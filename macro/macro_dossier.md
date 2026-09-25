@@ -1,5 +1,7 @@
 # Макро-слой: фон суждений (август 2026)
 
+Проверено: 2026-08-20
+
 Слой не порождает в брифе абзацев «про экономику». Он нужен, чтобы суждения о
 конкретной компании выносились на верной рамке: дорого ли ей занимать по её
 кредитному качеству, откуда придёт спрос, что давит на себестоимость и какие
@@ -8,6 +10,8 @@
 кеше не лежат вовсе: их даёт `macro_debt.py` детерминированно на дату брифа.
 
 ## Рамка года
+<!-- rests_on: cbr_forecast_keyrate, cbr_forecast_inflation,
+      cbr_forecast_gdp, cbr_forecast_corp_credit -->
 
 Регулятор ведёт цикл смягчения, но медленно и с повышенным прогнозом инфляции.
 Экономика при этом близка к нулевому росту, а валовое накопление основного
@@ -20,6 +24,11 @@
 за банковский лимит выше, а не ниже.
 
 ## Деньги: цена отдельно, доступ отдельно
+<!-- rests_on: macro_debt:g_spreads, nadbavka_krupnye_zakreditovannye,
+      effekt_nadbavki, anticiklicheskaya_nadbavka, icr_kriterii, frp_zaymy,
+      mtk_kreditovanie, programma_1764, psk_msp_oborotka,
+      zontichnye_poruchitelstva, cfa_rynok, cfa_raskrytie_2026,
+      moex_listing_rules -->
 
 Главное, что нужно понять про 2026 год, — цена денег и доступ к ним разошлись.
 
@@ -59,6 +68,13 @@
 имеет видимую цену в котировальном статусе.
 
 ## Фискальный контур: расходы растут, нефтяная база сжимается
+<!-- rests_on: federal_budget_2026, budget_revenue_structure,
+      budget_expenditure_structure, budget_execution_7m2026,
+      budget_plan_revision, fiscal_rule_oil_price, fiscal_impulse_timing,
+      zhkh_spending_trend, national_projects_funding,
+      tech_national_projects, goszakupki_advances, vat_rate,
+      usn_vat_threshold, psn_income_limit, msp_insurance_contributions,
+      strahvznosy_msp_okved, law_104fz_transition, software_vat_exemption -->
 
 Разрыв закрывается ненефтегазовыми налогами, и это устойчивая рамка на весь
 горизонт: план по доходам прямо опирается на изменения налогового
@@ -93,6 +109,10 @@
 подрядчика слабее первого.
 
 ## Труд: перелом темпа при неизменной структуре
+<!-- rests_on: zarplaty, zarplaty_god, rabochaya_sila, bezrabotica,
+      kadrovyi_deficit, kvota_inostrannye_rabotniki,
+      dolya_inostrannykh_rabotnikov, poshliny_inostrannye_rabotniki,
+      tk_izmeneniya_2026 -->
 
 Зарплатное давление остаётся двузначным, но темп внутри года резко замедлился.
 Практический вывод при чтении отчётности: если расходы на персонал растут
@@ -112,6 +132,10 @@
 вырасти при неизменной численности за счёт повышенной оплаты.
 
 ## Внешний контур: ограничение — это платёж, а не пошлина
+<!-- rests_on: transgranichnye_platezhi, komplaens_platezhi,
+      valyutnyi_kontrol, repatriaciya_vyruchki, tarif_rzd,
+      tarif_rzd_oktyabr, frakht_konteiner, konteinernyi_park,
+      parallelnyi_import, parallelnyi_import_kriterii, utilsbor -->
 
 Прямой банковский перевод дёшев, но непредсказуем по срокам, и особенно тяжело
 проходят группы оборудования, электроники и приборов. Рабочая альтернатива —
@@ -134,6 +158,9 @@
 обновляет парк.
 
 ## Что из этого спрашивать у финансового директора
+<!-- rests_on: vat_rate, strahvznosy_msp_okved, usn_vat_threshold,
+      splitting_amnesty, goszakupki_advances, icr_kriterii,
+      transgranichnye_platezhi, rabochaya_sila -->
 
 Как перенесён рост НДС в цены и что стало с оборотным циклом. Входит ли
 основной ОКВЭД в льготный перечень и держится ли доля дохода по нему. Есть ли в
