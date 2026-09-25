@@ -20,6 +20,8 @@ verify_sources.py — сверка «число есть на странице �
     VERIFIED        цитата найдена на странице, все значимые числа value — в ней;
     VERIFIED_TEXT   в value нет значимых чисел, цитата найдена на странице;
     QUOTE_NOT_FOUND цитаты на странице нет (выдумана или перефразирована);
+    QUOTE_TOO_SHORT ни одного фрагмента от 30 символов — голая ячейка или число
+                    без подписи и периода не доказывают, о чём цифра;
     NOT_FOUND       цитата есть, но в ней нет числа(ел) value — список в detail;
     NO_EVIDENCE     нет цитаты (у xlsx тоже: цитата — строка таблицы из --show);
     NEGATIVE        value — «нет данных»: отсутствие страницей не доказывается;
@@ -77,6 +79,7 @@ ANTIBOT = (b"ddos-guard", b"servicepipe", b"qrator", b"cf-chl", b"challenge-plat
 MIN_HTML_BYTES = 2000
 QUOTE_MAX = 300
 QUOTES_MAX = 4
+MIN_CONTEXT = 30          # хотя бы один фрагмент цитаты — с контекстом, не голая ячейка
 
 SPACES = "\u00a0\u202f\u2009\u2007\u200b\ufeff"
 MONTHS = {"январ": 1, "феврал": 2, "март": 3, "апрел": 4, "ма": 5, "июн": 6,
@@ -424,6 +427,12 @@ def verify_item(item: dict, fetcher: Fetcher, text_field: str = "value") -> dict
     value = str(item.get(text_field) or "")
     if not ev:
         rep["verdict"] = "NO_EVIDENCE"
+        return rep
+    if max(len(norm(e)) for e in evs) < MIN_CONTEXT:
+        # прогон 25.09: безработица «подтверждена» цитатой «Российская Федерация;2,2» —
+        # голая ячейка, период из цитаты не виден; нужен хоть один фрагмент с контекстом
+        rep["verdict"] = "QUOTE_TOO_SHORT"
+        rep["detail"] = "no fragment of %d+ chars: quote a sentence, or the table row with its header/period" % MIN_CONTEXT
         return rep
     if len(evs) > QUOTES_MAX:
         rep["verdict"], rep["detail"] = "QUOTE_NOT_FOUND", "more than %d quotes" % QUOTES_MAX

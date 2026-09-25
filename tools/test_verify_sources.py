@@ -117,7 +117,7 @@ def _():
 @case("verified")
 def _():
     r = vs.verify_item({"value": "22%", "source_url": URL,
-                        "evidence": "с 1 января 2026 года составляет 22 %"}, fetcher(OKNET))
+                        "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}, fetcher(OKNET))
     assert r["verdict"] == "VERIFIED" and r["route"] == "direct", r
 
 
@@ -221,7 +221,7 @@ def _():
 @case("negative-value-never-verified")
 def _():
     for v in ("нет данных", "Нет данных (источник закрыт)", "данные не найдены"):
-        r = vs.verify_item({"value": v, "source_url": URL, "evidence": "Налоги 2026"}, fetcher(OKNET))
+        r = vs.verify_item({"value": v, "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}, fetcher(OKNET))
         assert r["verdict"] == "NEGATIVE", (v, r)
     r = vs.verify_item({"value": "нетарифные меры 3%", "source_url": URL, "evidence": "22 %"}, fetcher(OKNET))
     assert r["verdict"] != "NEGATIVE", r
@@ -241,6 +241,16 @@ def _():
     assert "x.ru" not in out and "LINKS shown=1" in out, out
 
 
+@case("quote-too-short-bare-cell")
+def _():
+    f = fetcher({XURL: {"direct": (200, XLSX)}})
+    r = vs.verify_item({"value": "110 216", "source_url": XURL, "evidence": "Федерация | 110216,3"}, f)
+    assert r["verdict"] == "QUOTE_TOO_SHORT", r
+    r = vs.verify_item({"value": "110 216", "source_url": XURL,
+                        "evidence": ["Федерация | 110216,3", "Российская Федерация | 110216,3 | 10,94"]}, f)
+    assert r["verdict"] == "VERIFIED", r        # одного фрагмента с контекстом достаточно
+
+
 STUB503 = ("<html><body>Доступ к сайту временно ограничен владельцем веб-ресурса. "
            "Ваш IP-адрес: 0.0.0.0</body></html>").encode("utf-8")
 DDG = b"<html><title>DDoS-Guard</title><body>ddos-guard check</body></html>"
@@ -249,21 +259,21 @@ DDG = b"<html><title>DDoS-Guard</title><body>ddos-guard check</body></html>"
 @case("route-direct-blocked-then-proxy")
 def _():
     net = {URL: {"direct": (503, STUB503), "proxy": (200, PAGE.encode("utf-8"))}}
-    r = vs.verify_item({"value": "22%", "source_url": URL, "evidence": "составляет 22 %"}, fetcher(net))
+    r = vs.verify_item({"value": "22%", "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}, fetcher(net))
     assert r["verdict"] == "VERIFIED" and r["route"] == "proxy", r
 
 
 @case("route-antibot-200-counts-as-blocked")
 def _():
     net = {URL: {"direct": (200, DDG + b" " * 3000), "proxy": (200, PAGE.encode("utf-8"))}}
-    r = vs.verify_item({"value": "22%", "source_url": URL, "evidence": "составляет 22 %"}, fetcher(net))
+    r = vs.verify_item({"value": "22%", "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}, fetcher(net))
     assert r["route"] == "proxy", r
 
 
 @case("unreachable-is-not-refuted")
 def _():
     net = {URL: {"direct": (503, STUB503), "proxy": (503, STUB503)}}
-    r = vs.verify_item({"value": "22%", "source_url": URL, "evidence": "составляет 22 %"}, fetcher(net))
+    r = vs.verify_item({"value": "22%", "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}, fetcher(net))
     assert r["verdict"] == "UNREACHABLE" and "direct: http 503" in r["detail"] and "proxy: http 503" in r["detail"], r
 
 
@@ -279,7 +289,7 @@ def _():
     net = FakeNet(OKNET)
     f = vs.Fetcher(Path(tempfile.mkdtemp()), fetch=net)
     for _ in range(3):
-        vs.verify_item({"value": "22%", "source_url": URL, "evidence": "составляет 22 %"}, f)
+        vs.verify_item({"value": "22%", "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}, f)
     assert net.calls == [(URL, "direct")], net.calls
 
 
@@ -288,11 +298,11 @@ def _():
     cands = {"segments": {"nalogi": [
         {"claim": "c1", "value": "22%", "source": "ФНС", "source_url": URL, "as_of": "2026-01-01",
          "cadence": "annual", "topic": "vat_rate", "replaces": ["585d6ffd"],
-         "evidence": "составляет 22 %"},
+         "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"},
         {"claim": "c2", "value": "20%", "source": "ФНС", "source_url": URL, "as_of": "2026-01-01",
-         "cadence": "annual", "topic": "x", "evidence": "выдуманная цитата про 20 %"}]},
+         "cadence": "annual", "topic": "x", "evidence": "выдуманная цитата: основная ставка НДС составляет 20 %"}]},
         "reg_calendar": [{"name": "r1", "cadence": "slow", "last_value": "22%", "as_of": "2026-09-25",
-                          "next_event": "2027-01-01", "source_url": URL, "evidence": "составляет 22 %"}]}
+                          "next_event": "2027-01-01", "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}]}
     ver, pen, rep = vs.run(cands, fetcher(OKNET))
     f = ver["segments"]["nalogi"]
     assert len(f) == 1 and "evidence" not in f[0] and f[0]["replaces"] == ["585d6ffd"], ver
@@ -308,7 +318,7 @@ def _():
     td = Path(tempfile.mkdtemp())
     (td / "c.json").write_text(json.dumps({"segments": {"s": [
         {"claim": "c", "value": "22%", "source": "x", "source_url": "http://127.0.0.1:9/x",
-         "as_of": "2026-01-01", "cadence": "slow", "evidence": "22 %"}]}}), "utf-8")
+         "as_of": "2026-01-01", "cadence": "slow", "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}]}}), "utf-8")
     old = os.environ.get("MACRO_PROXY")
     os.environ["MACRO_PROXY"] = secret
     buf = io.StringIO()
