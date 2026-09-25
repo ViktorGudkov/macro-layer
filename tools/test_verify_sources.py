@@ -298,7 +298,7 @@ def _():
     assert len(f) == 1 and "evidence" not in f[0] and f[0]["replaces"] == ["585d6ffd"], ver
     assert pen["segments"]["nalogi"][0]["_verdict"] == "QUOTE_NOT_FOUND", pen
     rc = ver["reg_calendar"][0]
-    assert "evidence" not in rc and "source_url" not in rc, rc
+    assert "evidence" not in rc and rc.get("source_url") == URL, rc
     assert rep["hosts"]["nalog.gov.ru"]["direct"] == 3, rep["hosts"]
 
 

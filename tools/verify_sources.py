@@ -466,8 +466,10 @@ def run(cands: dict, fetcher: Fetcher) -> tuple[dict, dict, dict]:
         r = verify_item(rc, fetcher, text_field="last_value")
         r.update(kind_item="recipe", segment="reg_calendar")
         items.append(r)
-        # в рецепт попадают только поля схемы: merge кладёт рецепт в файл целиком
-        clean = {k: v for k, v in rc.items() if k not in ("evidence", "source_url")}
+        # merge кладёт рецепт в файл целиком: цитата (текст чужой страницы) в
+        # файл не идёт, а source_url остаётся — у инициатив (kind, stage) это
+        # адрес, по которому рутина проверяет стадию (monthly-pass §4)
+        clean = {k: v for k, v in rc.items() if k != "evidence"}
         if r["verdict"] in OK_VERDICTS:
             verified["reg_calendar"].append(clean)
         else:

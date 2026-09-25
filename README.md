@@ -5,7 +5,9 @@
 внешняя торговля, денежно-кредитная политика. Только открытые источники.
 
 Обновляет облачная рутина Claude Code (пятница, 19:00 МСК) по промпту
-[`PROMPT.md`](PROMPT.md). Каждое число, влитое рутиной, подтверждено
+[`PROMPT.md`](PROMPT.md): каждую неделю — снимок лент источников и пересборка
+протухших фактов; в первую пятницу месяца — ещё поиск нового по лентам
+(инициативы, принятые нормы, тренды) и полное перечитывание досье. Каждое число, влитое рутиной, подтверждено
 цитатой со страницы первоисточника — отчёт сверки лежит в `runs/<неделя>/`.
 
 ## Где брать данные
@@ -31,12 +33,16 @@ https://raw.githubusercontent.com/ViktorGudkov/macro-layer/claude/macro/macro/ma
 macro/macro.json          факты (схема v2) — источник правды
 macro/macro_dossier.md    нарративный фон ≤ 20 КБ; числа — только из macro.json
 CHANGELOG.md              по неделям: что заменено, что не подтверждено, цитаты
-runs/<ГГГГ-Wнн>/          кандидаты, verified/pending, отчёт сверки, merge, предохранители
+runs/<ГГГГ-Wнн>/          снимок лент, кандидаты, verified/pending, отчёт сверки, merge, предохранители
 tools/industry_cache.py   модуль кеша (status / merge / view) — копия, см. ниже
 tools/macro_merge.py      merge для macro.md (исключение из гейта макро-дублей)
 tools/verify_sources.py   сверка «число есть на странице источника»
 tools/fuses.py            предохранители недельного коммита
 tools/calendar_due.py     какие рецепты календаря проверять в этот прогон (до 8)
+tools/feeds.py            еженедельный снимок лент (ЦБ, правительство, минфин по номерам,
+                          КонсультантПлюс, «Ведомости») + сводка за месяц (--digest)
+tools/feeds_keywords.json словарь снимка: сегменты, стоп-лист, рубрики, политика источников
+tools/dossier_due.py      какие разделы досье перечитать (опоры rests_on, «Проверено:»)
 PROMPT.md                 промпт рутины — под версионным контролем, как код
 ```
 
@@ -98,11 +104,15 @@ merge-гейт `_macro_duplicate` отбивает факт, где сквозн
 ## Настройка рутины
 
 - Репозиторий подключён к рутине один — этот.
-- Сеть окружения: **Custom** (домены ниже) или **Full**. Нужны: `pypi.org`,
-  `files.pythonhosted.org` и источники: `minfin.gov.ru`, `nalog.gov.ru`,
-  `cbr.ru`, `rosstat.gov.ru`, `frprf.ru`, `customs.gov.ru`, `economy.gov.ru`,
-  `government.ru`, `roskazna.gov.ru`, `budget.gov.ru`, `sozd.duma.gov.ru`,
-  `publication.pravo.gov.ru`, `consultant.ru`, `garant.ru`, `kontur.ru`.
+- Сеть окружения: **Full** (рекомендовано: секретов в окружении нет) или
+  **Custom** со всеми доменами источников. Custom-список должен включать
+  пакетные реестры (`pypi.org`, `files.pythonhosted.org`), официальные
+  источники (`minfin.gov.ru`, `nalog.gov.ru`, `cbr.ru`, `rosstat.gov.ru`,
+  `government.ru`, `publication.pravo.gov.ru`, `consultant.ru`, `garant.ru`
+  и др.), ленты (`vedomosti.ru`) и ВСЕ вторичные домены из `source_url`
+  фактов — иначе такие пункты уходят в `pending` как «недоступные» (пилот
+  25.09: interfax, kommersant, index1520, портал ЦФА). Появится секрет в
+  окружении — только Custom.
 - `MACRO_PROXY` (необязательно) — переменная окружения рутины,
   `http://user:pass@host:port`. В репозиторий не попадает.
 - Расписание: пятница 19:00 Europe/Moscow (16:00 UTC).

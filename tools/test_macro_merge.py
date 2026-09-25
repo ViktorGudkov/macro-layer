@@ -11,6 +11,7 @@ import re
 import shutil
 import sys
 import tempfile
+from datetime import date
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -201,6 +202,50 @@ def _():
     assert fuses.check_dossier((ROOT / "macro" / "macro_dossier.md").read_bytes()) == []
     assert fuses.check_dossier(b"x" * (20 * 1024 + 1))[0].startswith("dossier: 20481")
     assert fuses.check_dossier("chat telegram:123".encode())[0].startswith("dossier: ")
+
+
+def _with_new_topics(n):
+    art = json.loads(SEED.read_text("utf-8"))
+    for i in range(n):
+        art["segments"]["nalogi"].append({"id": "new%05d" % i, "topic": "new_topic_%d" % i, "claim": "c",
+                                          "value": "v", "source": "s", "as_of": "2026-09-25",
+                                          "cadence": "slow", "harvested": "2026-09-25", "channel": "deep_research"})
+    return json.dumps(art, ensure_ascii=False, indent=1).encode()
+
+
+@case("fuses-appended-signal")
+def _():
+    assert not any(x.startswith("appended") for x in fuses.check(SEED.read_bytes(), _with_new_topics(10), None))
+    r = fuses.check(SEED.read_bytes(), _with_new_topics(11), None)
+    assert any(x.startswith("appended: 11 new facts") for x in r), r
+
+
+@case("fuses-replacement-is-not-appended")
+def _():
+    art = json.loads(SEED.read_text("utf-8"))
+    for f in art["segments"]["dkp"]:           # 6 замен: новые id, те же темы
+        f["id"] = "r" + f["id"][1:]
+    r = fuses.check(SEED.read_bytes(), json.dumps(art, ensure_ascii=False, indent=1).encode(), None)
+    assert not any(x.startswith("appended") for x in r) and not any(x.startswith("deleted") for x in r), r
+
+
+@case("fuses-budget")
+def _():
+    r = fuses.check(SEED.read_bytes(), _with_new_topics(59), None)       # 92 + 59 = 151
+    assert any(x.startswith("budget: 151 facts") for x in r), r
+
+
+@case("fuses-dossier-anchors-and-age")
+def _():
+    macro = json.loads(SEED.read_text("utf-8"))
+    legacy = (ROOT / "macro" / "macro_dossier.md").read_bytes()
+    assert fuses.check_dossier(legacy, macro, date(2026, 12, 1)) == []   # неразмеченное — не валит
+    doc = ("# Досье\nПроверено: 2026-08-20\n\n## Рамка года\n<!-- rests_on: cbr_forecast_gdp -->\nТекст\n"
+           "## Труд\nбез опор\n").encode()
+    r = fuses.check_dossier(doc, macro, date(2026, 10, 2))
+    assert any("without rests_on: Труд" in x for x in r) and any("older than 35 days" in x for x in r), r
+    ok = doc.replace("## Труд\nбез опор".encode(), "## Труд\n<!-- rests_on: zarplaty -->".encode())
+    assert fuses.check_dossier(ok, macro, date(2026, 9, 20)) == []
 
 
 @case("copy-sha-matches-readme")
