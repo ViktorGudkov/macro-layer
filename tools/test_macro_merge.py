@@ -72,37 +72,37 @@ def stats(out):
     return dict(kv.split("=") for kv in m.group(1).split() if "=" in kv) if m else {}
 
 
-@case("sentinel-combat-gate-still-rejects-macro-facts")
+@case("v662-module-admits-macro-facts-for-macro-profile")
 def _():
-    # Если упало — боевой модуль сам перестал бить по macro.md: обёртку можно снять.
+    # v6.62: боевой модуль сам не применяет гейт макро-дублей к macro.md,
+    # а для отраслевых профилей гейт на месте
     for topic in ("vat_rate", "contribution_base_2026"):
         seg, f = seed_fact(topic)
+        assert ic._validate_fact(dict(f, segment=seg), "macro.md") is None, topic
         why = ic._validate_fact(dict(f, segment=seg))
         assert why and why.startswith("макро-дубль"), (topic, why)
 
 
-@case("wrapper-admits-whole-seed")
+@case("whole-seed-valid-for-macro-profile")
 def _():
-    import macro_merge
-    macro_merge.disable_macro_gate()
     art = json.loads(SEED.read_text("utf-8"))
-    bad = [(f["id"], ic._validate_fact(dict(f, segment=s))) for s, _, f in ic.iter_facts(art)
-           if ic._validate_fact(dict(f, segment=s))]
+    bad = [(f["id"], ic._validate_fact(dict(f, segment=s), "macro.md")) for s, _, f in ic.iter_facts(art)
+           if ic._validate_fact(dict(f, segment=s), "macro.md")]
     assert not bad, bad
 
 
-@case("wrapper-fails-loudly-if-gate-renamed")
+@case("wrapper-refuses-module-older-than-v662")
 def _():
     import macro_merge
-    saved = ic._macro_duplicate
-    del ic._macro_duplicate
+    saved = ic.MACRO_PROFILE
+    del ic.MACRO_PROFILE
     try:
-        macro_merge.disable_macro_gate()
+        macro_merge.require_v662()
         raise AssertionError("no SystemExit")
     except SystemExit as e:
-        assert "MACRO_MERGE FAIL" in str(e)
+        assert "older than v6.62" in str(e)
     finally:
-        ic._macro_duplicate = saved
+        ic.MACRO_PROFILE = saved
 
 
 @case("reverify-vat-same-claim-is-refreshed")
@@ -116,6 +116,7 @@ def _():
     new = json.loads((td / "macro.json").read_text("utf-8"))
     g = [x for _, _, x in ic.iter_facts(new) if x["id"] == f["id"]][0]
     assert g["harvested"] == "2026-09-26" and len(list(ic.iter_facts(new))) == 92
+    assert g["channel"] == "routine", g["channel"]          # v6.62: перепроверено рутиной
 
 
 @case("mrot-replaced-by-id-and-fuses-ok")
