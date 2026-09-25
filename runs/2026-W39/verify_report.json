@@ -1,0 +1,404 @@
+{
+ "counts": {
+  "VERIFIED": 13,
+  "NO_EVIDENCE": 1,
+  "UNREACHABLE": 4,
+  "VERIFIED_CELLS": 1
+ },
+ "hosts": {
+  "cbr.ru": {
+   "items": 8,
+   "direct": 8,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "consultant.ru": {
+   "items": 1,
+   "direct": 1,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "interfax.ru": {
+   "items": 1,
+   "direct": 0,
+   "proxy": 0,
+   "unreachable": 1
+  },
+  "xn--80a3bf.xn--p1ai": {
+   "items": 1,
+   "direct": 0,
+   "proxy": 0,
+   "unreachable": 1
+  },
+  "kommersant.ru": {
+   "items": 1,
+   "direct": 0,
+   "proxy": 0,
+   "unreachable": 1
+  },
+  "minfin.gov.ru": {
+   "items": 4,
+   "direct": 4,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "rosstat.gov.ru": {
+   "items": 2,
+   "direct": 2,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "index1520.com": {
+   "items": 1,
+   "direct": 0,
+   "proxy": 0,
+   "unreachable": 1
+  }
+ },
+ "items": [
+  {
+   "topic": "anticiklicheskaya_nadbavka",
+   "replaces": [
+    "3dd29d54"
+   ],
+   "source_url": "https://www.cbr.ru/finstab/instruments/ccb/",
+   "value": "0,5 п.п. (сохранена 27.07.2026)",
+   "evidence": [
+    "с 1 февраля 2025 года – в размере 0,25 процента, с 1 июля – 0,5 процента",
+    "27 июля 2026 г. 11:50 Банк России принял ряд решений по макропруденциальной политике"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "finansirovanie"
+  },
+  {
+   "topic": "effekt_nadbavki",
+   "replaces": [
+    "4be79ef8"
+   ],
+   "source_url": "https://www.consultant.ru/document/cons_doc_LAW_525558/307a63e42d4c21be7837a4618f3382a744d79b50/",
+   "value": "нет данных",
+   "evidence": [],
+   "route": "direct",
+   "verdict": "NO_EVIDENCE",
+   "detail": "",
+   "host": "consultant.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "finansirovanie"
+  },
+  {
+   "topic": "budget_plan_revision",
+   "replaces": [
+    "c711ced0"
+   ],
+   "source_url": "https://www.interfax.ru/business/1103530",
+   "value": "расходы 45,11 трлн ₽ (план, не закон)",
+   "evidence": [],
+   "route": "-",
+   "verdict": "UNREACHABLE",
+   "detail": "direct: curl rc=56",
+   "host": "interfax.ru",
+   "http": 0,
+   "kind_item": "fact",
+   "segment": "finansirovanie"
+  },
+  {
+   "topic": "cfa_rynok",
+   "replaces": [
+    "f5efb4c5"
+   ],
+   "source_url": "https://xn--80a3bf.xn--p1ai/cfa_q1_2026.html",
+   "value": "1 375,4 млрд ₽ действующих выпусков; вторичка 3,6%",
+   "evidence": [],
+   "route": "-",
+   "verdict": "UNREACHABLE",
+   "detail": "direct: curl rc=56",
+   "host": "xn--80a3bf.xn--p1ai",
+   "http": 0,
+   "kind_item": "fact",
+   "segment": "finansirovanie"
+  },
+  {
+   "topic": "cfa_raskrytie_2026",
+   "replaces": [
+    "b998269a"
+   ],
+   "source_url": "https://www.kommersant.ru/doc/8741477",
+   "value": "с 01.10.2026: отчётность за 3 года + аудит; триггер превышения долга на 20%",
+   "evidence": [],
+   "route": "-",
+   "verdict": "UNREACHABLE",
+   "detail": "direct: curl rc=56",
+   "host": "kommersant.ru",
+   "http": 0,
+   "kind_item": "fact",
+   "segment": "finansirovanie"
+  },
+  {
+   "topic": "budget_execution_7m2026",
+   "replaces": [
+    "6765c0d6"
+   ],
+   "source_url": "https://minfin.gov.ru/ru/press-center/?id_4=40580-predvaritelnaya_otsenka_ispolneniya_federalnogo_byudzheta_za_yanvar-avgust_2026_goda",
+   "value": "дефицит 5 795 млрд ₽ (2,5% ВВП)",
+   "evidence": [
+    "По итогам января-августа 2026 года федеральный бюджет сложился с дефицитом в размере 5 795 млрд рублей.",
+    "ДЕФИЦИТ % ВВП -5 795 -2,5% -3 920 -1,8% -1 875 -3 786 -1,6%"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "minfin.gov.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  },
+  {
+   "topic": "fiscal_impulse_timing",
+   "replaces": [
+    "d8eeb76a"
+   ],
+   "source_url": "https://minfin.gov.ru/ru/press-center/?id_4=40580-predvaritelnaya_otsenka_ispolneniya_federalnogo_byudzheta_za_yanvar-avgust_2026_goda",
+   "value": "31 724 млрд ₽ расходов (+14,7% г/г)",
+   "evidence": [
+    "объем расходов федерального бюджета по итогам января-августа 2026 года составил 31 724 млрд рублей, что выше показателей предыдущего года на 14,7% г/г"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "minfin.gov.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  },
+  {
+   "topic": "fiscal_rule_oil_price",
+   "replaces": [
+    "74e57914"
+   ],
+   "source_url": "https://minfin.gov.ru/ru/press-center/?id_4=40635-minfin_rossii_vnes_v_pravitelstvo_rf_byudzhetnyi_paket",
+   "value": "50 $/барр. с 2027 года",
+   "evidence": [
+    "с 2027 года будет предусмотрено установление базовой цены на нефть на уровне 50 $/барр."
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "minfin.gov.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  },
+  {
+   "topic": "cbr_forecast_keyrate",
+   "replaces": [
+    "762e922b"
+   ],
+   "source_url": "https://www.cbr.ru/Content/Document/File/194258/forecast_260724.pdf",
+   "value": "средняя КС: 14,5–14,6% (2026), 10,5–12,5% (2027), 8,0–9,0% (2028)",
+   "evidence": [
+    "Ключевая ставка, в среднем за год, в % годовых 19,2 14,5–14,61 10,5–12,5 8,0–9,0 7,5–8,5"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "pdf",
+   "kind_item": "fact",
+   "segment": "dkp"
+  },
+  {
+   "topic": "cbr_forecast_inflation",
+   "replaces": [
+    "f2b276b6"
+   ],
+   "source_url": "https://www.cbr.ru/Content/Document/File/194258/forecast_260724.pdf",
+   "value": "6,0–7,0% в 2026 (дек/дек); 4,0% с 2027",
+   "evidence": [
+    "Инфляция, в %, декабрь к декабрю предыдущего года 5,6 6,0–7,0 4,0 4,0 4,0"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "pdf",
+   "kind_item": "fact",
+   "segment": "dkp"
+  },
+  {
+   "topic": "cbr_forecast_corp_credit",
+   "replaces": [
+    "8600f6cc"
+   ],
+   "source_url": "https://www.cbr.ru/Content/Document/File/194258/forecast_260724.pdf",
+   "value": "+7–11% в 2026 (факт 2025 — 11,9%)",
+   "evidence": [
+    "к организациям 11,9 7–11 7–12 8–13 8–13"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "pdf",
+   "kind_item": "fact",
+   "segment": "dkp"
+  },
+  {
+   "topic": "cbr_forecast_gdp",
+   "replaces": [
+    "5b2895df"
+   ],
+   "source_url": "https://www.cbr.ru/Content/Document/File/194258/forecast_260724.pdf",
+   "value": "ВВП 0,0–1,0% в 2026; накопление осн. капитала −1,5…−0,5%",
+   "evidence": [
+    "Валовой внутренний продукт 1,0 0,0–1,0 1,5–2,5 1,5–2,5 1,5–2,5",
+    "Валовое накопление -4,9 (-3,5)–(-1,5) 2,0–4,0 1,5–3,5 1,0–3,0 – основного капитала -0,4 (-1,5)–0,5 2,0–4,0 1,5–3,5 1,0–3,0"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "pdf",
+   "kind_item": "fact",
+   "segment": "dkp"
+  },
+  {
+   "topic": "cbr_forecast_oil",
+   "replaces": [
+    "a6b62d88"
+   ],
+   "source_url": "https://www.cbr.ru/Content/Document/File/194258/forecast_260724.pdf",
+   "value": "60 долл./барр. в 2026; 50 долл. в 2027–2029",
+   "evidence": [
+    "Цена нефти для налогообложения5, в среднем за год, долл. США за баррель 56 60 50 50 50"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "pdf",
+   "kind_item": "fact",
+   "segment": "dkp"
+  },
+  {
+   "topic": "bezrabotica",
+   "replaces": [
+    "1581ea98"
+   ],
+   "source_url": "https://rosstat.gov.ru/storage/mediabank/trud_3_15-s.xlsx",
+   "value": "2,2% (май–июль 2026, скользящее среднее за 3 мес.)",
+   "evidence": [],
+   "route": "direct",
+   "verdict": "VERIFIED_CELLS",
+   "detail": "",
+   "host": "rosstat.gov.ru",
+   "http": 200,
+   "kind": "xlsx",
+   "kind_item": "fact",
+   "segment": "trud"
+  },
+  {
+   "topic": "frakht_konteiner",
+   "replaces": [
+    "55800957"
+   ],
+   "source_url": "https://index1520.com/news/stoimost-transportirovki-konteynera-iz-kitaya-v-moskvu-v-iyune-2026-goda-vyrosla-na-11-k-mayu-do-900/",
+   "value": "9 002 долл. за 40' Китай — Москва (июнь 2026), +11% м/м",
+   "evidence": [],
+   "route": "-",
+   "verdict": "UNREACHABLE",
+   "detail": "direct: curl rc=56",
+   "host": "index1520.com",
+   "http": 0,
+   "kind_item": "fact",
+   "segment": "vneshtorg"
+  },
+  {
+   "topic": "Ежемесячная оценка исполнения федерального бюджета",
+   "replaces": [],
+   "source_url": "https://minfin.gov.ru/ru/press-center/?id_4=40580-predvaritelnaya_otsenka_ispolneniya_federalnogo_byudzheta_za_yanvar-avgust_2026_goda",
+   "value": "дефицит 5 795 млрд ₽ (2,5% ВВП) за январь–август 2026, публикация 09.09.2026",
+   "evidence": [
+    "Предварительная оценка исполнения федерального бюджета за январь-август 2026 года 09 сентября 2026 11:00",
+    "По итогам января-августа 2026 года федеральный бюджет сложился с дефицитом в размере 5 795 млрд рублей.",
+    "ДЕФИЦИТ % ВВП -5 795 -2,5% -3 920 -1,8% -1 875 -3 786 -1,6%"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "minfin.gov.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "recipe",
+   "segment": "reg_calendar"
+  },
+  {
+   "topic": "Заседание Совета директоров Банка России по ключевой ставке",
+   "replaces": [],
+   "source_url": "https://www.cbr.ru/press/keypr/",
+   "value": "14,00% годовых сохранена решением от 11.09.2026 (промежуточное заседание, без обновления прогноза). Значение в бриф берётся из macro_debt.py, здесь — только направление и календарь заседаний.",
+   "evidence": [
+    "Совет директоров Банка России 11 сентября 2026 года принял решение сохранить ключевую ставку на уровне 14,00% годовых.",
+    "Следующее заседание Совета директоров Банка России, на котором будет рассматриваться вопрос об уровне ключевой ставки, запланировано на 23 октября 2026 года"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "recipe",
+   "segment": "reg_calendar"
+  },
+  {
+   "topic": "Обновление среднесрочного прогноза Банка России",
+   "replaces": [],
+   "source_url": "https://www.cbr.ru/press/keypr/",
+   "value": "На заседании 11.09.2026 обновлённый среднесрочный прогноз не публиковался (заседание не опорное); действующий прогноз — прежний. Следующее обновление — на опорном заседании 23.10.2026. Сверять ТОЛЬКО по таблице PDF на cbr.ru — поисковая выдача даёт неверные диапазоны.",
+   "evidence": [
+    "Совет директоров Банка России 11 сентября 2026 года принял решение сохранить ключевую ставку на уровне 14,00% годовых.",
+    "Следующее заседание Совета директоров Банка России, на котором будет рассматриваться вопрос об уровне ключевой ставки, запланировано на 23 октября 2026 года"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "recipe",
+   "segment": "reg_calendar"
+  },
+  {
+   "topic": "Недельная инфляция Росстата",
+   "replaces": [],
+   "source_url": "https://rosstat.gov.ru/storage/mediabank/148_23-09-2026.html",
+   "value": "с 15 по 21 сентября 2026 г. ИПЦ 100,06%, с начала месяца 100,13%, с начала года 104,81%",
+   "evidence": [
+    "За период с 15 по 21 сентября 2026 г. индекс потребительских цен 2 , по оценке Росстата, составил 100,06%, с начала месяца – 100,13%, с начала года – 104,81%"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "rosstat.gov.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "recipe",
+   "segment": "reg_calendar"
+  }
+ ]
+}

@@ -1,0 +1,21 @@
+PROBE proxy=no
+PROBE minfin.gov.ru                  ok=True  route=direct http=200 kind=html  bytes=100489   direct: ok
+PROBE www.nalog.gov.ru               ok=True  route=direct http=200 kind=html  bytes=149615   direct: ok
+PROBE rosstat.gov.ru                 ok=True  route=direct http=200 kind=html  bytes=815546   direct: ok
+PROBE www.cbr.ru                     ok=True  route=direct http=200 kind=html  bytes=73523    direct: ok
+PROBE frprf.ru                       ok=False route=-      http=403 kind=-     bytes=0        direct: http 403
+PROBE customs.gov.ru                 ok=False route=-      http=0   kind=-     bytes=0        direct: curl rc=35
+PROBE www.consultant.ru              ok=True  route=direct http=200 kind=html  bytes=40211    direct: ok
+PROBE www.garant.ru                  ok=True  route=direct http=200 kind=html  bytes=267936   direct: ok
+PROBE kontur.ru                      ok=True  route=direct http=200 kind=html  bytes=146353   direct: ok
+PROBE publication.pravo.gov.ru       ok=True  route=direct http=200 kind=html  bytes=27995    direct: ok
+PROBE government.ru                  ok=True  route=direct http=200 kind=html  bytes=63334    direct: ok
+PROBE www.economy.gov.ru             ok=False route=-      http=0   kind=-     bytes=0        direct: curl rc=35
+PROBE sozd.duma.gov.ru               ok=False route=-      http=0   kind=-     bytes=0        direct: curl rc=35
+PROBE roskazna.gov.ru                ok=False route=-      http=0   kind=-     bytes=0        direct: curl rc=56
+PROBE budget.gov.ru                  ok=False route=-      http=0   kind=-     bytes=0        direct: curl rc=35
+PROBE www.nalog.gov.ru               ok=True  route=direct http=200 kind=html  bytes=176682   direct: ok
+PROBE www.cbr.ru                     ok=True  route=direct http=200 kind=html  bytes=92594    direct: ok
+PROBE rosstat.gov.ru                 ok=True  route=direct http=200 kind=xlsx  bytes=20773    direct: ok
+PROBE frprf.ru                       ok=False route=-      http=403 kind=-     bytes=0        direct: http 403
+PROBE www.garant.ru                  ok=True  route=direct http=200 kind=html  bytes=149127   direct: ok
