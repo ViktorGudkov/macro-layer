@@ -2,3 +2,5 @@ runs/*/pages/
 __pycache__/
 *.pyc
 .DS_Store
+runs/*/macro_before.json
+runs/*/macro_head.json

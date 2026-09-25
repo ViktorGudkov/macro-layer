@@ -19,10 +19,10 @@ verify_sources.py — сверка «число есть на странице �
 Вердикты:
     VERIFIED        цитата найдена на странице, все значимые числа value — в ней;
     VERIFIED_TEXT   в value нет значимых чисел, цитата найдена на странице;
-    VERIFIED_CELLS  таблица (xlsx) без цитаты: все значимые числа — в ячейках;
     QUOTE_NOT_FOUND цитаты на странице нет (выдумана или перефразирована);
     NOT_FOUND       цитата есть, но в ней нет числа(ел) value — список в detail;
-    NO_EVIDENCE     нет цитаты у не-табличного источника;
+    NO_EVIDENCE     нет цитаты (у xlsx тоже: цитата — строка таблицы из --show);
+    NEGATIVE        value — «нет данных»: отсутствие страницей не доказывается;
     UNREACHABLE     страница не скачалась ни напрямую, ни через прокси. Это
                     «не проверено», а НЕ «опровергнуто»: пункт идёт в pending;
     UNSUPPORTED     формат, из которого текст не извлекается (PDF без pymupdf
@@ -47,6 +47,7 @@ verify_sources.py — сверка «число есть на странице �
     python3 tools/verify_sources.py --candidates work/candidates.json --out-dir work
         [--cache-dir work/pages] [--offline]
     python3 tools/verify_sources.py --show URL [--grep 'ставк[аи] НДС'] --out-dir work
+    python3 tools/verify_sources.py --show URL --links [--grep 'бюджет'] --out-dir work
     python3 tools/verify_sources.py --probe URL [URL ...] --out-dir work
 """
 from __future__ import annotations
@@ -64,7 +65,7 @@ import sys
 import zipfile
 from decimal import ROUND_DOWN, ROUND_HALF_UP, Decimal, InvalidOperation
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urljoin, urlsplit
 
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36")
@@ -151,6 +152,59 @@ def sniff(body: bytes, ctype: str = "") -> str:
     return "html" if (b"<html" in head or b"<body" in head or b"<div" in head or "html" in ctype.lower()) else "text"
 
 
+def _local(tag: str) -> str:
+    return tag.rsplit("}", 1)[-1]
+
+
+def xlsx_rows(z: zipfile.ZipFile) -> str:
+    """Таблица построчно: «ячейка | ячейка | …», строки — через перевод строки.
+
+    Пилот 25.09: сплошной дамп ячеек xlsx Росстата нечитаем, цитату из него не
+    взять, а сверка «число есть где-то в ячейках» на таблице в 344 тыс. символов
+    подтверждала «2,2» и «3» чем угодно. Построчный текст даёт цитату «строка
+    таблицы» — подпись и значения рядом.
+    """
+    import xml.etree.ElementTree as ET
+    shared: list[str] = []
+    if "xl/sharedStrings.xml" in z.namelist():
+        root = ET.fromstring(z.read("xl/sharedStrings.xml"))
+        for si in root:
+            shared.append("".join(t.text or "" for t in si.iter() if _local(t.tag) == "t"))
+    sheets = sorted((n for n in z.namelist() if re.match(r"xl/worksheets/sheet\d+\.xml$", n)),
+                    key=lambda n: int(re.search(r"(\d+)", n.rsplit("/", 1)[-1]).group(1)))
+    out = []
+    for n in sheets:
+        out.append("== %s ==" % n.rsplit("/", 1)[-1])
+        root = ET.fromstring(z.read(n))
+        for row in (e for e in root.iter() if _local(e.tag) == "row"):
+            cells = []
+            for c in (e for e in row if _local(e.tag) == "c"):
+                typ = c.get("t", "")
+                v = next((e.text for e in c if _local(e.tag) == "v"), None)
+                if typ == "s" and v is not None:
+                    try:
+                        val = shared[int(v)]
+                    except (ValueError, IndexError):
+                        val = ""
+                elif typ == "inlineStr":
+                    val = "".join(t.text or "" for t in c.iter() if _local(t.tag) == "t")
+                elif v is None:
+                    val = ""
+                elif typ in ("str", "b", "e"):
+                    val = v
+                else:
+                    try:
+                        val = ("%.10g" % float(v)).replace(".", ",")
+                    except ValueError:
+                        val = v
+                val = re.sub(r"\s+", " ", val).strip()
+                if val:
+                    cells.append(val)
+            if cells:
+                out.append(" | ".join(cells))
+    return "\n".join(out)
+
+
 def extract(body: bytes, ctype: str = "") -> tuple[str | None, str]:
     """(текст, вид) — вид: html | pdf | xlsx | text; текст None = не извлёкся."""
     if body[:4] == b"%PDF":
@@ -158,10 +212,11 @@ def extract(body: bytes, ctype: str = "") -> tuple[str | None, str]:
     if body[:2] == b"PK":
         try:
             z = zipfile.ZipFile(io.BytesIO(body))
-            parts = [n for n in z.namelist() if n.endswith(".xml")
-                     and (n.startswith("xl/") or n.startswith("word/"))]
+            if any(n.startswith("xl/worksheets/") for n in z.namelist()):
+                return xlsx_rows(z), "xlsx"
+            parts = [n for n in z.namelist() if n.endswith(".xml") and n.startswith("word/")]
             xml = " ".join(z.read(n).decode("utf-8", "replace") for n in parts)
-            return html.unescape(re.sub(r"<[^>]+>", " ", xml)), "xlsx"
+            return html.unescape(re.sub(r"<[^>]+>", " ", xml)), "docx"
         except Exception:
             return None, "xlsx"
     t = decode(body, ctype)
@@ -343,6 +398,14 @@ def verify_item(item: dict, fetcher: Fetcher, text_field: str = "value") -> dict
     rep = {"topic": item.get("topic") or item.get("name", ""), "replaces": item.get("replaces") or [],
            "source_url": url, "value": item.get(text_field, ""), "evidence": [e[:QUOTE_MAX] for e in evs],
            "route": "-", "verdict": "", "detail": ""}
+    if NEGATIVE_RE.match(norm(str(item.get(text_field) or ""))):
+        # пилот 25.09: агент заменял положительный факт на «нет данных», потому
+        # что источник был закрыт по расписанию. Отрицательный поиск факт не
+        # снимает, а страница «отсутствие» не доказывает — с любой цитатой без
+        # чисел это прошло бы как VERIFIED_TEXT.
+        rep["verdict"] = "NEGATIVE"
+        rep["detail"] = "a negative value cannot be verified by a page; keep the old fact"
+        return rep
     if not url:
         rep["verdict"] = "NO_URL"
         return rep
@@ -360,14 +423,6 @@ def verify_item(item: dict, fetcher: Fetcher, text_field: str = "value") -> dict
         return rep
     value = str(item.get(text_field) or "")
     if not ev:
-        if kind == "xlsx":
-            miss, n = missing_tokens(value, text)
-            if n and not miss:
-                rep["verdict"] = "VERIFIED_CELLS"
-            else:
-                rep["verdict"] = "NOT_FOUND"
-                rep["detail"] = "no significant numbers in value" if not n else "missing: " + ", ".join(miss)
-            return rep
         rep["verdict"] = "NO_EVIDENCE"
         return rep
     if len(evs) > QUOTES_MAX:
@@ -389,7 +444,8 @@ def verify_item(item: dict, fetcher: Fetcher, text_field: str = "value") -> dict
     return rep
 
 
-OK_VERDICTS = {"VERIFIED", "VERIFIED_TEXT", "VERIFIED_CELLS"}
+OK_VERDICTS = {"VERIFIED", "VERIFIED_TEXT"}
+NEGATIVE_RE = re.compile(r"^(нет данных|данные не найдены|сведений нет|сведения не найдены|не найдено|н/д)(?![а-я])")
 
 
 def run(cands: dict, fetcher: Fetcher) -> tuple[dict, dict, dict]:
@@ -434,6 +490,33 @@ def run(cands: dict, fetcher: Fetcher) -> tuple[dict, dict, dict]:
     return verified, pending, report
 
 
+def links(f: Fetcher, url: str, grep: str | None, limit: int = 40) -> None:
+    """Ссылки страницы (текст -> абсолютный URL): точный адрес пресс-релиза или
+    файла брать отсюда, а не угадывать и не разбирать сырой HTML руками."""
+    page = f.get(url)
+    print("LINKS route=%s http=%s ok=%s" % (page["route"], page["http"], page["ok"]))
+    if not page["ok"]:
+        return
+    t = decode(page["body"], page.get("ctype", ""))
+    n, seen = 0, set()
+    for m in re.finditer(r"(?is)<a\b[^>]*?href\s*=\s*[\"']([^\"'#]+)[\"'][^>]*>(.*?)</a>", t):
+        href = urljoin(url, html.unescape(m.group(1)).strip())
+        text = re.sub(r"\s+", " ", html.unescape(re.sub(r"<[^>]+>", " ", m.group(2)))).strip()
+        title = re.search(r"title\s*=\s*[\"']([^\"']+)", m.group(0))
+        if not text and title:
+            text = html.unescape(title.group(1))
+        if grep and not re.search(grep, text + " " + href, re.I):
+            continue
+        if href in seen:        # картинка и заголовок новости ведут на один адрес
+            continue
+        seen.add(href)
+        print("LINK %s -> %s" % (text[:100] or "-", href))
+        n += 1
+        if n >= limit:
+            break
+    print("LINKS shown=%d" % n)
+
+
 def show(f: Fetcher, url: str, grep: str | None, width: int = 300, limit: int = 12) -> None:
     """Текст страницы ровно в том виде, в каком его увидит сверка: цитату для
     evidence брать отсюда, а не из WebFetch (другой маршрут, другая разметка)."""
@@ -474,7 +557,8 @@ def main(argv: list[str] | None = None) -> int:
     mode.add_argument("--candidates", help="candidates.json (merge payload + evidence)")
     mode.add_argument("--show", metavar="URL", help="print the page text as the verifier sees it")
     mode.add_argument("--probe", nargs="+", metavar="URL", help="reachability table")
-    ap.add_argument("--grep", help="--show: regex, print windows around matches")
+    ap.add_argument("--grep", help="--show: regex, print windows around matches (with --links: filter links)")
+    ap.add_argument("--links", action="store_true", help="--show: list the page links instead of its text")
     ap.add_argument("--out-dir", default="work")
     ap.add_argument("--cache-dir", help="page cache (default <out-dir>/pages)")
     ap.add_argument("--offline", action="store_true", help="only cached pages (tests, re-runs)")
@@ -487,7 +571,7 @@ def main(argv: list[str] | None = None) -> int:
         proxy = None
     f = Fetcher(Path(a.cache_dir) if a.cache_dir else out / "pages", proxy, a.offline)
     if a.show:
-        show(f, a.show, a.grep)
+        (links if a.links else show)(f, a.show, a.grep)
         return 0
     if a.probe:
         probe(f, a.probe)

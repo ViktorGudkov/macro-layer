@@ -33,7 +33,7 @@ git fetch origin
 git checkout claude/macro 2>/dev/null || git checkout -b claude/macro origin/main   # первый прогон
 cp macro/macro.json $R/macro_before.json
 pip install -q pymupdf 2>/dev/null || true      # текст PDF (ЦБ, Минфин); без него — pdftotext
-python3 tools/test_verify_sources.py && python3 tools/test_macro_merge.py   # оба «0 failed», иначе стоп
+for t in tools/test_*.py; do python3 $t | tail -1; done     # везде «0 failed», иначе стоп
 python3 tools/industry_cache.py --status --profile macro.md --cache-dir macro --now $TODAY --json > $R/status.json
 ```
 
@@ -56,19 +56,27 @@ python3 tools/verify_sources.py --out-dir $R --probe \
 **Очередь.** `$R/status.json` → `stale_queue`: до 15 протухших фактов с
 `id`, `topic`, `segment`, `claim`, `value`, `as_of`. Бери их все, сверху вниз.
 
-**Календарь.** `macro/macro.json` → `reg_calendar` (32 рецепта: `name`,
-`query`, `last_value`, `as_of`, `next_event`). Поле `next_event` чаще текст,
-чем дата («Октябрь — ноябрь 2026: постановление…», «до 1 октября 2026»).
-Рецепт «наступил», если его дата или окно уже пришли или придут в
-ближайшие 7 дней, либо текст велит проверять регулярно («еженедельно»,
-«ежемесячно», «при каждом обновлении»). По каждому наступившему проверь по
-`query`, случилось ли событие.
-- Случилось → факты, которые оно меняет, добавь в работу (сверх 15) с их `id`;
-  сам рецепт обнови (п. 3, блок `reg_calendar`).
-- Не случилось → рецепт не трогай.
+**Календарь.** Какие рецепты `reg_calendar` проверять, решает скрипт, а не
+ты (одинаково при одинаковом файле и дате; до 8 за прогон):
+
+```bash
+python3 tools/calendar_due.py --macro macro/macro.json --today $TODAY | tee $R/calendar_due.txt
+```
+
+По каждому `DUE` проверь по `query` рецепта, случилось ли событие.
+- Случилось → факты, которые оно меняет, добавь в работу (сверх 15) с их
+  `id`; рецепт обнови: новые `last_value` и `next_event`, `as_of` = $TODAY.
+- Не случилось, но на официальной странице видно текущее состояние
+  («следующее заседание 23 октября») → обнови рецепт так же, с этой цитатой.
+- Не случилось и цитаты нет → рецепт не трогай (скрипт вернёт его позже).
+`as_of` рецепта — дата проверки: по ней скрипт решает, когда проверять снова.
 
 **Отрицательные факты** (`value` «нет данных», источник «Отрицательный
 результат…»): заменяй только найденным документом. Не нашёл — не трогай.
+🔴 Обратное запрещено: положительный факт НИКОГДА не заменяется на «нет
+данных», даже если источник закрыт, недоступен или открыт по расписанию —
+такой пункт просто пропусти и запиши в отчёт. Сверка такие кандидаты
+отбивает (`NEGATIVE`).
 
 ## 3. Пересборка
 
@@ -84,7 +92,11 @@ sozd.duma.gov.ru (законопроекты), publication.pravo.gov.ru (опу�
 
 ```bash
 python3 tools/verify_sources.py --out-dir $R --show '<URL>' --grep '<регэксп вокруг числа>'
+python3 tools/verify_sources.py --out-dir $R --show '<URL>' --links --grep '<слово>'   # ссылки страницы
 ```
+
+Точный адрес пресс-релиза или файла бери из `--links` (текст ссылки →
+абсолютный URL), а не угадывай и не разбирай HTML руками.
 
 Кандидаты — в `$R/candidates.json`, формат merge-пакета:
 
@@ -117,7 +129,9 @@ python3 tools/verify_sources.py --out-dir $R --show '<URL>' --grep '<регэк�
 - `as_of` — дата, на которую верны данные или с которой действует норма, а
   НЕ дата сбора. Ставка ЦБ: решение в пятницу, действует с понедельника.
 - `cadence` — как у старого факта (`slow` / `annual`); `fast` у макро нет.
-- Из xlsx (Росстат) `evidence` можно не давать: сверка ищет числа в ячейках.
+- xlsx (Росстат) `--show` показывает построчно: «Российская Федерация |
+  3981,584 | 3672,952 | …». Цитата — такая строка (или её кусок) с подписью
+  и нужным значением; без цитаты xlsx не подтверждается.
 - Быстрые величины (ключевая ставка, курсы, ОФЗ, доходности) — не твои: их
   каждый прогон берёт другой детерминированный модуль. Если пункт очереди —
   такая величина, пропусти его с пометкой в отчёте.
@@ -133,7 +147,8 @@ python3 tools/verify_sources.py --candidates $R/candidates.json --out-dir $R
 `QUOTE_NOT_FOUND` / `NOT_FOUND` / `NO_EVIDENCE` → поправь цитату или форму
 записи числа по выводу `--show` и повтори сверку; **не больше двух
 повторов**. `UNREACHABLE` не повторяй: пункт остаётся в `pending.json` для
-досверки на стороне сервера.
+досверки на стороне сервера (у него другой выход в сеть). `NEGATIVE` —
+убери кандидата: старый факт остаётся как есть.
 
 ## 5. Вливание
 
@@ -176,8 +191,9 @@ python3 tools/fuses.py --old $R/macro_head.json --new macro/macro.json --verifie
 
 ## 9. Коммит
 
-Коммитишь: `macro/`, `CHANGELOG.md`, `runs/$WEEK/` (кроме `pages/` — они в
-`.gitignore`).
+Коммитишь: `macro/`, `CHANGELOG.md`, `runs/$WEEK/` (кроме `pages/` и копий
+`macro_before.json` / `macro_head.json` — они в `.gitignore`: история файла и
+так в git).
 
 - `FUSES OK`: `git add … && git commit -m "macro $WEEK: <влито N, pending M>"`
   и `git push origin claude/macro` (пилот — `claude/macro-pilot`).

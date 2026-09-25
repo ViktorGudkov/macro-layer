@@ -177,23 +177,68 @@ def _():
     assert vs.verify_item({"value": "22%"}, fetcher(OKNET))["verdict"] == "NO_URL"
 
 
-def _xlsx(cells):
+def _xlsx(rows):
+    """rows: [[cell, …]]; строки — shared strings, числа — как в xlsx Росстата."""
     b = io.BytesIO()
+    strings = sorted({c for r in rows for c in r if not c.replace(".", "").isdigit()})
+    idx = {t: i for i, t in enumerate(strings)}
     with zipfile.ZipFile(b, "w") as z:
-        z.writestr("xl/sharedStrings.xml", "<sst><si><t>Средняя заработная плата</t></si></sst>")
-        z.writestr("xl/worksheets/sheet1.xml", "<worksheet><sheetData><row>" +
-                   "".join("<c><v>%s</v></c>" % c for c in cells) + "</row></sheetData></worksheet>")
+        z.writestr("xl/sharedStrings.xml", "<sst>" + "".join("<si><t>%s</t></si>" % t for t in strings) + "</sst>")
+        body = ""
+        for r in rows:
+            body += "<row>" + "".join(
+                ('<c t="s"><v>%d</v></c>' % idx[c]) if c in idx else "<c><v>%s</v></c>" % c for c in r) + "</row>"
+        z.writestr("xl/worksheets/sheet1.xml", "<worksheet><sheetData>%s</sheetData></worksheet>" % body)
     return b.getvalue()
 
 
-@case("xlsx-cells-with-rounding")
+XLSX = _xlsx([["Российская Федерация", "110216.3", "10.94"], ["Центральный федеральный округ", "2.2", "3"]])
+XURL = "https://rosstat.gov.ru/storage/mediabank/tab1-zpl_05-2026.xlsx"
+
+
+@case("xlsx-rows-text")
 def _():
-    u = "https://rosstat.gov.ru/storage/mediabank/tab1-zpl_05-2026.xlsx"
-    f = fetcher({u: {"direct": (200, _xlsx(["110216.3", "10.94"]))}})
-    r = vs.verify_item({"value": "110 216 руб./мес (май 2026), +10,9% г/г", "source_url": u}, f)
-    assert r["verdict"] == "VERIFIED_CELLS" and r["kind"] == "xlsx", r
-    r = vs.verify_item({"value": "101 784 руб./мес за 2025", "source_url": u}, f)
-    assert r["verdict"] == "NOT_FOUND", r
+    text, kind = vs.extract(XLSX)
+    assert kind == "xlsx" and "Российская Федерация | 110216,3 | 10,94" in text, text
+
+
+@case("xlsx-row-quote-verified-with-rounding")
+def _():
+    f = fetcher({XURL: {"direct": (200, XLSX)}})
+    r = vs.verify_item({"value": "110 216 руб./мес, +10,9% г/г", "source_url": XURL,
+                        "evidence": "Российская Федерация | 110216,3 | 10,94"}, f)
+    assert r["verdict"] == "VERIFIED" and r["kind"] == "xlsx", r
+
+
+@case("xlsx-without-quote-is-not-verified")
+def _():
+    # пилот 25.09: «2,2%» и «3» есть в любой большой таблице — без строки-цитаты не доказательство
+    f = fetcher({XURL: {"direct": (200, XLSX)}})
+    r = vs.verify_item({"value": "2,2% (скользящее за 3 мес.)", "source_url": XURL}, f)
+    assert r["verdict"] == "NO_EVIDENCE", r
+
+
+@case("negative-value-never-verified")
+def _():
+    for v in ("нет данных", "Нет данных (источник закрыт)", "данные не найдены"):
+        r = vs.verify_item({"value": v, "source_url": URL, "evidence": "Налоги 2026"}, fetcher(OKNET))
+        assert r["verdict"] == "NEGATIVE", (v, r)
+    r = vs.verify_item({"value": "нетарифные меры 3%", "source_url": URL, "evidence": "22 %"}, fetcher(OKNET))
+    assert r["verdict"] != "NEGATIVE", r
+
+
+@case("links-absolute-and-filtered")
+def _():
+    page = ('<html><body><a href="/ru/press-center/?id_4=40635-byudzhetnyi_paket" title="Бюджетный пакет">'
+            '<img></a><a href="https://x.ru/a">Другое</a>' + "<p>" + "x " * 1500 + "</p></body></html>").encode()
+    u = "https://minfin.gov.ru/ru/press-center/"
+    f = fetcher({u: {"direct": (200, page)}})
+    buf = io.StringIO()
+    with contextlib.redirect_stdout(buf):
+        vs.links(f, u, "бюджет")
+    out = buf.getvalue()
+    assert "LINK Бюджетный пакет -> https://minfin.gov.ru/ru/press-center/?id_4=40635-byudzhetnyi_paket" in out, out
+    assert "x.ru" not in out and "LINKS shown=1" in out, out
 
 
 STUB503 = ("<html><body>Доступ к сайту временно ограничен владельцем веб-ресурса. "
