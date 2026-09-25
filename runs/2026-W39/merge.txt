@@ -1,0 +1,2 @@
+MERGE macro.md: принято 14, отклонено 0, классы ['slow']
+MERGE_STATS profile=macro.md replaced_by_id=5 replaced_by_topic=0 refreshed=9 appended=0 older_rejected=0 unknown_ids=0 stale_left=25
