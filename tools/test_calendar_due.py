@@ -12,7 +12,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import calendar_due as cd  # noqa: E402
 
-SEED = HERE.parent / "macro" / "macro.json"
+SEED = HERE / "fixtures" / "seed_macro.json"   # замороженный посев, не живые данные
 PASSED, FAILED = [], []
 
 

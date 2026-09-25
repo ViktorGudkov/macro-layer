@@ -20,7 +20,10 @@ sys.path.insert(0, str(HERE))
 import fuses  # noqa: E402
 import industry_cache as ic  # noqa: E402
 
-SEED = ROOT / "macro" / "macro.json"
+# замороженный посев, а не живые данные: в рабочей ветке macro/ меняется каждую
+# неделю, и тесты на нём падали бы (25.09: разметка досье уронила бы прогон 02.10)
+SEED = HERE / "fixtures" / "seed_macro.json"
+SEED_DOSSIER = HERE / "fixtures" / "seed_dossier.md"
 PASSED, FAILED = [], []
 REAL_GATE = ic._macro_duplicate
 
@@ -199,7 +202,7 @@ def _():
 
 @case("fuses-dossier-cap-and-leak")
 def _():
-    assert fuses.check_dossier((ROOT / "macro" / "macro_dossier.md").read_bytes()) == []
+    assert fuses.check_dossier(SEED_DOSSIER.read_bytes()) == []
     assert fuses.check_dossier(b"x" * (20 * 1024 + 1))[0].startswith("dossier: 20481")
     assert fuses.check_dossier("chat telegram:123".encode())[0].startswith("dossier: ")
 
@@ -238,7 +241,7 @@ def _():
 @case("fuses-dossier-anchors-and-age")
 def _():
     macro = json.loads(SEED.read_text("utf-8"))
-    legacy = (ROOT / "macro" / "macro_dossier.md").read_bytes()
+    legacy = SEED_DOSSIER.read_bytes()
     assert fuses.check_dossier(legacy, macro, date(2026, 12, 1)) == []   # неразмеченное — не валит
     doc = ("# Досье\nПроверено: 2026-08-20\n\n## Рамка года\n<!-- rests_on: cbr_forecast_gdp -->\nТекст\n"
            "## Труд\nбез опор\n").encode()
