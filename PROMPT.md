@@ -31,6 +31,9 @@ export TZ=Europe/Moscow
 WEEK=$(date +%G-W%V); TODAY=$(date +%F); R=runs/$WEEK; mkdir -p $R
 git fetch origin
 git checkout claude/macro 2>/dev/null || git checkout -b claude/macro origin/main   # первый прогон
+# инструменты и промпт живут в main, данные — в рабочей ветке: без этой строки
+# ветка навсегда осталась бы с инструментами на момент своего создания
+git checkout origin/main -- tools PROMPT.md README.md .gitignore
 cp macro/macro.json $R/macro_before.json
 pip install -q pymupdf 2>/dev/null || true      # текст PDF (ЦБ, Минфин); без него — pdftotext
 for t in tools/test_*.py; do python3 $t | tail -1; done     # везде «0 failed», иначе стоп
@@ -191,7 +194,8 @@ python3 tools/fuses.py --old $R/macro_head.json --new macro/macro.json --verifie
 
 ## 9. Коммит
 
-Коммитишь: `macro/`, `CHANGELOG.md`, `runs/$WEEK/` (кроме `pages/` и копий
+Коммитишь: `macro/`, `CHANGELOG.md`, `runs/$WEEK/` и подтянутые из `main`
+`tools/`, `PROMPT.md`, `README.md`, `.gitignore` (п. 1 — их ты не правишь) (кроме `pages/` и копий
 `macro_before.json` / `macro_head.json` — они в `.gitignore`: история файла и
 так в git).
 
