@@ -193,6 +193,23 @@ def _():
     assert got == ["b", "a"], got
 
 
+@case("mer-forecast-and-whitening-kept")
+def _():
+    # сверка с подсказками Market_analysis W39 (27.09): ленты это видели, словарь отсекал
+    rec = lambda src, title, rubric="": {"source": src, "title": title, "rubric": rubric}
+    ok, segs, _why = DIC.classify(rec("cons_week",
+        '"Прогноз социально-экономического развития Российской Федерации на 2027 год и на плановый '
+        'период 2028 и 2029 годов" (разработан Минэкономразвития России)',
+        "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ"))
+    assert ok and "byudzhet" in segs, segs
+    ok, segs, _why = DIC.classify(rec("vedomosti", "Минэкономразвития спрогнозировало инфляцию на конец года в 6,8%"))
+    assert ok and segs == ["byudzhet", "dkp"], segs                        # не «только dkp»: прогноз МЭР — не ЦБ
+    ok, segs, _why = DIC.classify(rec("minfin", "Алексей Яковлев: Уже видим первые результаты Плана по «обелению» экономики"))
+    assert ok and segs == ["nalogi"], segs
+    assert not DIC.classify(rec("vedomosti", "Инфляция в России ускорилась до 0,06% за неделю"))[0]
+    assert not DIC.classify(rec("vedomosti", "Минэкономразвития провело форум"))[0]
+
+
 if __name__ == "__main__":
     print("%d passed, %d failed" % (len(PASSED), len(FAILED)))
     sys.exit(1 if FAILED else 0)
