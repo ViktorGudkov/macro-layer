@@ -1,0 +1,8 @@
+FEEDS_STATS since=2026-08-28 items=133 new=133 sources_ok=6/7 minfin_last_id=40662 FAILED=cons_week
+FEEDS_SOURCE cbr_events ok=True  fetched=100  kept=12   
+FEEDS_SOURCE cbr_press  ok=True  fetched=13   kept=9    
+FEEDS_SOURCE cons_bills ok=True  fetched=33   kept=8    
+FEEDS_SOURCE cons_week  ok=False fetched=0    kept=0    RuntimeError: review 2026-09-12 http 0
+FEEDS_SOURCE gov_docs   ok=True  fetched=20   kept=5    
+FEEDS_SOURCE minfin     ok=True  fetched=97   kept=30   
+FEEDS_SOURCE vedomosti  ok=True  fetched=200  kept=69   

@@ -1,0 +1,7 @@
+DOSSIER_DUE checked=2026-08-20 sections=6 due=6 problems=0
+  DUE Рамка года — monthly full re-read; facts re-verified or replaced after 2026-08-20: cbr_forecast_corp_credit, cbr_forecast_gdp, cbr_forecast_inflation, cbr_forecast_keyrate
+  DUE Деньги: цена отдельно, доступ отдельно — monthly full re-read; facts re-verified or replaced after 2026-08-20: anticiklicheskaya_nadbavka, cfa_raskrytie_2026, cfa_rynok, effekt_nadbavki, icr_kriterii, mtk_kreditovanie, nadbavka_krupnye_zakreditovannye, programma_1764 [not re-checkable in the cloud: macro_debt:g_spreads]
+  DUE Фискальный контур: расходы растут, нефтяная база сжимается — monthly full re-read; facts re-verified or replaced after 2026-08-20: budget_execution_7m2026, budget_plan_revision, fiscal_impulse_timing, fiscal_rule_oil_price, goszakupki_advances
+  DUE Труд: перелом темпа при неизменной структуре — monthly full re-read; facts re-verified or replaced after 2026-08-20: bezrabotica
+  DUE Внешний контур: ограничение — это платёж, а не пошлина — monthly full re-read; facts re-verified or replaced after 2026-08-20: frakht_konteiner, komplaens_platezhi, parallelnyi_import, parallelnyi_import_kriterii
+  DUE Что из этого спрашивать у финансового директора — monthly full re-read; facts re-verified or replaced after 2026-08-20: goszakupki_advances, icr_kriterii

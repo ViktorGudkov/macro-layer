@@ -60,10 +60,15 @@ industry_cache.py — кеш отраслевого слоя (v6.21, дизай�
     - файл v1 поднимается до v2 В ПАМЯТИ при чтении (факт получает дату
       своего класса); на диск пишут только merge и cache_migrate_v2.py.
 
+v6.62 «macro-pull»: макро-профиль `macro.md` — свой случай (гейт макро-дублей
+к нему не применяется, у выборки свои правила и строка «макро-слой: …»);
+необязательное поле `status` у факта (проект / принят / вступил / истёк);
+канал `routine` — факт перепроверен облачной рутиной репозитория данных.
+
 Использование:
     python3 industry_cache.py --status --profile apk.md --cache-dir <dir> [--json]
     python3 industry_cache.py --merge <facts.json> --profile apk.md --cache-dir <dir> \
-        [--channel market_agent|deep_research] [--dossier file.md]
+        [--channel market_agent|deep_research|routine] [--dossier file.md]
     python3 industry_cache.py --invalidate --profile apk.md --cache-dir <dir>
     python3 industry_cache.py --view --profile apk.md --cache-dir <dir> --out <view.json>
 
@@ -85,7 +90,11 @@ from pathlib import Path
 
 SCHEMA_VERSION = 2
 QUEUE_CAP = 15            # фактов в очереди блока PARTIAL (решение 25.09)
-CHANNELS = ("deep_research", "market_agent", "unknown")
+CHANNELS = ("deep_research", "market_agent", "routine", "unknown")   # routine — облачная рутина макро-слоя (v6.62)
+MACRO_PROFILE = "macro.md"
+# Статус нормы у факта (v6.62, необязательное поле): до v6.62 жил только словами
+# в claim, а merge собирал факт из фиксированного набора полей и поле выбрасывал.
+FACT_STATUSES = ("проект", "принят", "вступил", "истёк")
 _CLS_ORDER = {"fast": 0, "slow": 1, "annual": 2}
 TTL_DAYS = {"fast": 7, "slow": 30, "annual": 90}          # weekly не кешируется
 CADENCES = {"weekly", "fast", "slow", "annual"}
@@ -560,8 +569,14 @@ def status_block(st: dict) -> str:
 
 
 # ---------------------------------------------------------------- merge
-def _validate_fact(f: dict) -> str | None:
-    """None = валиден, иначе причина отказа."""
+def _validate_fact(f: dict, profile: str | None = None) -> str | None:
+    """None = валиден, иначе причина отказа.
+
+    v6.62: гейт макро-дублей не применяется к самому макро-профилю — сквозные
+    величины (общая ставка НДС, МРОТ) живут именно там. До v6.62 гейт бил и
+    по macro.md: на посеве не проходили повторное вливание vat_rate и
+    contribution_base_2026, репозиторий данных обходил это обёрткой.
+    """
     if not isinstance(f, dict):
         return "факт не объект"
     for k in FACT_REQUIRED:
@@ -581,8 +596,11 @@ def _validate_fact(f: dict) -> str | None:
     leak = _client_data_leak(f)
     if leak:
         return leak
-    dup = _macro_duplicate(f.get("claim"), f.get("value"),
-                           f'{f.get("claim") or ""} — {f.get("value") or ""}')
+    st = f.get("status")
+    if st is not None and st not in FACT_STATUSES:
+        return f"неизвестный status «{st}» (допустимо: {', '.join(FACT_STATUSES)})"
+    dup = None if profile == MACRO_PROFILE else _macro_duplicate(
+        f.get("claim"), f.get("value"), f'{f.get("claim") or ""} — {f.get("value") or ""}')
     if dup:
         return (f"макро-дубль «{dup}»: сквозная величина живёт в макро-слое "
                 f"(macro_debt.json + macro.json, сегмент dkp) и в отраслевой "
@@ -629,7 +647,7 @@ def merge(cache_dir: str | Path, profile: str, facts: list[dict],
     }
     accepted, rejected = [], []
     for f in facts:
-        why = _validate_fact(f)
+        why = _validate_fact(f, profile)
         if why:
             rejected.append({"claim": str(f.get("claim", "?"))[:80], "why": why})
             continue
@@ -654,6 +672,8 @@ def merge(cache_dir: str | Path, profile: str, facts: list[dict],
             "as_of": f.get("as_of") or f.get("pub_date"),
             "cadence": f["cadence"], "topic": f.get("topic", ""),
         }
+        if f.get("status"):
+            clean["status"] = f["status"]
         clean["id"] = fact_id(profile, clean["topic"], clean["claim"])
         clean["harvested"] = today
         clean["channel"] = channel if channel in CHANNELS else "unknown"
@@ -712,8 +732,8 @@ def merge(cache_dir: str | Path, profile: str, facts: list[dict],
             continue
         # рецепт запроса на сквозную величину — тот же дубль, только weekly:
         # боевой remont.json держал «Базовая ставка НДС 22% с 01.01.2026»
-        dup = _macro_duplicate(rc.get("name"), rc.get("last_value"),
-                               f'{rc.get("name") or ""} — {rc.get("last_value") or ""}')
+        dup = None if profile == MACRO_PROFILE else _macro_duplicate(
+            rc.get("name"), rc.get("last_value"), f'{rc.get("name") or ""} — {rc.get("last_value") or ""}')
         if dup:
             rejected.append({"claim": f"reg_calendar:{rc.get('name', '?')}",
                              "why": f"макро-дубль «{dup}»: сквозную величину "
@@ -791,6 +811,21 @@ VIEW_RULES = [
     "уже заменил при вливании. Выбирать «последний» по теме не нужно.",
     "Строку «отраслевой слой: …» для брифа брать дословно из layer_line.",
 ]
+# Выборка макро-слоя (v6.62): тот же механизм, другие правила — макро не
+# источник чисел для §3, а фон суждений для §4/§7/§7.4/§8 (SKILL, ШАГ 1.7-макро).
+MACRO_VIEW_RULES = [
+    "fresh — действующие макро-условия: фон для §4 (стоимость долга), §7/§7.4 "
+    "(окно рефинансирования, продукты), §8 (вопросы к CFO); число — с источником "
+    "и «по состоянию на <as_of>»; собственных абзацев «про экономику» не порождать.",
+    "stale — не перепроверены в срок (поле not_checked_since): только «по "
+    "состоянию на <as_of>», не как текущее значение.",
+    "Ключевая ставка, курсы, кривая ОФЗ, доходности — ТОЛЬКО из macro_debt.json "
+    "на дату брифа, не отсюда.",
+    "status: «проект» — не утверждать как действующую норму («рассматривается…»); "
+    "«истёк» — норма не действует; «принят» с датой вступления в будущем — «вступит в "
+    "силу с …». Без status — статус нормы читать из текста claim.",
+    "Строку «макро-слой: …» для брифа собирать из layer_line и даты долгового среза.",
+]
 
 
 def view(cache_dir: str | Path, profile: str, now: date | None = None) -> dict:
@@ -807,7 +842,9 @@ def view(cache_dir: str | Path, profile: str, now: date | None = None) -> dict:
     if st.get("not_cacheable"):
         line = f"отраслевой слой: не использован (общая линза {profile}, слой не кешируется)"
     elif art is None or not st["as_of"]:
-        line = "отраслевой слой: не использован"
+        line = ("макро-слой" if profile == MACRO_PROFILE else "отраслевой слой") + ": не использован"
+    elif profile == MACRO_PROFILE:
+        line = f"макро-слой: macro@{st['as_of']}"
     else:
         line = f"отраслевой слой: {profile}@{st['as_of']}"
     fresh, stale = [], []
@@ -817,6 +854,8 @@ def view(cache_dir: str | Path, profile: str, now: date | None = None) -> dict:
                 "value": f.get("value", ""), "source": f.get("source", ""),
                 "source_url": f.get("source_url", ""), "as_of": f.get("as_of"),
                 "cadence": f.get("cadence"), "harvested": f.get("harvested")}
+        if f.get("status"):
+            item["status"] = f["status"]
         if f.get("cadence") in used and is_stale(f, now):
             item["not_checked_since"] = f.get("harvested")
             stale.append(item)
@@ -828,7 +867,8 @@ def view(cache_dir: str | Path, profile: str, now: date | None = None) -> dict:
     return {"schema": "icache-view-1", "profile": profile, "generated": now.isoformat(),
             "verdict": st["verdict"], "as_of": st["as_of"], "layer_line": line,
             "counts": {"fresh": len(fresh), "stale": len(stale)},
-            "rules": VIEW_RULES, "fresh": fresh, "stale": stale}
+            "rules": MACRO_VIEW_RULES if profile == MACRO_PROFILE else VIEW_RULES,
+            "fresh": fresh, "stale": stale}
 
 
 # ---------------------------------------------------------------- cli
@@ -846,7 +886,7 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", help="--view: куда записать выборку (briefs/<chat>/icache_<ИНН>.json)")
     ap.add_argument("--json", action="store_true", help="--status: машинный вывод")
     ap.add_argument("--channel", default="market_agent",
-                    choices=["market_agent", "deep_research"])
+                    choices=["market_agent", "deep_research", "routine"])
     ap.add_argument("--dossier", help="--merge: файл нарративного досье (кап 20 КБ)")
     args = ap.parse_args(argv)
     now = _parse_day(args.now) if args.now else None
