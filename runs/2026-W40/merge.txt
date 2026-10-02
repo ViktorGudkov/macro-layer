@@ -1,0 +1,5 @@
+MERGE macro.md: принято 15, отклонено 1, классы ['annual', 'slow']
+MERGE_STATS profile=macro.md replaced_by_id=5 replaced_by_topic=0 refreshed=8 appended=2 older_rejected=1 unknown_ids=0 stale_left=16
+  ✗ Механизм параллельного импорта продлён на весь 2026 год: Федеральным законом от  — старее кешевого: as_of 2025-12-15 < 2026-08-20 — кеш не тронут, находка остаётся в market_<ИНН>.json
+MERGE macro.md: принято 16, отклонено 0, классы ['annual', 'slow']
+MERGE_STATS profile=macro.md replaced_by_id=1 replaced_by_topic=0 refreshed=15 appended=0 older_rejected=0 unknown_ids=0 stale_left=15

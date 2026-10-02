@@ -11,6 +11,7 @@ import re
 import shutil
 import sys
 import tempfile
+from datetime import date
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
@@ -19,7 +20,10 @@ sys.path.insert(0, str(HERE))
 import fuses  # noqa: E402
 import industry_cache as ic  # noqa: E402
 
-SEED = ROOT / "macro" / "macro.json"
+# замороженный посев, а не живые данные: в рабочей ветке macro/ меняется каждую
+# неделю, и тесты на нём падали бы (25.09: разметка досье уронила бы прогон 02.10)
+SEED = HERE / "fixtures" / "seed_macro.json"
+SEED_DOSSIER = HERE / "fixtures" / "seed_dossier.md"
 PASSED, FAILED = [], []
 REAL_GATE = ic._macro_duplicate
 
@@ -68,37 +72,37 @@ def stats(out):
     return dict(kv.split("=") for kv in m.group(1).split() if "=" in kv) if m else {}
 
 
-@case("sentinel-combat-gate-still-rejects-macro-facts")
+@case("v662-module-admits-macro-facts-for-macro-profile")
 def _():
-    # Если упало — боевой модуль сам перестал бить по macro.md: обёртку можно снять.
+    # v6.62: боевой модуль сам не применяет гейт макро-дублей к macro.md,
+    # а для отраслевых профилей гейт на месте
     for topic in ("vat_rate", "contribution_base_2026"):
         seg, f = seed_fact(topic)
+        assert ic._validate_fact(dict(f, segment=seg), "macro.md") is None, topic
         why = ic._validate_fact(dict(f, segment=seg))
         assert why and why.startswith("макро-дубль"), (topic, why)
 
 
-@case("wrapper-admits-whole-seed")
+@case("whole-seed-valid-for-macro-profile")
 def _():
-    import macro_merge
-    macro_merge.disable_macro_gate()
     art = json.loads(SEED.read_text("utf-8"))
-    bad = [(f["id"], ic._validate_fact(dict(f, segment=s))) for s, _, f in ic.iter_facts(art)
-           if ic._validate_fact(dict(f, segment=s))]
+    bad = [(f["id"], ic._validate_fact(dict(f, segment=s), "macro.md")) for s, _, f in ic.iter_facts(art)
+           if ic._validate_fact(dict(f, segment=s), "macro.md")]
     assert not bad, bad
 
 
-@case("wrapper-fails-loudly-if-gate-renamed")
+@case("wrapper-refuses-module-older-than-v662")
 def _():
     import macro_merge
-    saved = ic._macro_duplicate
-    del ic._macro_duplicate
+    saved = ic.MACRO_PROFILE
+    del ic.MACRO_PROFILE
     try:
-        macro_merge.disable_macro_gate()
+        macro_merge.require_v662()
         raise AssertionError("no SystemExit")
     except SystemExit as e:
-        assert "MACRO_MERGE FAIL" in str(e)
+        assert "older than v6.62" in str(e)
     finally:
-        ic._macro_duplicate = saved
+        ic.MACRO_PROFILE = saved
 
 
 @case("reverify-vat-same-claim-is-refreshed")
@@ -112,6 +116,7 @@ def _():
     new = json.loads((td / "macro.json").read_text("utf-8"))
     g = [x for _, _, x in ic.iter_facts(new) if x["id"] == f["id"]][0]
     assert g["harvested"] == "2026-09-26" and len(list(ic.iter_facts(new))) == 92
+    assert g["channel"] == "routine", g["channel"]          # v6.62: перепроверено рутиной
 
 
 @case("mrot-replaced-by-id-and-fuses-ok")
@@ -198,9 +203,53 @@ def _():
 
 @case("fuses-dossier-cap-and-leak")
 def _():
-    assert fuses.check_dossier((ROOT / "macro" / "macro_dossier.md").read_bytes()) == []
+    assert fuses.check_dossier(SEED_DOSSIER.read_bytes()) == []
     assert fuses.check_dossier(b"x" * (20 * 1024 + 1))[0].startswith("dossier: 20481")
     assert fuses.check_dossier("chat telegram:123".encode())[0].startswith("dossier: ")
+
+
+def _with_new_topics(n):
+    art = json.loads(SEED.read_text("utf-8"))
+    for i in range(n):
+        art["segments"]["nalogi"].append({"id": "new%05d" % i, "topic": "new_topic_%d" % i, "claim": "c",
+                                          "value": "v", "source": "s", "as_of": "2026-09-25",
+                                          "cadence": "slow", "harvested": "2026-09-25", "channel": "deep_research"})
+    return json.dumps(art, ensure_ascii=False, indent=1).encode()
+
+
+@case("fuses-appended-signal")
+def _():
+    assert not any(x.startswith("appended") for x in fuses.check(SEED.read_bytes(), _with_new_topics(10), None))
+    r = fuses.check(SEED.read_bytes(), _with_new_topics(11), None)
+    assert any(x.startswith("appended: 11 new facts") for x in r), r
+
+
+@case("fuses-replacement-is-not-appended")
+def _():
+    art = json.loads(SEED.read_text("utf-8"))
+    for f in art["segments"]["dkp"]:           # 6 замен: новые id, те же темы
+        f["id"] = "r" + f["id"][1:]
+    r = fuses.check(SEED.read_bytes(), json.dumps(art, ensure_ascii=False, indent=1).encode(), None)
+    assert not any(x.startswith("appended") for x in r) and not any(x.startswith("deleted") for x in r), r
+
+
+@case("fuses-budget")
+def _():
+    r = fuses.check(SEED.read_bytes(), _with_new_topics(59), None)       # 92 + 59 = 151
+    assert any(x.startswith("budget: 151 facts") for x in r), r
+
+
+@case("fuses-dossier-anchors-and-age")
+def _():
+    macro = json.loads(SEED.read_text("utf-8"))
+    legacy = SEED_DOSSIER.read_bytes()
+    assert fuses.check_dossier(legacy, macro, date(2026, 12, 1)) == []   # неразмеченное — не валит
+    doc = ("# Досье\nПроверено: 2026-08-20\n\n## Рамка года\n<!-- rests_on: cbr_forecast_gdp -->\nТекст\n"
+           "## Труд\nбез опор\n").encode()
+    r = fuses.check_dossier(doc, macro, date(2026, 10, 2))
+    assert any("without rests_on: Труд" in x for x in r) and any("older than 35 days" in x for x in r), r
+    ok = doc.replace("## Труд\nбез опор".encode(), "## Труд\n<!-- rests_on: zarplaty -->".encode())
+    assert fuses.check_dossier(ok, macro, date(2026, 9, 20)) == []
 
 
 @case("copy-sha-matches-readme")

@@ -11,7 +11,12 @@ merge. Любое срабатывание → рабочую ветку не т
     schema    не v2, не macro.md, у факта нет обязательного поля, status() падает;
     size      размер файла изменился больше чем на 30%;
     shrink    фактов стало меньше, чем 80% от прежнего (как у забора на сервере);
-    dossier   (--dossier) больше 20 КБ или клиентские данные в тексте.
+    appended  больше 10 добавлений (новые темы + новые рецепты) за прогон;
+    budget    больше 150 фактов или 200 КБ — бюджет объёма слоя (finalize читает
+              файл целиком), PR с предложением, что вывести;
+    dossier   (--dossier) больше 20 КБ, клиентские данные; у размеченного досье —
+              раздел без опор, опора на несуществующую тему, «Проверено» старше
+              35 дней (--today).
 
 Код возврата: 0 — FUSES OK, 3 — FUSES TRIPPED, 2 — файл не читается.
 
@@ -25,14 +30,20 @@ import argparse
 import json
 import sys
 import tempfile
+from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
+import dossier_due as dd  # noqa: E402
 import industry_cache as ic  # noqa: E402
 
 MAX_CHANGED = 25
 MAX_SIZE_DELTA = 0.30
 MIN_FACTS_RATIO = 0.80
+MAX_APPENDED = 10          # новых фактов + рецептов за прогон — «громкая» неделя, PR
+BUDGET_FACTS = 150         # бюджет объёма слоя: finalize читает macro.json целиком
+BUDGET_BYTES = 200 * 1024  # (25.09: 92 факта / 150 КБ ≈ 40 тыс. токенов окна finalize)
+DOSSIER_MAX_AGE = 35       # дней с «Проверено» — месячный проход пропущен
 FACT_KEYS = ("id", "harvested", "channel", "claim", "value", "source", "as_of", "cadence", "topic")
 
 
@@ -76,17 +87,39 @@ def check(old_raw: bytes, new_raw: bytes, verified: dict | None) -> list[str]:
         reasons.append("shrink: %d -> %d facts" % (len(fo), len(fn)))
     if len(old_raw) and abs(len(new_raw) - len(old_raw)) > MAX_SIZE_DELTA * len(old_raw):
         reasons.append("size: %d -> %d bytes" % (len(old_raw), len(new_raw)))
+    # добавления: новые факты, которые ничего не заменили (новая тема), и новые рецепты
+    old_topics = {f.get("topic") for f in fo.values()}
+    replaced_topics = {fo[i].get("topic") for i in removed}
+    appended = [i for i in added if fn[i].get("topic") not in old_topics
+                and fn[i].get("topic") not in replaced_topics]
+    old_rc = {r.get("name") for r in old.get("reg_calendar") or []}
+    new_rc = [r.get("name") for r in new.get("reg_calendar") or [] if r.get("name") not in old_rc]
+    if len(appended) + len(new_rc) > MAX_APPENDED:
+        reasons.append("appended: %d new facts + %d new recipes (> %d in one run)" % (
+            len(appended), len(new_rc), MAX_APPENDED))
+    if len(fn) > BUDGET_FACTS or len(new_raw) > BUDGET_BYTES:
+        reasons.append("budget: %d facts / %d bytes (cap %d / %d) — propose what to retire" % (
+            len(fn), len(new_raw), BUDGET_FACTS, BUDGET_BYTES))
     return reasons
 
 
-def check_dossier(raw: bytes) -> list[str]:
-    """Досье рутина правит прямо в файле — те же условия, что у merge_dossier."""
+def check_dossier(raw: bytes, macro: dict | None = None, today: date | None = None) -> list[str]:
+    """Досье рутина правит прямо в файле — те же условия, что у merge_dossier,
+    плюс разметка опор (monthly-pass §3.5) — только для размеченного досье:
+    старое досье без разметки не валит прогон, пока его не разметили."""
     out = []
     if len(raw) > ic.DOSSIER_CAP_BYTES:
         out.append("dossier: %d bytes (> %d)" % (len(raw), ic.DOSSIER_CAP_BYTES))
-    leak = ic._client_data_leak(raw.decode("utf-8", "replace"))
+    text = raw.decode("utf-8", "replace")
+    leak = ic._client_data_leak(text)
     if leak:
         out.append("dossier: " + leak)
+    doc = dd.parse(text)
+    if doc["anchored"] and macro is not None:
+        out += ["dossier: " + p for p in dd.problems(doc, dd.fact_dates(macro))]
+        if doc["checked"] and today and (today - date.fromisoformat(doc["checked"])).days > DOSSIER_MAX_AGE:
+            out.append("dossier: checked %s, older than %d days — monthly re-read missed" % (
+                doc["checked"], DOSSIER_MAX_AGE))
     return out
 
 
@@ -95,7 +128,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--old", required=True)
     ap.add_argument("--new", required=True)
     ap.add_argument("--verified")
-    ap.add_argument("--dossier", help="macro/macro_dossier.md: cap 20 KB, no client data")
+    ap.add_argument("--dossier", help="macro/macro_dossier.md: cap 20 KB, no client data, anchors")
+    ap.add_argument("--today", help="YYYY-MM-DD (Moscow): dossier age check")
     a = ap.parse_args(argv)
     try:
         old_raw, new_raw = Path(a.old).read_bytes(), Path(a.new).read_bytes()
@@ -106,7 +140,12 @@ def main(argv: list[str] | None = None) -> int:
     reasons = check(old_raw, new_raw, verified)
     if a.dossier:
         try:
-            reasons += check_dossier(Path(a.dossier).read_bytes())
+            try:
+                new_macro = json.loads(new_raw)
+            except (ValueError, UnicodeDecodeError):
+                new_macro = None
+            reasons += check_dossier(Path(a.dossier).read_bytes(), new_macro,
+                                     date.fromisoformat(a.today) if a.today else None)
         except OSError:
             reasons.append("dossier: not readable")
     try:
