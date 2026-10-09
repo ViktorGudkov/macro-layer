@@ -1,0 +1,16 @@
+VERIFY_STATS items=14 ok=7 NOT_FOUND=4 QUOTE_NOT_FOUND=3 VERIFIED=7 proxy=no
+VERIFY_HOST cbr.ru                       items=3 direct=3 proxy=0 unreachable=0
+VERIFY_HOST consultant.ru                items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST corpmsp.ru                   items=3 direct=3 proxy=0 unreachable=0
+VERIFY_HOST kommersant.ru                items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST ppt.ru                       items=2 direct=2 proxy=0 unreachable=0
+VERIFY_HOST retail.ru                    items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST rosstat.gov.ru               items=2 direct=2 proxy=0 unreachable=0
+VERIFY_HOST xn--90ab5f.xn--p1ai          items=1 direct=1 proxy=0 unreachable=0
+  x podderzhka veb_fabrika_no_data          QUOTE_NOT_FOUND quote(s) 4 not on page
+  x podderzhka psk_msp_oborotka             NOT_FOUND not in quote: 0.5, 1
+  x vneshtorg  valyutnyi_kontrol            QUOTE_NOT_FOUND quote(s) 1 not on page
+  x reg_calend Перечень товаров для паралле QUOTE_NOT_FOUND quote(s) 1,2,3,4 not on page
+  x reg_calend Недельная инфляция Росстата  NOT_FOUND not in quote: 2026-10-07, 2026-10-09, 2026-10-14, 29.09, 0.96, 0.90, 5.94, 0.50, 4.81, 1, 
+  x reg_calend Безвизовый режим труда гражд NOT_FOUND not in quote: 2025-07-25, 520
+  x reg_calend Предельная величина базы по  NOT_FOUND not in quote: 2979000

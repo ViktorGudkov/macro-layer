@@ -1,0 +1,898 @@
+{
+ "today": "2026-10-09",
+ "since": "2026-10-02",
+ "state": {
+  "minfin_last_id": 40679
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": true,
+   "fetched": 100,
+   "kept": 2
+  },
+  "cbr_press": {
+   "ok": true,
+   "fetched": 16,
+   "kept": 4
+  },
+  "gov_docs": {
+   "ok": true,
+   "fetched": 20,
+   "kept": 2
+  },
+  "vedomosti": {
+   "ok": true,
+   "fetched": 200,
+   "kept": 30
+  },
+  "cons_bills": {
+   "ok": true,
+   "fetched": 30,
+   "kept": 10
+  },
+  "minfin": {
+   "ok": true,
+   "fetched": 17,
+   "kept": 7
+  },
+  "cons_week": {
+   "ok": true,
+   "fetched": 166,
+   "kept": 15
+  }
+ },
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "UnHerd: кризис с госдолгом Франции может распространиться на всю Европу",
+   "url": "https://www.vedomosti.ru/politics/news/2026/10/09/1235921-krizis-s-gosdolgom-frantsii",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "Банки ЕС столкнутся с дополнительными проверками суверенных облигаций",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/09/1235746-banki-stolknutsya",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "ФНС обозначила признаки созданных для налоговой оптимизации ЗПИФов",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/09/1235602-fns-oboznachila-priznaki-sozdannih-dlya-nalogovoi-optimizatsii-zpifov",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-09",
+   "title": "Предварительная оценка исполнения федерального бюджета за январь-сентябрь 2026 года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40677",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-09",
+   "title": "Ирина Окладникова: Бюджет на 2027–2029 годы обеспечит выполнение социальных обязательств и реализацию нацпроектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40676",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-09",
+   "title": "Индикаторы денежно-кредитных условий в августе – сентябре менялись разнонаправленно, оставаясь умеренно жесткими",
+   "url": "https://www.cbr.ru/press/event/?id=32903",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-08",
+   "title": "Минпромторг предложил изменить условия налоговых льгот для радиоэлектроники",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/08/1235291-minpromtorg-predlozhil",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-08",
+   "title": "Исполнение расходов федерального бюджета на реализацию национальных проектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40672",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-08",
+   "title": "Установлены факты манипулирования рынком ценных бумаг группой аффилированных организаций и их владельцами (08.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639270476049988487PNP.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-08",
+   "title": "В сентябре розничные инвесторы поддержали рынок облигаций",
+   "url": "https://www.cbr.ru/press/event/?id=32899",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "Фонд национального благосостояния в сентябре сократился на 210 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1235116-fond-sokratilsya",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "FT: ЕС ищет способ увеличить налоги для американских техногигантов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1234981-ft-es-ischet-sposob",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "Белгородской области списали 2,8 млрд рублей задолженности по бюджетным кредитам",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1234971-spisali-28-mlrd-rublei",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "МВФ: мировой госдолг превысит 100% ВВП к 2030 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1234927-mirovoi-gosdolg",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-07",
+   "title": "Информационное сообщение о результатах размещения средств Фонда национального благосостояния",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40668",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-07",
+   "title": "Правительство списало часть задолженности по бюджетным кредитам Белгородской области",
+   "url": "http://government.ru/docs/60112/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-07",
+   "title": "Состоялось заседание Национального финансового совета (07.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639269710780956055TODAY.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-07",
+   "title": "Банк России утвердил перечень системно значимых кредитных организаций (07.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639269694907022516BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Россия почти втрое нарастила экспорт золота в Гонконг",
+   "url": "https://www.vedomosti.ru/finance/news/2026/10/06/1234750-eksport-zolota-v-gonkong",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Шохин предложил альтернативу налогу на сверхприбыль",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/06/1234830-shohin-predlozhil-alternativu",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Доходности долгосрочных гособлигаций США обновили максимумы за 24 года",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/06/1234573-gosobligatsii-ssha",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "О чем просили Минфин регионы в ходе публичных слушаний проекта бюджета",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/06/1234507-o-chem-prosili-minfin-regioni",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Подсчеты «Ведомостей»: Европа удвоила военные расходы за пять лет",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/06/1234498-evropa-udvoila-voennie-rashodi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Матвиенко назвала бюджет на 2027–2029 годы «финансовым искусством»",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234390-byudzhet-iskusstvom",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов рассказал о найденном компромиссе по налогу на сверхдоходы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234338-o-naidennom-kompromisse",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов: МРОТ в России достигнет 35 000 рублей к 2030 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234325-mrot-dostignet",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "ЦБ: налоговые поступления снизят влияние роста расходов бюджета на ДКП",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234305-tsb-nalogovie-postupleniya",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов: план по обелению экономики уже принес 34 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234295-siluanov-plan-po",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов: доля нефтегазовых доходов бюджета РФ в 2027–2029 годах не превысит 17%",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234288-dolya-neftegazovih-dohodov",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Матвиенко: отмена льгот по НДС на устриц и омаров даст бюджету 6 млрд",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234286-matvienko-otmena-lgoti",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Доходы, нефть и «обеление» экономики: главное из выступления Силуанова в Совфеде",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/05/1234328-dohodi-neft-obelenie",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Генпрокурора просят поучаствовать в делах о налогах для экспортеров АПК",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/05/1234117-genprokurora-prosyat-pouchastvovat-v-delah-o-nalogah",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Минфин оценил эффективность отраслевых налоговых льгот",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/05/1234114-minfin-otsenil-effektivnost-lgot",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-05",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40666",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-05",
+   "title": "Министр финансов РФ Антон Силуанов представил на парламентских слушаниях в Совете Федерации проект федерального бюджета на 2027-2029 гг.",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40665",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-05",
+   "title": "О нефтегазовых доходах и проведении операций по покупке/продаже иностранной валюты и золота на внутреннем валютном рынке",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40664",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-05",
+   "title": "Совет директоров Банка России принял решение о включении ценных бумаг в Ломбардный список (05.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639267886931956080DSD.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-03",
+   "title": "Правительство утвердило постановление о маркетплейсах, на которых могут проводиться госзакупки для образовательных организаций",
+   "url": "http://government.ru/docs/60077/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Основные направления бюджетной, налоговой и таможенно-тарифной политики на 2027 год и на плановый период 2028 и 2029 годов\" (разработаны Минфином России)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545750/",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet",
+    "nalogi",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "<Информация> ФНС России \"Установлен порядок подтверждения пониженной налоговой ставки НДС в отношении товаров для детей\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545726/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Информация профессиональных участников рынка ценных бумаг, имеющих лицензии на осуществление депозитарной деятельности, а также деятельности по ведению реестра владельцев ценных бумаг, порядок и сроки ее составления и представления\" (утв. Банком России 25.09.2026)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545640/",
+   "rubric": "ЦЕННЫЕ БУМАГИ. РЫНОК ЦЕННЫХ БУМАГ",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "<Информация> ФНС России\"При применении льготы по налогу на прибыль организаций следует правильно отражать код признака налогоплательщика\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545564/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования, оценка соблюдения которых осуществляется в рамках федерального государственного контроля (надзора) в области производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции, предметом",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545411/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования, оценка соблюдения которых осуществляется в рамках федерального государственного контроля (надзора) в области производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции, предметом",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545410/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Порядок по подготовке информации по расчету норматива достаточности капитала\" (утв. Банком России 25.09.2026)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545400/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Стандарт Банка России \"Обмен электронными сообщениями в области наличного денежного обращения. Заявка на сдачу (получение) наличных денег в кредитной организации, филиале, внутреннем структурном подразделении кредитной организации, филиала\" СТО БР НДО-1.0-2026\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545356/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 620-9 \"О бюджете Фонда пенсионного и социального страхования Российской Федерации на 2027 год и на плановый период 2028 и 2029 годов\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-620.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 619-9 \"Об установлении особенностей исполнения бюджетов бюджетной системы Российской Федерации в 2027 году, о внесении изменений в отдельные законодательные акты Российской Федерации, приостановлении действия отдельных положений законодательных актов Российской Федерации",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-619.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона РФ N 618-9 \"О налоге на сверхдоходы\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-618.pdf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 617-9 \"О внесении изменений в части первую и вторую Налогового кодекса Российской Федерации и отдельные законодательные акты Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-617.pdf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 616-9 \"О внесении изменений в Бюджетный кодекс Российской Федерации и отдельные законодательные акты Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-616.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 615-9 \"О федеральном бюджете на 2027 год и на плановый период 2028 и 2029 годов\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-615.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": true
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 680-9 \"О внесении изменений в Уголовный кодекс Российской Федерации и Уголовно-процессуальный кодекс Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_011026_680.pdf",
+   "rubric": "УГОЛОВНОЕ ПРАВО. ИСПОЛНЕНИЕ НАКАЗАНИЙ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Расходы на здравоохранение в России могут увеличиться за счет бюджета ФОМС",
+   "url": "https://www.vedomosti.ru/society/articles/2026/10/02/1233633-rashodi-na-zdravoohranenie-mogut-uvelichitsya",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Правительство предложило уменьшить расходы нацпроекта «Молодежь и дети»",
+   "url": "https://www.vedomosti.ru/society/articles/2026/10/02/1233632-rashodi-natsproekta-molodezh-i-deti",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Бюджет получит до 15,5 млрд рублей за обращения бизнеса к СМЭВ за три года",
+   "url": "https://www.vedomosti.ru/finance/articles/2026/10/02/1233626-byudzhet-poluchit-do-155-mlrd-rublei-za-obrascheniya-biznesa",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Новак: рынок дизельного топлива стабилен, но на рынке бензина есть дефицит",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/02/1233813-est-defitsit",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Главы правительств стран ЕАЭС обсудили значение промышленной кооперации",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233644-eaes-znachenie-promishlennoi-kooperatsii",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Из чего будут складываться доходы бюджета в будущем году",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233628-iz-chego-budut-skladivatsya-dohodi-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Таможенные сборы за покупки зарубежных товаров могут достичь 25 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233620-tamozhennie-sbori",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона\"О внесении изменений в часть вторую Налогового кодекса Российской Федерации\"(подготовлен Минэкономразвития России, ID проекта 02/04/09-26/00171432)(не внесен в ГД ФС РФ, текст по состоянию на 29.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837786.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 615-9\"О федеральном бюджете на 2027 год и на плановый период 2028 и 2029 годов\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837783.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 618-9\"О налоге на сверхдоходы\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837782.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 619-9\"Об установлении особенностей исполнения бюджетов бюджетной системы Российской Федерации в 2027 году, о внесении изменений в отдельные законодательные акты Российской Федерации, приостановлении действия отдельных положений законодательных актов Российской Федерации ",
+   "url": "https://www.consultant.ru/law/review/209837781.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 621-9\"О бюджете Федерального фонда обязательного медицинского страхования на 2027 год и на плановый период 2028 и 2029 годов\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837780.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 620-9\"О бюджете Фонда пенсионного и социального страхования Российской Федерации на 2027 год и на плановый период 2028 и 2029 годов\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 01.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209837779.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 1346902-8\"О внесении изменений в статью 8 Федерального закона \"О государственном оборонном заказе\" и статью 36 Федерального закона \"О таможенном регулировании в Российской Федерации и о внесении изменений в отдельные законодательные акты Российской Федерации\"(ред., внесе",
+   "url": "https://www.consultant.ru/law/review/209837774.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 1348117-8\"О внесении изменений в статью 149 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 25.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837772.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 1348957-8\"О внесении изменений в часть вторую Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 28.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837769.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 617-9\"О внесении изменений в части первую и вторую Налогового кодекса Российской Федерации и отдельные законодательные акты Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837765.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}

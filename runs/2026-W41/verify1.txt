@@ -1,0 +1,19 @@
+VERIFY_STATS items=13 ok=3 NOT_FOUND=1 QUOTE_NOT_FOUND=6 UNREACHABLE=3 VERIFIED=3 proxy=no
+VERIFY_HOST cbr.ru                       items=3 direct=3 proxy=0 unreachable=0
+VERIFY_HOST consultant.ru                items=1 direct=0 proxy=0 unreachable=1
+VERIFY_HOST corpmsp.ru                   items=3 direct=3 proxy=0 unreachable=0
+VERIFY_HOST kommersant.ru                items=1 direct=0 proxy=0 unreachable=1
+VERIFY_HOST ppt.ru                       items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST retail.ru                    items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST rosstat.gov.ru               items=2 direct=2 proxy=0 unreachable=0
+VERIFY_HOST xn--90ab5f.xn--p1ai          items=1 direct=0 proxy=0 unreachable=1
+  x podderzhka veb_fabrika_no_data          UNREACHABLE direct: curl rc=35
+  x podderzhka psk_msp_oborotka             QUOTE_NOT_FOUND quote(s) 2 not on page
+  x podderzhka zontichnye_poruchitelstva    QUOTE_NOT_FOUND quote(s) 3 not on page
+  x vneshtorg  tarif_rzd_oktyabr            QUOTE_NOT_FOUND quote(s) 1,4 not on page
+  x vneshtorg  valyutnyi_kontrol            QUOTE_NOT_FOUND quote(s) 2 not on page
+  x finansirov valyutnoe_korp_kreditovanie  QUOTE_NOT_FOUND quote(s) 1 not on page
+  x reg_calend Статус приёма заявок по прог NOT_FOUND not in quote: 2.75
+  x reg_calend Перечень товаров для паралле UNREACHABLE direct: curl rc=35
+  x reg_calend Недельная инфляция Росстата  QUOTE_NOT_FOUND quote(s) 1 not on page
+  x reg_calend Безвизовый режим труда гражд UNREACHABLE direct: curl rc=35

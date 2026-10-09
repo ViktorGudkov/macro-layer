@@ -1,0 +1,8 @@
+FEEDS_STATS since=2026-10-02 items=70 new=69 sources_ok=7/7 minfin_last_id=40679
+FEEDS_SOURCE cbr_events ok=True  fetched=100  kept=2    
+FEEDS_SOURCE cbr_press  ok=True  fetched=16   kept=4    
+FEEDS_SOURCE cons_bills ok=True  fetched=30   kept=10   
+FEEDS_SOURCE cons_week  ok=True  fetched=166  kept=15   
+FEEDS_SOURCE gov_docs   ok=True  fetched=20   kept=2    
+FEEDS_SOURCE minfin     ok=True  fetched=17   kept=7    
+FEEDS_SOURCE vedomosti  ok=True  fetched=200  kept=30   

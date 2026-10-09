@@ -1,0 +1,4 @@
+DOSSIER_DUE checked=2026-10-02 sections=6 due=3 problems=0
+  DUE Деньги: цена отдельно, доступ отдельно — facts re-verified or replaced after 2026-10-02: psk_msp_oborotka, zontichnye_poruchitelstva [not re-checkable in the cloud: macro_debt:g_spreads]
+  DUE Труд: перелом темпа при неизменной структуре — facts re-verified or replaced after 2026-10-02: zarplaty
+  DUE Внешний контур: ограничение — это платёж, а не пошлина — facts re-verified or replaced after 2026-10-02: konteinernyi_park, tarif_rzd_oktyabr, valyutnyi_kontrol
