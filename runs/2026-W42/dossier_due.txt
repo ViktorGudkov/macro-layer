@@ -1,0 +1,3 @@
+DOSSIER_DUE checked=2026-10-09 sections=6 due=2 problems=0
+  DUE Внешний контур: ограничение — это платёж, а не пошлина — facts re-verified or replaced after 2026-10-09: repatriaciya_vyruchki, transgranichnye_platezhi
+  DUE Что из этого спрашивать у финансового директора — facts re-verified or replaced after 2026-10-09: transgranichnye_platezhi

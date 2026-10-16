@@ -1,0 +1,13 @@
+VERIFY_STATS items=9 ok=5 NOT_FOUND=2 QUOTE_NOT_FOUND=2 VERIFIED=5 proxy=no
+VERIFY_HOST cbr.ru                       items=2 direct=2 proxy=0 unreachable=0
+VERIFY_HOST consultant.ru                items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST icustoms.ru                  items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST kontur.ru                    items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST mintrans.gov.ru              items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST pnp.ru                       items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST profile.ru                   items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST tks.ru                       items=1 direct=1 proxy=0 unreachable=0
+  x vneshtorg  repatriaciya_vyruchki        QUOTE_NOT_FOUND quote(s) 1,2 not on page
+  x reg_calend Исчерпание лимита новой прог NOT_FOUND not in quote: 2026-07-16, 3
+  x reg_calend Перечень товаров для паралле QUOTE_NOT_FOUND quote(s) 1 not on page
+  x reg_calend Тариф страховых взносов для  NOT_FOUND not in quote: 2026-10-01

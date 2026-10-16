@@ -1,0 +1,10 @@
+VERIFY_STATS items=9 ok=8 NOT_FOUND=1 VERIFIED=6 VERIFIED_TEXT=2 proxy=no
+VERIFY_HOST cbr.ru                       items=2 direct=2 proxy=0 unreachable=0
+VERIFY_HOST icustoms.ru                  items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST kontur.ru                    items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST mintrans.gov.ru              items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST pnp.ru                       items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST profile.ru                   items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST tks.ru                       items=1 direct=1 proxy=0 unreachable=0
+VERIFY_HOST vedomosti.ru                 items=1 direct=1 proxy=0 unreachable=0
+  x vneshtorg  repatriaciya_vyruchki        NOT_FOUND not in quote: 698

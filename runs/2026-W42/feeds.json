@@ -1,0 +1,593 @@
+{
+ "today": "2026-10-16",
+ "since": "2026-10-09",
+ "state": {
+  "minfin_last_id": 40696
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": true,
+   "fetched": 100,
+   "kept": 3
+  },
+  "cbr_press": {
+   "ok": true,
+   "fetched": 13,
+   "kept": 2
+  },
+  "gov_docs": {
+   "ok": true,
+   "fetched": 20,
+   "kept": 0
+  },
+  "vedomosti": {
+   "ok": true,
+   "fetched": 200,
+   "kept": 16
+  },
+  "cons_bills": {
+   "ok": true,
+   "fetched": 58,
+   "kept": 7
+  },
+  "minfin": {
+   "ok": true,
+   "fetched": 17,
+   "kept": 5
+  },
+  "cons_week": {
+   "ok": true,
+   "fetched": 150,
+   "kept": 12
+  }
+ },
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "Котяков: МРОТ в России составит 28 900 рублей в 2027 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237704-mrot-sostavit",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "Минэнерго и Минфин прорабатывают поправки по налогам для ТРИЗ",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237590-minenergo-i-minfin",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "В трехлетнем проекте бюджета Якутии отсутствуют дивиденды от «Алросы»",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237580-otsutstvuyut-dividendi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-16",
+   "title": "Установлены факты манипулирования рынком руководителем компании – профессионального участника рынка ценных бумаг (16.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639277388823606918PNP.htm",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Силуанов призвал G20 сокращать бюджетные дефициты для роста мировой экономики",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/15/1237468-siluanov-prizval",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Шохин попросил кабмин поэтапно включать пассивные доходы в расчет по НДФЛ",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/15/1237177-shohin-poprosil-kabmin",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Почему ожидания экономистов по инфляции хуже прогноза Минэка",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/15/1237175-ozhidaniya-ekonomistov-po-inflyatsii",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Чем вызван быстрый рост внешней торговли Китая",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/15/1237168-rost-vneshnei-torgovli-kitaya",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-15",
+   "title": "Приглашаем исследователей принять участие в научной конференции по Обзору денежно-кредитной политики",
+   "url": "https://www.cbr.ru/press/event/?id=32915",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-14",
+   "title": "Международное налоговое сотрудничество обсудили в Бангкоке",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40691",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-14",
+   "title": "Показатели устойчивой инфляции в сентябре практически не изменились",
+   "url": "https://www.cbr.ru/press/event/?id=32908",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-13",
+   "title": "Силуанов: проект о налоге на сверхдоходы учитывает мнение бизнеса",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/13/1236731-siluanov-o-naloge",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-13",
+   "title": "Как прошло обсуждение закона о бюджете в профильном комитете Госдумы",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/13/1236489-obsuzhdenie-zakona-o-byudzhete",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-13",
+   "title": "Аналитики «Сбера» указали на сокращение дефицита кадров за счет пожилых",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/13/1236484-sokraschenie-defitsita-kadrov-za-schet-pozhilih",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-13",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (13.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639275076044949684BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-12",
+   "title": "Казахстан начал продавать золото на фоне роста доходности облигаций США",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/12/1236456-kazahstan-nachal-prodavat-zoloto",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-12",
+   "title": "Заботкин: сокращение дефицита бюджета поможет снизить ключевую ставку",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/12/1236262-snizit-stavku",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-12",
+   "title": "Павел Кадочников: За каждой строкой бюджета должен стоять конкретный результат",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40685",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-12",
+   "title": "Антон Силуанов: Проект федерального бюджета на 2027-2029 годы устойчив к любым сценариям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40684",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-12",
+   "title": "Ненефтегазовый дефицит в предстоящей трехлетке составит около 5% ВВП – минимальный уровень с 2008 года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40682",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-10",
+   "title": "Участникам программы «Время героев» рассказали о программно-целевом бюджетировании и системе «Электронный бюджет»",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40681",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "<Информация> ФНС России \"Как подтвердить расходы на медицинские услуги для получения социального налогового вычета\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546270/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования, оценка соблюдения которых осуществляется в рамках федерального государственного контроля (надзора) за соблюдением обязательных требований к проведению экзамена по русскому языку как иностранному, истор",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546267/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "<Информация> ФНС России \"Утверждена обновленная форма декларации по налогу на прибыль организаций\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546183/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "<Информация> ФНС России \"ФНС России разъяснила особенности налогообложения автомобилей с электрическими двигателями\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546143/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "Информация ФНС России \"Правительство РФ предусмотрело меры поддержки предпринимателей \"Озон\", пострадавших от атак\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545861/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "Проект Приказа Минэкономразвития России \"Об установлении коэффициентов-дефляторов на 2027 год\"",
+   "url": "https://www.consultant.ru/cons/cgi/online.cgi?req=doc;base=PNPA;n=126632",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "Проект Постановления Правительства РФ \"О единой предельной величине базы для исчисления страховых взносов с 1 января 2027 г.\"",
+   "url": "https://storage.consultant.ru/site20/202610/08/pr_pr_081026-strchvznos.rtf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "UnHerd: кризис с госдолгом Франции может распространиться на всю Европу",
+   "url": "https://www.vedomosti.ru/politics/news/2026/10/09/1235921-krizis-s-gosdolgom-frantsii",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "Минфин: дефицит бюджета в России за девять месяцев составил 5,2 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/09/1235952-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "Банки ЕС столкнутся с дополнительными проверками суверенных облигаций",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/09/1235746-banki-stolknutsya",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "ФНС обозначила признаки созданных для налоговой оптимизации ЗПИФов",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/09/1235602-fns-oboznachila-priznaki-sozdannih-dlya-nalogovoi-optimizatsii-zpifov",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Распоряжение Правительства РФ от 09.10.2026 N 2844-р <О внесении изменений в распоряжение Правительства РФ от 21.06.2023 N 1633-р>",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546456/",
+   "rubric": "ХОЗЯЙСТВЕННАЯ ДЕЯТЕЛЬНОСТЬ",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "rubric",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Постановление Правительства РФ от 09.10.2026 N 1324 \"О внесении изменений в постановление Правительства Российской Федерации от 16 сентября 2022 г. N 1625\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546446/",
+   "rubric": "СВЯЗЬ. ИНФОРМАЦИЯ И ИНФОРМАТИЗАЦИЯ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Постановление Правительства РФ от 09.10.2026 N 1325 \"О внесении изменений в постановление Правительства Российской Федерации от 26 августа 2023 г. N 1390\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546445/",
+   "rubric": "ХОЗЯЙСТВЕННАЯ ДЕЯТЕЛЬНОСТЬ",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "rubric",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Постановление Правительства РФ от 09.10.2026 N 1327 \"О внесении изменений в постановление Правительства Российской Федерации от 31 декабря 2004 г. N 908\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546444/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Информационное письмо Банка России от 09.10.2026 N ИН-018-35/34 \"О порядке определения размера процентной ставки по отдельным ипотечным кредитам (займам)\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546430/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона\"О внесении изменений в Трудовой кодекс Российской Федерации\"(подготовлен Минтрудом России, ID проекта 02/04/10-26/00171527)(не внесен в ГД ФС РФ, текст по состоянию на 02.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209844043.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 70-9\"О внесении изменения в статью 61.1 Бюджетного кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209844025.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 333-9\"О внесении изменений в статьи 346.34 и 346.38 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209844022.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 474-9\"О внесении изменения в статью 1 Федерального закона \"О минимальном размере оплаты труда\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209844017.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 485-9\"О внесении изменения в статью 144 Трудового кодекса Российской Федерации в части установления ежегодной дополнительной выплаты по итогам календарного года работникам государственных и муниципальных учреждений\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09",
+   "url": "https://www.consultant.ru/law/review/209844015.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 1523-9\"О внесении изменений в статью 217.1 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 01.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209844010.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 3147-9\"О внесении изменений в отдельные законодательные акты в части отмены патентной системы осуществления иностранными гражданами трудовой деятельности на территории Российской Федерации и введении механизма организованного набора на основании разрешения на работу\"(ред",
+   "url": "https://www.consultant.ru/law/review/209844006.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-09",
+   "title": "Индикаторы денежно-кредитных условий в августе – сентябре менялись разнонаправленно, оставаясь умеренно жесткими",
+   "url": "https://www.cbr.ru/press/event/?id=32903",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}
