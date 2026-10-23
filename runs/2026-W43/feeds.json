@@ -1,0 +1,380 @@
+{
+ "today": "2026-10-23",
+ "since": "2026-10-16",
+ "state": {
+  "minfin_last_id": 40709
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": true,
+   "fetched": 100,
+   "kept": 2
+  },
+  "cbr_press": {
+   "ok": true,
+   "fetched": 14,
+   "kept": 5
+  },
+  "gov_docs": {
+   "ok": true,
+   "fetched": 20,
+   "kept": 1
+  },
+  "vedomosti": {
+   "ok": true,
+   "fetched": 200,
+   "kept": 14
+  },
+  "cons_bills": {
+   "ok": true,
+   "fetched": 25,
+   "kept": 4
+  },
+  "minfin": {
+   "ok": true,
+   "fetched": 11,
+   "kept": 1
+  },
+  "cons_week": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: review 2026-10-17 http 0"
+  }
+ },
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-10-23",
+   "title": "ЦБ рассчитывает на дезинфляционный характер нового проекта бюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/23/1239673-dezinflyatsionnii-harakter",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-23",
+   "title": "Чебесков: легализация онлайн-казино может дать бюджету 100 млрд рублей в год",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/23/1239617-legalizatsiya-onlain-kazino",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-23",
+   "title": "Владельцы ПВЗ попросили не облагать налогом кадастровую стоимость их помещений",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/23/1239439-vladeltsi-pvz-poprosili",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-23",
+   "title": "Банк России принял решение сохранить ключевую ставку на уровне 14,00% годовых (23.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=23102026_133000key.htm",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp",
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-23",
+   "title": "Заявление Председателя Банка России Эльвиры Набиуллиной по итогам заседания Совета директоров Банка России 23 октября 2026 года",
+   "url": "https://www.cbr.ru/press/event/?id=32929",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-22",
+   "title": "Как ФНС и бизнес видят режим самозанятости после 2028 года",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/22/1239073-kak-vidyat-rezhim-samozanyatosti",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-22",
+   "title": "Отозвана лицензия на осуществление банковских операций у ООО НКО «Тайдон» (22.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639282394585722382BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-21",
+   "title": "Силуанов призвал не торопиться с дополнительными налогами для банков",
+   "url": "https://www.vedomosti.ru/finance/news/2026/10/21/1238903-siluanov-prizval-ne-toropitsya",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-21",
+   "title": "Иван Чебесков: Для России АТР – это пространство для финансового сотрудничества, развития технологий и новых инвестиционных проектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40702",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-21",
+   "title": "Установлены факты неправомерного использования инсайдерской информации при совершении сделок с рядом акций на торгах ПАО Московская Биржа (21.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639281939787093652PNP.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-21",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (21.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639281806781687368BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-20",
+   "title": "23 октября в 15:00 состоится пресс-конференция по итогам заседания Совета директоров по денежно-кредитной политике",
+   "url": "https://www.cbr.ru/press/event/?id=32923",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Минфин обсудит продление специального налогового режима для самозанятых",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238359-minfin-obsudit-prodlenie",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Бюджет Минкульта на 2027–2029 годы составит 709,3 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238153-byudzhet-minkulta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Володин поддержал идею повысить налоги для золотодобывающих компаний",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238083-volodin-podderzhal-ideyu",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Володин предложил отменить льготный НДС на деликатесы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238082-otmenit-nds",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Сергей Черногаев: «Работникам выгодно объединяться»",
+   "url": "https://www.vedomosti.ru/economics/characters/2026/10/19/1238024-rabotnikam-vigodno-obedinyatsya",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "ФНС раскрыла итоги применения реабилитационных процедур в банкротстве",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/19/1238033-fns-raskrila-itogi",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-17",
+   "title": "Правительство выделило более 1,7 млрд рублей на поддержку региональных программ развития экспорта",
+   "url": "http://government.ru/docs/60217/",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "Котяков: МРОТ в России составит 28 935 рублей в 2027 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237704-mrot-sostavit",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "Минэнерго и Минфин прорабатывают поправки по налогам для ТРИЗ",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237590-minenergo-i-minfin",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "В трехлетнем проекте бюджета Якутии отсутствуют дивиденды от «Алросы»",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237580-otsutstvuyut-dividendi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона\"О внесении изменений в статью 15.1 Федерального закона \"О правовом положении иностранных граждан в Российской Федерации\"(подготовлен МВД России, ID проекта 01/05/10-26/00171771)(не внесен в ГД ФС РФ, текст по состоянию на 12.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851102.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона\"О внесении изменений в Федеральный закон \"О правовом положении иностранных граждан в Российской Федерации\"(подготовлен МВД России, ID проекта 01/05/10-26/00171797)(не внесен в ГД ФС РФ, текст по состоянию на 12.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851100.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона\"О внесении изменений в Федеральный закон \"Об особых экономических зонах в Российской Федерации\"(подготовлен Минэкономразвития России, ID проекта 02/04/10-26/00171692)(не внесен в ГД ФС РФ, текст по состоянию на 14.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851099.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона N 8090-9\"О внесении изменений в статью 349.2 Трудового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 09.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851089.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-16",
+   "title": "Установлены факты манипулирования рынком руководителем компании – профессионального участника рынка ценных бумаг (16.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639277388823606918PNP.htm",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}
