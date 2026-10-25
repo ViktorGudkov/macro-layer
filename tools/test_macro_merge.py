@@ -241,6 +241,21 @@ def _():
     assert any(x.startswith("budget: 151 facts") for x in r), r
 
 
+def _padded_to(n_bytes):
+    art = json.loads(SEED.read_text("utf-8"))
+    base = len(json.dumps(art, ensure_ascii=False, indent=1).encode())
+    art["segments"]["nalogi"][0]["claim"] += "x" * (n_bytes - base)
+    return json.dumps(art, ensure_ascii=False, indent=1).encode()
+
+
+@case("fuses-budget-bytes")
+def _():
+    # 25.10.2026: бюджет 200 → 300 КБ — 250 КБ проходит, 300 КБ + 1 байт уже нет
+    assert not any(x.startswith("budget") for x in fuses.check(SEED.read_bytes(), _padded_to(250 * 1024), None))
+    r = fuses.check(SEED.read_bytes(), _padded_to(300 * 1024 + 1), None)
+    assert any(x.startswith("budget: 92 facts / 307201 bytes") for x in r), r
+
+
 @case("fuses-dossier-anchors-and-age")
 def _():
     macro = json.loads(SEED.read_text("utf-8"))
