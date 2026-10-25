@@ -83,6 +83,23 @@ python3 tools/calendar_due.py --macro macro/macro.json --today $TODAY | tee $R/c
 - Не случилось и цитаты нет → рецепт не трогай (скрипт вернёт его позже).
 `as_of` рецепта — дата проверки: по ней скрипт решает, когда проверять снова.
 
+**Посев.** Факты посева 20.08.2026 не сверены цитатой; какие сверить в этот
+прогон, решает скрипт (до 20, сверх очереди; разделы ДКП, бюджет,
+финансирование — первыми):
+
+```bash
+python3 tools/seed_due.py --macro macro/macro.json --status $R/status.json --runs-dir runs | tee $R/seed_due.txt
+```
+
+Каждый `DUE` — пункт работы наравне с протухшими: тот же поиск
+первоисточника (п. 3), та же сверка (п. 4), `replaces: [id]` из вывода.
+Страница подтверждает весь `claim` — повтори его СЛОВО В СЛОВО (факт
+«перепроверен», id не меняется); число другое или в `claim` есть то, чего
+на странице нет, — замена. Не подтвердилось — пункт остаётся в
+`pending.json` (скрипт его больше не предложит, факт дождётся своего срока
+в очереди), старый факт не трогаешь (правило 4). `SEED_DUE due=0` — посев
+сверен, блок пропусти.
+
 **Отрицательные факты** (`value` «нет данных», источник «Отрицательный
 результат…»): заменяй только найденным документом. Не нашёл — не трогай.
 🔴 Обратное запрещено: положительный факт НИКОГДА не заменяется на «нет
@@ -180,7 +197,7 @@ python3 tools/verify_sources.py --out-dir $R --show '<URL>' --links --grep '<с�
                    "source_url": "…", "evidence": ["…"]}]}
 ```
 
-- `topic` и `segment` — ДОСЛОВНО из очереди; `replaces` — `[id]` из очереди.
+- `topic` и `segment` — ДОСЛОВНО из очереди (или `SEED_DUE`); `replaces` — `[id]` оттуда же.
 - Факт не изменился → повтори `claim` СЛОВО В СЛОВО (тот же id → merge
   отметит «перепроверен»), `evidence` всё равно обязательна.
 - `value` — числа в том виде, как на странице (единицы те же: «млрд» не
@@ -220,8 +237,9 @@ python3 tools/verify_sources.py --candidates $R/candidates.json --out-dir $R
 `$R/verified.json`, остальное с причиной — в `$R/pending.json`.
 `QUOTE_NOT_FOUND` / `NOT_FOUND` / `NO_EVIDENCE` → поправь цитату или форму
 записи числа по выводу `--show` и повтори сверку; **не больше двух
-повторов**. `UNREACHABLE` не повторяй: пункт остаётся в `pending.json` для
-досверки на стороне сервера (у него другой выход в сеть). `NEGATIVE` —
+повторов**. `UNREACHABLE` не повторяй: пункт остаётся в `pending.json`, старый
+факт — как есть (протухший вернётся в очередь, посев скрипт больше не
+предложит). `NEGATIVE` —
 убери кандидата: старый факт остаётся как есть.
 
 ## 5. Вливание
@@ -274,7 +292,7 @@ python3 tools/fuses.py --old $R/macro_head.json --new macro/macro.json --verifie
 ## 8. CHANGELOG и отчёт
 
 В начало `CHANGELOG.md` — раздел `## <неделя> (<дата>)`:
-- счётчики: очередь N, календарь N наступило / N случилось, кандидатов N,
+- счётчики: очередь N, посев N (осталось M), календарь N наступило / N случилось, кандидатов N,
   подтверждено N, влито N (замен / перепроверок), в pending N;
 - по каждому влитому факту: `topic`, старый id → новый, источник и одна
   цитата (≤ 150 символов);
@@ -282,7 +300,7 @@ python3 tools/fuses.py --old $R/macro_head.json --new macro/macro.json --verifie
 - недоступные домены.
 
 В `$R/report.md` — то же плюс таблица `VERIFY_HOST`, `FEEDS_STATS`,
-`DOSSIER_DUE`, время прогона от начала до конца, (пилот) вывод `probe.txt`,
+`SEED_DUE`, `DOSSIER_DUE`, время прогона от начала до конца, (пилот) вывод `probe.txt`,
 (`MONTHLY=1`) таблица разбора лент из п. 2а.
 
 ## 9. Коммит
@@ -305,5 +323,5 @@ python3 tools/fuses.py --old $R/macro_head.json --new macro/macro.json --verifie
   В `claude/macro` в этот прогон не пушить.
 
 Последняя строка ответа: `MACRO_RUN week=$WEEK monthly=$MONTHLY queue=N
-feeds=N verified=N merged=N appended=N pending=N dossier_due=N
+seed_due=N feeds=N verified=N merged=N appended=N pending=N dossier_due=N
 fuses=OK|TRIPPED branch=<ветка>`.
