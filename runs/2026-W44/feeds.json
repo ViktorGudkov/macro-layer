@@ -1,0 +1,44 @@
+{
+ "today": "2026-10-31",
+ "since": "2026-10-23",
+ "state": {
+  "minfin_last_id": 40709
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 0"
+  },
+  "cbr_press": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 0"
+  },
+  "gov_docs": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 0"
+  },
+  "vedomosti": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 0"
+  },
+  "cons_bills": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 0"
+  },
+  "minfin": {
+   "ok": true,
+   "fetched": 0
+  },
+  "cons_week": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: archive http 0"
+  }
+ },
+ "items": []
+}

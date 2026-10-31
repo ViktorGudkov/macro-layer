@@ -35,7 +35,7 @@ DOC = """# Макро-слой
 
 ## Деньги: цена отдельно, доступ отдельно
 <!-- rests_on: effekt_nadbavki,
-     anticiklicheskaya_nadbavka, macro_debt:g_spreads -->
+     anticiklicheskaya_nadbavka, icr_kriterii -->
 Текст.
 
 ## Труд
@@ -44,7 +44,8 @@ DOC = """# Макро-слой
 MACRO = {"segments": {"dkp": [{"topic": "cbr_forecast_gdp", "harvested": "2026-09-25"},
                               {"topic": "cbr_forecast_keyrate", "harvested": "2026-10-02"}],
                       "finansirovanie": [{"topic": "effekt_nadbavki", "harvested": "2026-08-20"},
-                                         {"topic": "anticiklicheskaya_nadbavka", "harvested": "2026-08-20"}],
+                                         {"topic": "anticiklicheskaya_nadbavka", "harvested": "2026-08-20"},
+                                         {"topic": "icr_kriterii", "harvested": "2026-08-20"}],
                       "trud": [{"topic": "zarplaty", "harvested": "2026-08-20"}]}}
 TOPICS = dd.fact_dates(MACRO)
 
@@ -54,7 +55,7 @@ def _():
     doc = dd.parse(DOC)
     assert doc["checked"] == "2026-09-25" and doc["anchored"]
     assert [s["title"] for s in doc["sections"]] == ["Рамка года", "Деньги: цена отдельно, доступ отдельно", "Труд"]
-    assert doc["sections"][1]["rests_on"] == ["effekt_nadbavki", "anticiklicheskaya_nadbavka", "macro_debt:g_spreads"]
+    assert doc["sections"][1]["rests_on"] == ["effekt_nadbavki", "anticiklicheskaya_nadbavka", "icr_kriterii"]
 
 
 @case("weekly-only-sections-whose-facts-moved")
@@ -70,12 +71,17 @@ def _():
     assert d == [], d
 
 
-@case("monthly-all-sections-and-server-mark")
+@case("monthly-all-sections")
 def _():
     d = dd.due(dd.parse(DOC), TOPICS, date(2026, 10, 2), monthly=True)
     assert len(d) == 3 and all("monthly full re-read" in x["reasons"] for x in d)
-    money = [x for x in d if x["title"].startswith("Деньги")][0]
-    assert money["needs_server"] == ["macro_debt:g_spreads"], money
+
+
+@case("bot-debt-anchor-is-unknown-topic")
+def _():
+    # долговой срез бота (macro_debt:*) больше не опора: бот закрыт 25.10.2026
+    p = dd.problems(dd.parse(DOC.replace("icr_kriterii", "macro_debt:g_spreads")), TOPICS)
+    assert any("unknown topics: macro_debt:g_spreads" in x for x in p), p
 
 
 @case("december-frame-rewrite")

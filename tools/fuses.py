@@ -5,18 +5,20 @@ fuses.py — предохранители недельного коммита ma
 Сравнивает файл до прогона (обычно `git show HEAD:macro/macro.json`) и после
 merge. Любое срабатывание → рабочую ветку не трогать, открыть PR с объяснением.
 
-    changed   > 25 фактов (удалённые + новые id) — неделя слишком «громкая»;
+    changed   > 45 изменений — неделя слишком «громкая»; замена по `replaces`
+              принятого факта — одно изменение (новый id), а не два;
     deleted   id исчез, и это не замена: нет в `replaces` принятых фактов и
               нет нового факта с той же темой (замена по теме);
     schema    не v2, не macro.md, у факта нет обязательного поля, status() падает;
     size      размер файла изменился больше чем на 30%;
-    shrink    фактов стало меньше, чем 80% от прежнего (как у забора на сервере);
+    shrink    фактов стало меньше, чем 80% от прежнего;
     appended  больше 10 добавлений (новые темы + новые рецепты) за прогон;
-    budget    больше 150 фактов или 200 КБ — бюджет объёма слоя (finalize читает
-              файл целиком), PR с предложением, что вывести;
+    budget    больше 150 фактов или 300 КБ — бюджет объёма слоя, PR с
+              предложением, что вывести;
     dossier   (--dossier) больше 20 КБ, клиентские данные; у размеченного досье —
               раздел без опор, опора на несуществующую тему, «Проверено» старше
-              35 дней (--today).
+              35 дней (--today). С 25.10.2026 досье заморожено, рутина флаг не
+              передаёт.
 
 Код возврата: 0 — FUSES OK, 3 — FUSES TRIPPED, 2 — файл не читается.
 
@@ -37,12 +39,18 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import dossier_due as dd  # noqa: E402
 import industry_cache as ic  # noqa: E402
 
-MAX_CHANGED = 25
+# 15 протухших + 20 посева (seed_due.py) + до 10 добавлений. Было 25 и замена
+# считалась дважды: сверка посева с 30.10.2026 уводила бы каждый прогон в PR.
+MAX_CHANGED = 45
 MAX_SIZE_DELTA = 0.30
 MIN_FACTS_RATIO = 0.80
 MAX_APPENDED = 10          # новых фактов + рецептов за прогон — «громкая» неделя, PR
-BUDGET_FACTS = 150         # бюджет объёма слоя: finalize читает macro.json целиком
-BUDGET_BYTES = 200 * 1024  # (25.09: 92 факта / 150 КБ ≈ 40 тыс. токенов окна finalize)
+# Бюджет объёма слоя. 200 КБ были окном finalize бота (бот закрыт 25.10.2026);
+# справка market_analysis берёт ~27 фактов по разделам, размер файла ей
+# безразличен. Сверка посева удлиняет факт в среднем на ~400 байт: 187 КБ на
+# 23.10 + 47 фактов посева упёрлись бы в 200 КБ к месячному проходу 06.11.
+BUDGET_FACTS = 150
+BUDGET_BYTES = 300 * 1024
 DOSSIER_MAX_AGE = 35       # дней с «Проверено» — месячный проход пропущен
 FACT_KEYS = ("id", "harvested", "channel", "claim", "value", "source", "as_of", "cadence", "topic")
 
@@ -63,7 +71,7 @@ def check(old_raw: bytes, new_raw: bytes, verified: dict | None) -> list[str]:
     bad = [i for i, f in fn.items() if any(not str(f.get(k) or "").strip() for k in FACT_KEYS if k != "topic")]
     if bad or "" in fn:
         reasons.append("schema: facts without required fields: %s" % ", ".join(sorted(bad)[:5] or ["<no id>"]))
-    try:  # тот же вызов, что сделают забор на сервере и дайджест
+    try:  # тот же вызов, что делает рутина в п. 1 (status.json)
         with tempfile.TemporaryDirectory() as td:
             (Path(td) / "macro.json").write_bytes(new_raw)
             if ic.status(td, "macro.md").get("n_facts") != len(fn):
@@ -71,14 +79,14 @@ def check(old_raw: bytes, new_raw: bytes, verified: dict | None) -> list[str]:
     except Exception as e:  # noqa: BLE001
         reasons.append("schema: status fails (%s)" % type(e).__name__)
     removed, added = set(fo) - set(fn), set(fn) - set(fo)
-    changed = len(removed) + len(added)
-    if changed > MAX_CHANGED:
-        reasons.append("changed: %d facts (> %d)" % (changed, MAX_CHANGED))
     repl = set()
     for facts in ((verified or {}).get("segments") or {}).values():
         for f in facts:
             r = f.get("replaces") or []
             repl |= {r} if isinstance(r, str) else set(map(str, r))
+    changed = len(added) + len(removed - repl)
+    if changed > MAX_CHANGED:
+        reasons.append("changed: %d facts (> %d)" % (changed, MAX_CHANGED))
     new_topics = {f.get("topic") for f in fn.values()}
     unexplained = sorted(i for i in removed if i not in repl and fo[i].get("topic") not in new_topics)
     if unexplained:

@@ -9,9 +9,9 @@ dossier_due.py — какие разделы досье перечитать в 
 
 Разметка (логика docs/LOGIC-2026-09-25-macro-monthly-pass.md, §3.5):
     строка в шапке      Проверено: YYYY-MM-DD
-    под каждым `## `    <!-- rests_on: topic_a, topic_b, macro_debt:g_spreads -->
-Опора `macro_debt:*` — долговой срез сервера, облаку недоступен: такой раздел
-помечается «не перепроверен: нужен долговой срез», а не проверяется.
+    под каждым `## `    <!-- rests_on: topic_a, topic_b -->
+Опора — только тема `macro.json`. Долгового среза бота (`macro_debt:*`) больше
+нет (бот закрыт 25.10.2026): такая опора — «unknown topic», как любая другая.
 
 Правила:
     еженедельно  раздел, у которого хоть одна опорная тема перепроверена или
@@ -68,7 +68,7 @@ def problems(doc: dict, topics: dict[str, list[str]]) -> list[str]:
         if s["rests_on"] is None:
             out.append("section without rests_on: %s" % s["title"])
             continue
-        unknown = [t for t in s["rests_on"] if not t.startswith("macro_debt:") and t not in topics]
+        unknown = [t for t in s["rests_on"] if t not in topics]
         if unknown:
             out.append("section '%s' rests on unknown topics: %s" % (s["title"], ", ".join(unknown)))
     return out
@@ -80,7 +80,6 @@ def due(doc: dict, topics: dict[str, list[str]], today: date, monthly: bool) -> 
     for s in doc["sections"]:
         rests = s["rests_on"] or []
         moved = sorted(t for t in rests if any(h > checked for h in topics.get(t, [])))
-        server = [t for t in rests if t.startswith("macro_debt:")]
         reasons = []
         if monthly:
             reasons.append("monthly full re-read")
@@ -89,8 +88,7 @@ def due(doc: dict, topics: dict[str, list[str]], today: date, monthly: bool) -> 
         if s["title"].startswith(FRAME_TITLE) and today.month == 12 and today.day >= DECEMBER_DAY:
             reasons.append("December: rewrite the frame for %d" % (today.year + 1))
         if reasons:
-            out.append({"title": s["title"], "reasons": reasons, "moved": moved,
-                        "needs_server": server})
+            out.append({"title": s["title"], "reasons": reasons, "moved": moved})
     return out
 
 
@@ -112,9 +110,7 @@ def main(argv: list[str] | None = None) -> int:
     print("DOSSIER_DUE checked=%s sections=%d due=%d problems=%d" % (
         doc["checked"], len(doc["sections"]), len(d), len(probs)))
     for x in d:
-        print("  DUE %s — %s%s" % (x["title"], "; ".join(x["reasons"]),
-                                   (" [not re-checkable in the cloud: %s]" % ", ".join(x["needs_server"]))
-                                   if x["needs_server"] else ""))
+        print("  DUE %s — %s" % (x["title"], "; ".join(x["reasons"])))
     for p in probs:
         print("  PROBLEM " + p)
     return 0

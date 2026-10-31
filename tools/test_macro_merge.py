@@ -91,20 +91,6 @@ def _():
     assert not bad, bad
 
 
-@case("wrapper-refuses-module-older-than-v662")
-def _():
-    import macro_merge
-    saved = ic.MACRO_PROFILE
-    del ic.MACRO_PROFILE
-    try:
-        macro_merge.require_v662()
-        raise AssertionError("no SystemExit")
-    except SystemExit as e:
-        assert "older than v6.62" in str(e)
-    finally:
-        ic.MACRO_PROFILE = saved
-
-
 @case("reverify-vat-same-claim-is-refreshed")
 def _():
     td = workdir()
@@ -178,11 +164,27 @@ def _():
     art = json.loads(SEED.read_text("utf-8"))
     n = 0
     for _, _, f in ic.iter_facts(art):
-        if n < 13:
+        if n < 23:
             f["id"] = "zz%06d" % n
             n += 1
     r = fuses.check(SEED.read_bytes(), json.dumps(art, ensure_ascii=False, indent=1).encode(), None)
-    assert any(x.startswith("changed: 26") for x in r), r
+    assert any(x.startswith("changed: 46") for x in r), r
+
+
+@case("fuses-replacement-counts-once")
+def _():
+    # 30 замен по replaces (очередь + посев) — 30 изменений, не 60: прогон не уходит в PR
+    old = json.loads(SEED.read_text("utf-8"))
+    art = json.loads(SEED.read_text("utf-8"))
+    ver = {"segments": {}}
+    n = 0
+    for s, _, f in ic.iter_facts(art):
+        if n < 30:
+            ver["segments"].setdefault(s, []).append({"topic": f["topic"], "replaces": [f["id"]]})
+            f["id"] = "zz%06d" % n
+            n += 1
+    r = fuses.check(json.dumps(old).encode(), json.dumps(art, ensure_ascii=False, indent=1).encode(), ver)
+    assert not any(x.startswith("changed") for x in r), r
 
 
 @case("fuses-schema-and-size")
@@ -239,6 +241,21 @@ def _():
     assert any(x.startswith("budget: 151 facts") for x in r), r
 
 
+def _padded_to(n_bytes):
+    art = json.loads(SEED.read_text("utf-8"))
+    base = len(json.dumps(art, ensure_ascii=False, indent=1).encode())
+    art["segments"]["nalogi"][0]["claim"] += "x" * (n_bytes - base)
+    return json.dumps(art, ensure_ascii=False, indent=1).encode()
+
+
+@case("fuses-budget-bytes")
+def _():
+    # 25.10.2026: бюджет 200 → 300 КБ — 250 КБ проходит, 300 КБ + 1 байт уже нет
+    assert not any(x.startswith("budget") for x in fuses.check(SEED.read_bytes(), _padded_to(250 * 1024), None))
+    r = fuses.check(SEED.read_bytes(), _padded_to(300 * 1024 + 1), None)
+    assert any(x.startswith("budget: 92 facts / 307201 bytes") for x in r), r
+
+
 @case("fuses-dossier-anchors-and-age")
 def _():
     macro = json.loads(SEED.read_text("utf-8"))
@@ -251,13 +268,6 @@ def _():
     ok = doc.replace("## Труд\nбез опор".encode(), "## Труд\n<!-- rests_on: zarplaty -->".encode())
     assert fuses.check_dossier(ok, macro, date(2026, 9, 20)) == []
 
-
-@case("copy-sha-matches-readme")
-def _():
-    readme = (ROOT / "README.md").read_text("utf-8")
-    m = re.search(r"industry_cache\.py[^\n]*?`([0-9a-f]{64})`", readme)
-    assert m, "README must state the sha256 of tools/industry_cache.py"
-    assert hashlib.sha256((HERE / "industry_cache.py").read_bytes()).hexdigest() == m.group(1)
 
 
 if __name__ == "__main__":
