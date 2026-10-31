@@ -1,8 +1,8 @@
-FEEDS_STATS since=2026-10-23 items=0 new=0 sources_ok=1/7 minfin_last_id=40709 FAILED=cbr_events,cbr_press,gov_docs,vedomosti,cons_bills,cons_week
-FEEDS_SOURCE cbr_events ok=False fetched=0    kept=0    RuntimeError: http 0
-FEEDS_SOURCE cbr_press  ok=False fetched=0    kept=0    RuntimeError: http 0
-FEEDS_SOURCE cons_bills ok=False fetched=0    kept=0    RuntimeError: http 0
-FEEDS_SOURCE cons_week  ok=False fetched=0    kept=0    RuntimeError: archive http 0
-FEEDS_SOURCE gov_docs   ok=False fetched=0    kept=0    RuntimeError: http 0
-FEEDS_SOURCE minfin     ok=True  fetched=0    kept=0    
-FEEDS_SOURCE vedomosti  ok=False fetched=0    kept=0    RuntimeError: http 0
+FEEDS_STATS since=2026-10-23 items=65 new=64 sources_ok=7/7 minfin_last_id=40728
+FEEDS_SOURCE cbr_events ok=True  fetched=100  kept=5    
+FEEDS_SOURCE cbr_press  ok=True  fetched=13   kept=2    
+FEEDS_SOURCE cons_bills ok=True  fetched=40   kept=10   
+FEEDS_SOURCE cons_week  ok=True  fetched=138  kept=15   
+FEEDS_SOURCE gov_docs   ok=True  fetched=20   kept=0    
+FEEDS_SOURCE minfin     ok=True  fetched=18   kept=12   
+FEEDS_SOURCE vedomosti  ok=True  fetched=200  kept=21   

@@ -1,2 +1,2 @@
-FUSES_STATS facts 94 -> 94 removed=0 added=0 bytes 186654 -> 186654
+FUSES_STATS facts 94 -> 94 removed=1 added=1 bytes 186654 -> 187823
 FUSES OK
