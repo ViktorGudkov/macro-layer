@@ -152,6 +152,30 @@ def _():
     assert snap["sources"]["vedomosti"] == {"ok": False, "fetched": 0, "error": "RuntimeError: http 503"}
 
 
+@case("minfin-unreachable-is-a-failure")
+def _():
+    # W44, 31.10.2026: сеть окружения закрыта — curl rc≠0 даёт код 0, а проход
+    # считал его «номера нет» и показывал минфин прошедшим без записей
+    snap = run(get=net({feeds.MINFIN_URL % 101: (0, b"")}))
+    assert snap["sources"]["minfin"]["ok"] is False and "http 0" in snap["sources"]["minfin"]["error"], snap["sources"]
+    assert snap["state"]["minfin_last_id"] == 100, snap["state"]           # номер не сдвинулся
+
+
+@case("since-by-source-widens-window")
+def _():
+    # общее окно с 18.09 отсекает событие ЦБ от 11.09 и обзор КонсультантПлюс от 01.08
+    base = feeds.snapshot(date(2026, 9, 25), date(2026, 9, 18), DIC, set(), 100, net())
+    assert "https://cbr.ru/a" not in {i["url"] for i in base["items"]}
+    g = net()
+    snap = feeds.snapshot(date(2026, 9, 25), date(2026, 9, 18), DIC, set(), 100, g,
+                          since_by={"cbr_events": date(2026, 9, 10), "cons_week": date(2026, 7, 25)})
+    urls = {i["url"] for i in snap["items"]}
+    assert "https://cbr.ru/a" in urls and "https://cbr.ru/old" not in urls, urls
+    assert feeds.CONS_WEEK % "2026-08-01" in g.calls                        # упавшая неделя добрана
+    assert snap["sources"]["cbr_events"]["since"] == "2026-09-10" and "since" not in snap["sources"]["vedomosti"]
+    assert snap["since"] == "2026-09-18"
+
+
 @case("known-marked")
 def _():
     snap = run(known={"https://cbr.ru/a"})
@@ -176,6 +200,32 @@ def _():
         {"today": "2026-09-11", "state": {"minfin_last_id": 40500}}), "utf-8")
     st, day = feeds.previous_state(td / "runs", td / "runs" / "2026-W39" / "feeds.json")
     assert st == {"minfin_last_id": 40600} and day == "2026-09-18", (st, day)
+
+
+@case("source-since-from-last-passing-snapshot")
+def _():
+    # как на деле: cons_week упала в W43, шесть лент — в первом прогоне W44
+    td = Path(tempfile.mkdtemp())
+    def put(week, today, failed=(), sources=True):
+        (td / week).mkdir(parents=True)
+        d = {"today": today, "state": {}}
+        if sources:
+            d["sources"] = {n: {"ok": n not in failed} for n in feeds.SOURCES}
+        (td / week / "feeds.json").write_text(json.dumps(d), "utf-8")
+    put("2026-W38", "2026-09-18", sources=False)                             # старый формат
+    put("2026-W42", "2026-10-16")
+    put("2026-W43", "2026-10-23", failed=("cons_week",))
+    put("2026-W44", "2026-10-31", failed=tuple(n for n in feeds.SOURCES if n != "minfin"))
+    out = td / "2026-W45" / "feeds.json"
+    got = feeds.source_since(td, out, date(2026, 10, 31), date(2026, 11, 6))
+    assert got["cons_week"] == date(2026, 10, 16) and got["cbr_press"] == date(2026, 10, 23), got
+    assert "minfin" not in got, got                                         # прошла в W44 — общее окно
+    # перезапуск W44 перезаписывает свой снимок: он в расчёт не идёт
+    assert feeds.source_since(td, td / "2026-W44" / "feeds.json", date(2026, 10, 23),
+                              date(2026, 10, 31)) == {"cons_week": date(2026, 10, 16)}
+    # глубже LOOKBACK_DAYS не добираем, даже если лента лежит дольше
+    got = feeds.source_since(td, out, date(2026, 11, 20), date(2026, 11, 27))
+    assert got["cons_week"] == date(2026, 10, 23), got
 
 
 @case("digest-union-window-unknown-only")

@@ -9,6 +9,13 @@ feeds.py — еженедельный снимок лент официальны
 словарём `feeds_keywords.json` и кладёт снимок `runs/<неделя>/feeds.json`;
 месячный проход разбирает объединение снимков за 5 недель.
 
+Окно снимка — с даты последнего снимка, но у каждой ленты своё: упавшая
+лента начинает с последнего снимка, где она прошла (не глубже LOOKBACK_DAYS).
+Иначе её записи между падением и следующим снимком не попадали никуда:
+31.10.2026 первый прогон W44 уронил шесть лент из семи (сеть окружения), и
+снимок 06.11 начался бы с 31.10 — записи 23–30.10 потерялись бы; так же
+пропал обзор КонсультантПлюс за 17.10 (cons_week упала в W43).
+
 Источники:
     cbr_events   RSS событий Банка России (память 77 дней)
     cbr_press    RSS пресс-релизов Банка России (26 дней)
@@ -52,6 +59,7 @@ import verify_sources as vs  # noqa: E402  (curl с UA, прокси из MACRO_
 STOP_404 = 6          # столько несуществующих номеров минфина подряд = конец
 MINFIN_MAX = 120      # номеров за прогон (≈ 2 месяца при ~1,5 в день)
 DEFAULT_SINCE_DAYS = 8
+LOOKBACK_DAYS = 35    # глубже окна месячного прохода упавшую ленту не добираем
 RSS = {
     "cbr_events": "https://www.cbr.ru/rss/eventrss",
     "cbr_press": "https://www.cbr.ru/rss/RssPress",
@@ -59,6 +67,7 @@ RSS = {
     "vedomosti": "https://www.vedomosti.ru/rss/rubric/economics",
     "cons_bills": "https://www.consultant.ru/rss/zw.xml",
 }
+SOURCES = tuple(RSS) + ("minfin", "cons_week")
 MINFIN_URL = "https://minfin.gov.ru/ru/press-center/?id_4=%d"
 CONS_ARCHIVE = "https://www.consultant.ru/law/review/fed/fw/archive/"
 CONS_WEEK = "https://www.consultant.ru/law/review/fed/fw%s.html"
@@ -115,6 +124,11 @@ def minfin_walk(start: int, get=http_get, stop_404: int = STOP_404, cap: int = M
     while miss < stop_404 and n - start < cap:
         n += 1
         code, body = get(MINFIN_URL % n)
+        if code == 0:
+            # нет соединения — не «номера нет»: иначе недоступный минфин выглядит
+            # прошедшей лентой без записей (W44, 31.10.2026). Номер не двигается,
+            # следующий прогон пройдёт с того же места
+            raise RuntimeError("http 0 at id_4=%d" % n)
         if code != 200:
             miss += 1
             continue
@@ -208,10 +222,46 @@ def previous_state(runs_dir: Path, out: Path) -> tuple[dict, str | None]:
     return best, best_key
 
 
+def source_since(runs_dir: Path, out: Path, since: date, today: date) -> dict[str, date]:
+    """Окно каждой ленты, которое начинается раньше общего `since`: дата
+    последнего снимка, где лента прошла (ok), но не глубже LOOKBACK_DAYS.
+    Лента, которая не проходила ни разу в пределах окна, — с самого его начала.
+    Снимок без `sources` (старый формат) считается прошедшим по всем лентам."""
+    floor = today - timedelta(days=LOOKBACK_DAYS)
+    last_ok: dict[str, date] = {}
+    names: set[str] = set()
+    for p in sorted(runs_dir.glob("*/feeds.json")):
+        if p.resolve() == out.resolve():
+            continue
+        try:
+            d = json.loads(p.read_text("utf-8"))
+            day = date.fromisoformat(d["today"])
+        except (OSError, ValueError, UnicodeDecodeError, KeyError, TypeError):
+            continue
+        srcs = d.get("sources")
+        if srcs is None:
+            srcs = {n: {"ok": True} for n in SOURCES}
+        for n, s in srcs.items():
+            names.add(n)
+            if s.get("ok") and (n not in last_ok or day > last_ok[n]):
+                last_ok[n] = day
+    out_since = {}
+    for n in names:
+        d = max(last_ok.get(n, floor), floor)
+        if d < since:
+            out_since[n] = d
+    return out_since
+
+
 # ---------------------------------------------------------------- run
 def snapshot(today: date, since: date, dic: Dictionary, known: set[str], minfin_start: int | None,
-             get=http_get) -> dict:
+             get=http_get, since_by: dict[str, date] | None = None) -> dict:
+    """`since_by` — ленты, чьё окно начинается раньше `since` (см. source_since)."""
     sources, raw = {}, []
+    since_by = since_by or {}
+
+    def lo(name):
+        return since_by.get(name, since)
 
     def take(name, fn):
         try:
@@ -229,7 +279,7 @@ def snapshot(today: date, since: date, dic: Dictionary, known: set[str], minfin_
             return parse_rss(body, name)
         return f
 
-    for name in ("cbr_events", "cbr_press", "gov_docs", "vedomosti", "cons_bills"):
+    for name in RSS:
         take(name, rss(name))
 
     state = {}
@@ -247,17 +297,20 @@ def snapshot(today: date, since: date, dic: Dictionary, known: set[str], minfin_
         if code != 200:
             raise RuntimeError("archive http %s" % code)
         recs = []
-        for d in cons_week_dates(body, since, today):
+        for d in cons_week_dates(body, lo("cons_week"), today):
             c2, b2 = get(CONS_WEEK % d)
             if c2 != 200:
                 raise RuntimeError("review %s http %s" % (d, c2))
             recs += parse_cons_week(b2, d)
         return recs
     take("cons_week", cons_week)
+    for name, d in since_by.items():
+        if name in sources:
+            sources[name]["since"] = d.isoformat()
 
     items, seen = [], set()
     for r in raw:
-        if r["date"] and r["date"] < since and r["source"] != "minfin":
+        if r["date"] and r["date"] < lo(r["source"]) and r["source"] != "minfin":
             continue
         ok, segs, why = dic.classify(r)
         s = sources[r["source"]]
@@ -299,7 +352,8 @@ def main(argv: list[str] | None = None) -> int:
     ap.add_argument("--out", required=True)
     ap.add_argument("--digest", type=int, metavar="DAYS",
                     help="monthly pass: union of snapshots for DAYS days into --out (no fetching)")
-    ap.add_argument("--since", help="YYYY-MM-DD (default: date of the previous snapshot, else today-8)")
+    ap.add_argument("--since", help="YYYY-MM-DD for every feed (default: date of the previous snapshot, "
+                                    "else today-8; a feed that failed there — its last passing snapshot)")
     ap.add_argument("--runs-dir", default="runs")
     ap.add_argument("--macro", default="macro/macro.json")
     ap.add_argument("--keywords", default=str(HERE / "feeds_keywords.json"))
@@ -320,9 +374,10 @@ def main(argv: list[str] | None = None) -> int:
     prev, prev_day = previous_state(Path(a.runs_dir), out)
     since = date.fromisoformat(a.since) if a.since else (
         date.fromisoformat(prev_day) if prev_day else today - timedelta(days=DEFAULT_SINCE_DAYS))
+    since_by = {} if a.since or not prev_day else source_since(Path(a.runs_dir), out, since, today)
     start = a.minfin_start if a.minfin_start is not None else prev.get("minfin_last_id")
     dic = Dictionary(json.loads(Path(a.keywords).read_text("utf-8")))
-    snap = snapshot(today, since, dic, known_urls(Path(a.macro)), start)
+    snap = snapshot(today, since, dic, known_urls(Path(a.macro)), start, since_by=since_by)
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(snap, ensure_ascii=False, indent=1), "utf-8")
     bad = [n for n, s in snap["sources"].items() if not s["ok"]]
@@ -331,8 +386,9 @@ def main(argv: list[str] | None = None) -> int:
         len(snap["sources"]) - len(bad), len(snap["sources"]), snap["state"].get("minfin_last_id"),
         (" FAILED=" + ",".join(bad)) if bad else ""))
     for n, s in sorted(snap["sources"].items()):
-        print("FEEDS_SOURCE %-10s ok=%-5s fetched=%-4d kept=%-4d %s" % (
-            n, s["ok"], s["fetched"], s.get("kept", 0), s.get("error", "")))
+        print("FEEDS_SOURCE %-10s ok=%-5s fetched=%-4d kept=%-4d %s%s" % (
+            n, s["ok"], s["fetched"], s.get("kept", 0),
+            ("since=%s " % s["since"]) if "since" in s else "", s.get("error", "")))
     return 0
 
 
