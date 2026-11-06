@@ -2,7 +2,7 @@
  "today": "2026-11-06",
  "since": "2026-10-31",
  "state": {
-  "minfin_last_id": 40728
+  "minfin_last_id": 40737
  },
  "sources": {
   "cbr_events": {
@@ -30,9 +30,9 @@
    "fetched": 65
   },
   "minfin": {
-   "ok": false,
-   "fetched": 0,
-   "error": "RuntimeError: http 0 at id_4=40730"
+   "ok": true,
+   "fetched": 7,
+   "kept": 1
   },
   "cons_week": {
    "ok": true,
@@ -73,6 +73,19 @@
    "rubric": "",
    "segments": [
     "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-05",
+   "title": "О нефтегазовых доходах и проведении операций по покупке/продаже иностранной валюты и золота на внутреннем валютном рынке",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40734",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "vneshtorg"
    ],
    "why": "keyword",
    "known": false
