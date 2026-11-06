@@ -121,6 +121,46 @@ def _():
     assert r["verdict"] == "VERIFIED" and r["route"] == "direct", r
 
 
+VAT = {"value": "22%", "source_url": URL, "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"}
+
+
+@case("claim-number-not-on-page")
+def _():
+    # W45: value сужен до чисел цитаты, а в claim осталось то, чего на странице нет
+    r = vs.verify_item(dict(VAT, claim="НДС 22%, это на 13,2% выше плана"), fetcher(OKNET))
+    assert r["verdict"] == "CLAIM_NOT_ON_PAGE" and "13.2" in r["detail"], r
+    assert vs.verify_item(dict(VAT, claim="НДС 22% с 01.01.2026"), fetcher(OKNET))["verdict"] == "VERIFIED"
+
+
+@case("claim-date-not-on-page")
+def _():
+    # W45: nadbavka_krupnye_zakreditovannye — «пресс-релиз 28.10» со ссылкой на релиз 27.07
+    r = vs.verify_item(dict(VAT, claim="По решению 28.10.2026 НДС 22%"), fetcher(OKNET))
+    assert r["verdict"] == "CLAIM_NOT_ON_PAGE" and "2026-10-28" in r["detail"], r
+
+
+@case("claim-document-details-are-not-data")
+def _():
+    miss = vs.claim_missing(
+        "ФЗ от 28.11.2025 № 426-ФЗ, ПП 1570, распоряжение № 2706-р, ст. 149, government.ru/news/60046/, "
+        "решение 13.02 → с 16.02: НДС 22%", "ставка 22 %")
+    assert miss == [], miss
+
+
+@case("claim-trillions-match-billions-on-page")
+def _():
+    assert vs.claim_missing("ВВП — 235,1 трлн ₽", "ВВП 235 067 млрд рублей") == []
+    assert vs.claim_missing("ВВП — 240,1 трлн ₽", "ВВП 235 067 млрд рублей") == ["240.1"]
+
+
+@case("recipe-without-claim-is-not-checked")
+def _():
+    r = vs.verify_item({"last_value": "22%", "source_url": URL,
+                        "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"},
+                       fetcher(OKNET), text_field="last_value")
+    assert r["verdict"] == "VERIFIED", r
+
+
 @case("verified-word-date-vs-dmy-value")
 def _():
     r = vs.verify_item({"value": "уведомление до 01.06.2026", "source_url": URL,
@@ -296,7 +336,7 @@ def _():
 @case("run-splits-and-strips")
 def _():
     cands = {"segments": {"nalogi": [
-        {"claim": "c1", "value": "22%", "source": "ФНС", "source_url": URL, "as_of": "2026-01-01",
+        {"claim": "НДС 22%", "value": "22%", "source": "ФНС", "source_url": URL, "as_of": "2026-01-01",
          "cadence": "annual", "topic": "vat_rate", "replaces": ["585d6ffd"],
          "evidence": "Основная ставка НДС с 1 января 2026 года составляет 22 %"},
         {"claim": "c2", "value": "20%", "source": "ФНС", "source_url": URL, "as_of": "2026-01-01",

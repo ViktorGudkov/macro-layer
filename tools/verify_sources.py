@@ -23,6 +23,11 @@ verify_sources.py — сверка «число есть на странице �
     QUOTE_TOO_SHORT ни одного фрагмента от 30 символов — голая ячейка или число
                     без подписи и периода не доказывают, о чём цифра;
     NOT_FOUND       цитата есть, но в ней нет числа(ел) value — список в detail;
+    CLAIM_NOT_ON_PAGE value подтверждён, но в claim есть число или дата, которых
+                    на странице нет вообще (выведенный процент, чужой факт,
+                    другой документ) — список в detail. Реквизиты документов и
+                    адреса не считаются. Совпадение — где угодно на странице: это
+                    нижняя граница, привязку числа к статье даёт только цитата;
     NO_EVIDENCE     нет цитаты (у xlsx тоже: цитата — строка таблицы из --show);
     NEGATIVE        value — «нет данных»: отсутствие страницей не доказывается;
     UNREACHABLE     страница не скачалась ни напрямую, ни через прокси. Это
@@ -293,6 +298,27 @@ def missing_tokens(value: str, evidence_text: str) -> tuple[list[str], int]:
     return miss, len(tv["dates"]) + len(tv["nums"])
 
 
+# Не данные, а реквизиты: адрес, «от 28.11.2025 № 426-ФЗ», «ПП 1570», «ст. 149»,
+# и «13.02» — день и месяц (десятичная в фактах — запятая). На брошюре Минфина
+# номера закона нет, но число бюджета это не опровергает.
+_CLAIM_SKIP = re.compile(
+    r"https?://\S+|(?<![\w.])[\w-]+(?:\.[\w-]+)*\.(?:ru|com|org|рф)(?:/\S*)?"
+    r"|(?:\bот\s+\d{1,2}\.\d{1,2}\.\d{4}\s+)?(?:№|\bN)\s*\d[\d./-]*(?:-[А-Яа-яA-Za-z]+)?"
+    r"|\b\d+-(?:ФЗ|р|п|У|П)\b"
+    r"|\bПП\s*(?:РФ\s*)?\d+"
+    r"|\b(?:ст\.|статьи|статье|статья|п\.|гл\.|главы)\s*\d+(?:\.\d+)*"
+    r"|(?<![\d.,])(?:0?[1-9]|[12]\d|3[01])\.(?:0[1-9]|1[0-2])(?![\d.])")
+
+
+def claim_missing(claim: str, page_text: str) -> list[str]:
+    """Что из claim не стоит на странице. Пул — и в тысячу раз меньше: «235,1 трлн»
+    в факте и «235 067 млрд» на странице — одно число."""
+    tc, tp = tokens(_CLAIM_SKIP.sub(" ", claim)), tokens(page_text)
+    pool = tp["nums"] + [p / 1000 for p in tp["nums"] if p >= 1000]
+    miss = [d for d in sorted(tc["dates"]) if d not in tp["dates"]]
+    return miss + [str(n) for n in tc["nums"] if not num_match(n, pool)]
+
+
 def quote_found(evidence: str, page_norm: str) -> bool:
     """Цитата (или каждый её фрагмент между «...») есть на странице по порядку."""
     frags = [f.strip(" .,;:") for f in norm(evidence).split("...")]
@@ -450,6 +476,12 @@ def verify_item(item: dict, fetcher: Fetcher, text_field: str = "value") -> dict
         rep["verdict"], rep["detail"] = "NOT_FOUND", "not in quote: " + ", ".join(miss)
     else:
         rep["verdict"] = "VERIFIED"
+    if rep["verdict"] in OK_VERDICTS and item.get("claim"):
+        # W45, 06.11.2026: value сузили до чисел цитаты, claim оставили слово в слово —
+        # факт стал «сверен» с датой 28.10 при ссылке на релиз от 27.07
+        off_page = claim_missing(str(item["claim"]), text)
+        if off_page:
+            rep["verdict"], rep["detail"] = "CLAIM_NOT_ON_PAGE", "not on page: " + ", ".join(off_page)
     return rep
 
 
