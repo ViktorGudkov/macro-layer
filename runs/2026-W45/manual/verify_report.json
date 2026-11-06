@@ -1,0 +1,79 @@
+{
+ "counts": {
+  "VERIFIED": 3
+ },
+ "hosts": {
+  "government.ru": {
+   "items": 2,
+   "direct": 2,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "cbr.ru": {
+   "items": 1,
+   "direct": 1,
+   "proxy": 0,
+   "unreachable": 0
+  }
+ },
+ "items": [
+  {
+   "topic": "federal_budget_2027_2029_draft",
+   "replaces": [
+    "31bb09b8"
+   ],
+   "source_url": "http://government.ru/news/59963/",
+   "value": "расходы 48,8 трлн ₽, доходы 43,3 трлн ₽ (2027); дефицит ~2% ВВП ежегодно (2,2% в 2027)",
+   "evidence": [
+    "На следующий год расходы составят 48,8 трлн рублей, доходы – 43,3 трлн рублей, дефицит бюджета определён порядка 2% на предстоящие три года. В 2027 году дефицит бюджета составит 2,2% от валового внутреннего продукта."
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "government.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  },
+  {
+   "topic": "mer_forecast_inflation_2026",
+   "replaces": [
+    "8a081087"
+   ],
+   "source_url": "http://government.ru/news/59963/",
+   "value": "6,8% на конец 2026; возврат к 4% к концу 2027 (прогноз Минэкономразвития)",
+   "evidence": [
+    "Инфляцию на конец 2026 года оцениваем в 6,8%, к концу 2027 года ожидаем возвращения инфляции к 4%, как это предполагается Банком России."
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "government.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "dkp"
+  },
+  {
+   "topic": "nadbavka_krupnye_zakreditovannye",
+   "replaces": [
+    "a5d54319"
+   ],
+   "source_url": "https://www.cbr.ru/press/PR/?file=639287925395179124FINSTAB.htm",
+   "value": "100% с 01.03.2026",
+   "evidence": [
+    "С 01.03.2026 макропруденциальная надбавка на прирост кредитных требований банков к крупным компаниям с высокой долговой нагрузкой действует на уровне 100%.",
+    "Банк России принял ряд решений по макропруденциальной политике 28 октября 2026 года"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "cbr.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "finansirovanie"
+  }
+ ]
+}
