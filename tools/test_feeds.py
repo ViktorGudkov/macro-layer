@@ -161,6 +161,28 @@ def _():
     assert snap["state"]["minfin_last_id"] == 100, snap["state"]           # номер не сдвинулся
 
 
+@case("http-get-retries-only-dropped-connection")
+def _():
+    # 06.11.2026: разовый обрыв на прокси облака не должен ронять ленту
+    answers, calls = [], []
+
+    def fake(url, proxy, dst):
+        calls.append(url)
+        code, rc, body = answers.pop(0)
+        dst.write_bytes(body)
+        return code, "", rc
+    real, feeds.vs.curl_fetch = feeds.vs.curl_fetch, fake
+    try:
+        answers[:] = [(0, 35, b""), (200, 0, b"ok")]
+        assert feeds.http_get("u", pause=0) == (200, b"ok") and len(calls) == 2, calls
+        calls.clear(); answers[:] = [(404, 0, b"")]                          # 404 — ответ, не обрыв
+        assert feeds.http_get("u", pause=0) == (404, b"") and len(calls) == 1, calls
+        calls.clear(); answers[:] = [(0, 35, b"")] * feeds.HTTP_TRIES        # обрыв держится
+        assert feeds.http_get("u", pause=0)[0] == 0 and len(calls) == feeds.HTTP_TRIES, calls
+    finally:
+        feeds.vs.curl_fetch = real
+
+
 @case("since-by-source-widens-window")
 def _():
     # общее окно с 18.09 отсекает событие ЦБ от 11.09 и обзор КонсультантПлюс от 01.08

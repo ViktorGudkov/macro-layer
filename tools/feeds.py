@@ -49,6 +49,7 @@ import json
 import re
 import sys
 import tempfile
+import time
 from datetime import date, timedelta
 from pathlib import Path
 
@@ -60,6 +61,8 @@ STOP_404 = 6          # столько несуществующих номеро
 MINFIN_MAX = 120      # номеров за прогон (≈ 2 месяца при ~1,5 в день)
 DEFAULT_SINCE_DAYS = 8
 LOOKBACK_DAYS = 35    # глубже окна месячного прохода упавшую ленту не добираем
+HTTP_TRIES = 3        # попыток при обрыве соединения
+HTTP_PAUSE = 5        # секунд между ними
 RSS = {
     "cbr_events": "https://www.cbr.ru/rss/eventrss",
     "cbr_press": "https://www.cbr.ru/rss/RssPress",
@@ -76,13 +79,22 @@ _MONTHS = {"январ": 1, "феврал": 2, "март": 3, "апрел": 4, "
 
 
 # ---------------------------------------------------------------- network
-def http_get(url: str, proxy: str | None = None) -> tuple[int, bytes]:
-    """(HTTP-код, тело). Тот же curl, что у сверки: UA, -k, прокси не печатается."""
-    with tempfile.TemporaryDirectory() as td:
-        dst = Path(td) / "body"
-        code, _ctype, rc = vs.curl_fetch(url, proxy, dst)
-        body = dst.read_bytes() if dst.exists() else b""
-    return (code if rc == 0 else 0), body
+def http_get(url: str, proxy: str | None = None, tries: int = HTTP_TRIES, pause: float = HTTP_PAUSE) -> tuple[int, bytes]:
+    """(HTTP-код, тело). Тот же curl, что у сверки: UA, -k, прокси не печатается.
+    Обрыв соединения (код 0) повторяется: разовый обрыв на прокси облака 06.11.2026
+    уронил всю ленту минфина на id_4=40730. HTTP-ответ, в том числе 404, не повторяется."""
+    code, body = 0, b""
+    for attempt in range(tries):
+        if attempt:
+            time.sleep(pause)
+        with tempfile.TemporaryDirectory() as td:
+            dst = Path(td) / "body"
+            code, _ctype, rc = vs.curl_fetch(url, proxy, dst)
+            body = dst.read_bytes() if dst.exists() else b""
+        code = code if rc == 0 else 0
+        if code:
+            break
+    return code, body
 
 
 def _clean(s: str) -> str:
