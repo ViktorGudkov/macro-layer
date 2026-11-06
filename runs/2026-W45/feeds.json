@@ -1,0 +1,251 @@
+{
+ "today": "2026-11-06",
+ "since": "2026-10-31",
+ "state": {
+  "minfin_last_id": 40728
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": true,
+   "fetched": 100,
+   "kept": 1
+  },
+  "cbr_press": {
+   "ok": true,
+   "fetched": 11,
+   "kept": 1
+  },
+  "gov_docs": {
+   "ok": true,
+   "fetched": 20,
+   "kept": 1
+  },
+  "vedomosti": {
+   "ok": true,
+   "fetched": 200,
+   "kept": 8
+  },
+  "cons_bills": {
+   "ok": true,
+   "fetched": 65
+  },
+  "minfin": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 0 at id_4=40730"
+  },
+  "cons_week": {
+   "ok": true,
+   "fetched": 111,
+   "kept": 6
+  }
+ },
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-11-06",
+   "title": "Бюджет получил в октябре самые высокие нефтегазовые доходы за полтора года",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/06/1243067-byudzhet-poluchil",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-05",
+   "title": "Решетников попросил Путина продлить программу казначейских кредитов для регионов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/05/1242961-prodlit-programmu-kaznacheiskih-kreditov",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-05",
+   "title": "В каких регионах росла безработица",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/05/1242671-v-kakih-regionah-rosla-bezrabotitsa",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-05",
+   "title": "Банк России публикует Резюме обсуждения ключевой ставки по итогам заседания 23 октября",
+   "url": "https://www.cbr.ru/press/event/?id=32960",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-04",
+   "title": "Собрать по 5% с миллиардеров: как Калифорния объявила войну своим богачам",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/04/1242159-voinu-bogacham",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-11-02",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (02.11.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639292378686973469BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "Французские депутаты поддержали введение налога на интернет-трафик",
+   "url": "https://www.vedomosti.ru/politics/news/2026/10/31/1241761-frantsuzskie-deputati-podderzhali",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "В Италии предложили ввести 26%-ный налог для богатых при смене резидентства",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/31/1241784-v-italii-predlozhili-nalog",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "Правительство РФ выделило еще 725 млн рублей на льготные кредиты аграриям",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/31/1241737-725-mln-na-krediti-agrariyam",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "Проект бюджета на ближайшую трехлетку в цифрах и графиках",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/31/1241124-proekt-byudzheta-na-trehletku",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-31",
+   "title": "Правительство дополнительно выделило более 725 млн рублей на субсидирование льготных кредитов для сельхозпроизводителей",
+   "url": "http://government.ru/docs/60324/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "Информация Минэкономразвития России <О коэффициентах-дефляторах к ставке налога на добычу полезных ископаемых при добыче угля на IV квартал 2026 года>",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547933/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "\"Основные направления единой государственной денежно-кредитной политики на 2027 год и период 2028 и 2029 годов\" (утв. Банком России)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547816/",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "<Информация> ФНС России \"Когда выплата работодателем единовременной материальной помощи при рождении ребенка освобождается от уплаты страховых взносов\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547692/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "<Информация> Минэкономразвития России \"О ставках вывозных таможенных пошлин на нефть и отдельные категории товаров, выработанных из нефти, на период с 1 по 30 ноября 2026 года\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547674/",
+   "rubric": "ВНЕШНЕЭКОНОМИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ. ТАМОЖЕННОЕ ДЕЛО",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "\"Методические рекомендации Банка России по определению финансового положения и источников происхождения денежных средств клиентов кредитных организаций в целях усиления контроля за операциями с наличными денежными средствами\" (утв. Банком России 26.10.2026 N 5-МР)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547667/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "Проект Постановления Правительства РФ \"О Программе государственных гарантий бесплатного оказания гражданам медицинской помощи на 2027 год и на плановый период 2028 и 2029 годов\"",
+   "url": "https://storage.consultant.ru/site20/202610/29/pr_p_291026_med.zip",
+   "rubric": "ЗДРАВООХРАНЕНИЕ",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}

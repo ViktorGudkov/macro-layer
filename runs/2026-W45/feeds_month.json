@@ -1,0 +1,4099 @@
+{
+ "today": "2026-11-06",
+ "days": 35,
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-11-06",
+   "title": "Бюджет получил в октябре самые высокие нефтегазовые доходы за полтора года",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/06/1243067-byudzhet-poluchil",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-05",
+   "title": "Решетников попросил Путина продлить программу казначейских кредитов для регионов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/05/1242961-prodlit-programmu-kaznacheiskih-kreditov",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-05",
+   "title": "В каких регионах росла безработица",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/05/1242671-v-kakih-regionah-rosla-bezrabotitsa",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-05",
+   "title": "Банк России публикует Резюме обсуждения ключевой ставки по итогам заседания 23 октября",
+   "url": "https://www.cbr.ru/press/event/?id=32960",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-04",
+   "title": "Собрать по 5% с миллиардеров: как Калифорния объявила войну своим богачам",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/04/1242159-voinu-bogacham",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-11-02",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (02.11.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639292378686973469BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "Французские депутаты поддержали введение налога на интернет-трафик",
+   "url": "https://www.vedomosti.ru/politics/news/2026/10/31/1241761-frantsuzskie-deputati-podderzhali",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "В Италии предложили ввести 26%-ный налог для богатых при смене резидентства",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/31/1241784-v-italii-predlozhili-nalog",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "Правительство РФ выделило еще 725 млн рублей на льготные кредиты аграриям",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/31/1241737-725-mln-na-krediti-agrariyam",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-31",
+   "title": "Проект бюджета на ближайшую трехлетку в цифрах и графиках",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/31/1241124-proekt-byudzheta-na-trehletku",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-31",
+   "title": "Правительство дополнительно выделило более 725 млн рублей на субсидирование льготных кредитов для сельхозпроизводителей",
+   "url": "http://government.ru/docs/60324/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "Информация Минэкономразвития России <О коэффициентах-дефляторах к ставке налога на добычу полезных ископаемых при добыче угля на IV квартал 2026 года>",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547933/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "\"Основные направления единой государственной денежно-кредитной политики на 2027 год и период 2028 и 2029 годов\" (утв. Банком России)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547816/",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "<Информация> ФНС России \"Когда выплата работодателем единовременной материальной помощи при рождении ребенка освобождается от уплаты страховых взносов\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547692/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "<Информация> Минэкономразвития России \"О ставках вывозных таможенных пошлин на нефть и отдельные категории товаров, выработанных из нефти, на период с 1 по 30 ноября 2026 года\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547674/",
+   "rubric": "ВНЕШНЕЭКОНОМИЧЕСКАЯ ДЕЯТЕЛЬНОСТЬ. ТАМОЖЕННОЕ ДЕЛО",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "\"Методические рекомендации Банка России по определению финансового положения и источников происхождения денежных средств клиентов кредитных организаций в целях усиления контроля за операциями с наличными денежными средствами\" (утв. Банком России 26.10.2026 N 5-МР)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547667/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-31",
+   "title": "Проект Постановления Правительства РФ \"О Программе государственных гарантий бесплатного оказания гражданам медицинской помощи на 2027 год и на плановый период 2028 и 2029 годов\"",
+   "url": "https://storage.consultant.ru/site20/202610/29/pr_p_291026_med.zip",
+   "rubric": "ЗДРАВООХРАНЕНИЕ",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-30",
+   "title": "ФНС начала штрафовать самозанятых за «отмену чеков»",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/30/1241408-fns-nachala-shtrafovat",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-30",
+   "title": "Как Госдума принимала еще один непростой бюджет в первом чтении",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/30/1241345-kak-gosduma-prinimala",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-30",
+   "title": "ФНС апробирует системный контроль за сокрытием доходов самозанятых",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/30/1241342-fns-aprobiruet-kontrol",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-30",
+   "title": "29 октября Госдума приняла в I чтении проект бюджета на предстоящие три года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40727",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-30",
+   "title": "Финансовые регуляторы стран ЕАЭС встретились в Несвиже",
+   "url": "https://www.cbr.ru/press/event/?id=32951",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Госдума приняла в первом чтении законопроект о налоге на сверхдоходы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/29/1241319-o-naloge-na-sverhdohodi",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Правительство предлагает отменить таможенный сбор на товары интернет-торговли",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/29/1241317-otmenit-tamozhennii-sbor",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Силуанов: проект бюджета обеспечивает все социальные обязательства",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/29/1241226-sotsialnie-obyazatelstva",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Госдума приняла проект трехлетнего бюджета в первом чтении",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/29/1241197-gosduma-prinyala-proekt",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Силуанов: задачей нового бюджета является обеление экономики",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/29/1241192-obelenie-ekonomiki",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Силуанов оценил в сотни миллиардов рублей рост инфляции и ставки ЦБ для бюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/29/1241171-otsenil-posledstviya",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-29",
+   "title": "Комитет по бюджету предупредил о возможных рисках недополучения доходов казны",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/29/1240969-komitet-po-byudzhetu-predupredil",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-29",
+   "title": "Госдума приняла в первом чтении законопроекты «бюджетного пакета», определяющие особенности формирования и исполнения бюджета на трехлетний период",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40726",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-29",
+   "title": "Госдума в первом чтении приняла проект поправок в Налоговый кодекс",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40724",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-29",
+   "title": "Госдума приняла в первом чтении законопроект о федеральном бюджете на 2027–2029 годы",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40723",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-28",
+   "title": "Подсчеты «Ведомостей»: БРИКС догоняет Запад по экономическому влиянию в Африке",
+   "url": "https://www.vedomosti.ru/politics/articles/2026/10/27/1240626-briks-oboshel-zapad",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-28",
+   "title": "Какие налоговые поправки предложили скорректировать ко второму чтению депутаты",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/28/1240638-nalogovie-popravki-predlozhili-skorrektirovat",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-28",
+   "title": "Минфин готов смягчить налоговый законопроект в части ЗПИФов",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/28/1240628-minfin-gotov-smyagchit-nalogovii-zakonoproekt",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-28",
+   "title": "Госдума ратифицировала соглашение с Южной Осетией о признании стажа работников таможенных органов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40719",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-28",
+   "title": "Госдума одобрила внесение изменений в договор с Республикой Беларусь об общих принципах налогообложения",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40718",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-28",
+   "title": "Банк России принял ряд решений по макропруденциальной политике (28.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639287925395179124FINSTAB.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-28",
+   "title": "Банк России опубликовал Основные направления денежно-кредитной политики на 2027–2029 годы",
+   "url": "https://www.cbr.ru/press/event/?id=32941",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-28",
+   "title": "Инфляционные ожидания в октябре снизились",
+   "url": "https://www.cbr.ru/press/event/?id=32938",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-27",
+   "title": "Депутаты предложили скорректировать законопроект о налоге на сверхприбыль",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/27/1240480-deputati-predlozhili",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-27",
+   "title": "Бизнес и юристы выразили обеспокоенность возможным расширением полномочий ФНС",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/27/1240327-biznes-i-yuristi-virazili-obespokoennost",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-27",
+   "title": "Минфин России предлагает усовершенствовать порядок предоставления льгот по туристическому налогу",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40721",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-27",
+   "title": "Общий объем финансирования образования из федерального и региональных бюджетов в 2027–2029 годах составит более 8 трлн рублей ежегодно",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40716",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-27",
+   "title": "В Госдуме завершились «нулевые чтения» проекта федерального бюджета на 2027–2029 годы",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40715",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-27",
+   "title": "Трехсторонняя комиссия по вопросам межбюджетных отношений одобрила методики и расчеты межбюджетных трансфертов к первому чтению проекта бюджета на 2027–2029 годы",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40714",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-26",
+   "title": "Россияне оплатили налоги через «Госуслуги» 16,3 млн раз с начала года",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/26/1240131-rossiyane-oplatili-nalogi",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-26",
+   "title": "ЕР поддержит проект бюджета на 2027–2029 годы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/26/1240113-er-podderzhit",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-26",
+   "title": "На площадке Госдумы проходят «нулевые чтения» проекта федерального бюджета на 2027-2029 годы",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40713",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-26",
+   "title": "В сентябре рост корпоративного кредитования замедлился, в рознице ускорилась ипотека",
+   "url": "https://www.cbr.ru/press/event/?id=32932",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-25",
+   "title": "Путин: внешний долг России находится на уровне 2,6% ВВП",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/25/1239920-vneshnii-dolg-rossii",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования. Федеральный государственный контроль (надзор) за выполнением частным агентством занятости требований аккредитации на право осуществления деятельности по предоставлению труда работников (персонала)\" (ут",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547594/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "\"Исчерпывающий перечень сведений, которые могут запрашиваться Федеральной службой по труду и занятости у контролируемых лиц при осуществлении федерального государственного контроля (надзора) в сфере социального обслуживания\" (утв. Рострудом)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547582/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "<Информация> ФНС России \"28 октября наступает единый срок уплаты авансовых платежей по налогам на имущество организаций за третий квартал\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547494/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "\"Клинические рекомендации \"Другие нарушения накопления липидов (дефицит лизосомной кислой липазы)\" (одобрены Минздравом России)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547481/",
+   "rubric": "ЗДРАВООХРАНЕНИЕ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "\"Обобщение практики оказания консультационных услуг по вопросам корпоративного управления, налогообложения, бухгалтерского сопровождения и права в иностранных юрисдикциях аудиторскими организациями\" (одобрено Решением Правления СРО ААС 16.10.2026, протокол N 805)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547427/",
+   "rubric": "БУХГАЛТЕРСКИЙ УЧЕТ. СТАТИСТИКА",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "<Информация> СФР \"Граждане из приграничья смогут оформить пособие на детей в упрощенном режиме\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547323/",
+   "rubric": "СОЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ. ПОСОБИЯ И ЛЬГОТЫ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "\"Соглашение о продлении срока действия на 2026 - 2029 годы Отраслевого соглашения по федеральным государственным бюджетным и казенным учреждениям, находящимся в ведении Министерства труда и социальной защиты Российской Федерации, на 2023 - 2026 годы\" (утв. Общероссийским профессиональным союзом рабо",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547271/",
+   "rubric": "ТРУД И ЗАНЯТОСТЬ",
+   "segments": [
+    "byudzhet",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "<Информация> ФНС России \"Изменился формат представления организациями финансового рынка информации о счетах клиентов\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547265/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "<Информация> ФНС России \"Обновлена форма декларации по ЕСХН за 2026 год\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547172/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "<Информация> ФНС России \"ФНС России разъяснила, как получить налоговое уведомление за 2025 год на бумаге\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547073/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "\"Перечень поручений по итогам заседания Совета по стратегическому развитию и национальным проектам\" (утв. Президентом РФ 15.10.2026 N Пр-2595)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547059/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "Проект Федерального закона N 17096-9 \"О внесении изменения в статью 256 Трудового кодекса Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/23/pr_231026_096.pdf",
+   "rubric": "СОЦИАЛЬНОЕ ОБЕСПЕЧЕНИЕ. ПОСОБИЯ И ЛЬГОТЫ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "Проект Постановления Правительства РФ \"О фиксированном размере страховых взносов на обязательное социальное страхование от несчастных случаев на производстве и профессиональных заболеваний, уплачиваемых организациями и индивидуальными предпринимателями, применяющими специальный налоговый режим \"Авто",
+   "url": "https://storage.consultant.ru/site20/202610/22/pr_p_221026.rtf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-24",
+   "title": "Проект Положения Банка России \"О порядке ведения кассовых операций и правилах хранения, перевозки и инкассации наличных денег в кредитных организациях\"",
+   "url": "https://storage.consultant.ru/site20/202610/21/bank_211026.zip",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-23",
+   "title": "ЦБ рассчитывает на дезинфляционный характер нового проекта бюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/23/1239673-dezinflyatsionnii-harakter",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-23",
+   "title": "Чебесков: легализация онлайн-казино может дать бюджету 100 млрд рублей в год",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/23/1239617-legalizatsiya-onlain-kazino",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-23",
+   "title": "Владельцы ПВЗ попросили не облагать налогом кадастровую стоимость их помещений",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/23/1239439-vladeltsi-pvz-poprosili",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-23",
+   "title": "Алексей Сазанов: автоматизация операций и применение искусственного интеллекта оптимизируют работу таможенников и ускорят перемещение товаров через границу",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40710",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-23",
+   "title": "<Информация> Банка России от 23.10.2026 \"Банк России принял решение сохранить ключевую ставку на уровне 14,00% годовых\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_547497/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 12892-9\"О внесении изменений в Трудовой кодекс в части предоставления оплачиваемого отпуска членам семьи погибшего (умершего) участника специальной военной операции, а также членам семьи участника специальной военной операции, получившего ранение, контузию или увечье\"(ре",
+   "url": "https://www.consultant.ru/law/review/209857263.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 13748-9\"О внесении изменений в статью 164 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 19.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857259.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1265989-8\"О внесении изменений в Федеральный закон \"О введении в действие Земельного кодекса Российской Федерации\" и статью 70 Федерального закона \"О государственной регистрации недвижимости\"(ред., принятая ГД ФС РФ в I чтении 15.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857252.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1264919-8\"О внесении изменения в статью 333.36 части второй Налогового кодекса Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 15.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857247.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1272209-8\"О внесении изменений в статью 88 части первой и статью 214.10 части второй Налогового кодекса Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 15.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857246.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1285748-8\"О внесении изменения в статью 333.35 части второй Налогового кодекса Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 15.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857245.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1236829-8\"О внесении изменений в Федеральный закон \"О банках и банковской деятельности\"(ред., принятая ГД ФС РФ в I чтении 20.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857243.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1236943-8\"О внесении изменений в статью 18 Федерального закона \"О Центральном банке Российской Федерации (Банке России)\" и Федеральный закон \"О валютном регулировании и валютном контроле\"(ред., принятая ГД ФС РФ в I чтении 20.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857242.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1327032-8\"О внесении изменения в Федеральный закон \"О страховых пенсиях\"(ред., принятая ГД ФС РФ в I чтении 14.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857240.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-23",
+   "title": "Проект Федерального закона N 1291817-8\"О внесении изменений в статью 370 Трудового кодекса Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 15.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209857239.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-23",
+   "title": "Банк России принял решение сохранить ключевую ставку на уровне 14,00% годовых (23.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=23102026_133000key.htm",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp",
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-23",
+   "title": "Заявление Председателя Банка России Эльвиры Набиуллиной по итогам заседания Совета директоров Банка России 23 октября 2026 года",
+   "url": "https://www.cbr.ru/press/event/?id=32929",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-22",
+   "title": "Как ФНС и бизнес видят режим самозанятости после 2028 года",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/22/1239073-kak-vidyat-rezhim-samozanyatosti",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-22",
+   "title": "Отозвана лицензия на осуществление банковских операций у ООО НКО «Тайдон» (22.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639282394585722382BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-21",
+   "title": "Силуанов призвал не торопиться с дополнительными налогами для банков",
+   "url": "https://www.vedomosti.ru/finance/news/2026/10/21/1238903-siluanov-prizval-ne-toropitsya",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-21",
+   "title": "Иван Чебесков: Для России АТР – это пространство для финансового сотрудничества, развития технологий и новых инвестиционных проектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40702",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-21",
+   "title": "Установлены факты неправомерного использования инсайдерской информации при совершении сделок с рядом акций на торгах ПАО Московская Биржа (21.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639281939787093652PNP.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-21",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (21.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639281806781687368BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-20",
+   "title": "23 октября в 15:00 состоится пресс-конференция по итогам заседания Совета директоров по денежно-кредитной политике",
+   "url": "https://www.cbr.ru/press/event/?id=32923",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Минфин обсудит продление специального налогового режима для самозанятых",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238359-minfin-obsudit-prodlenie",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Бюджет Минкульта на 2027–2029 годы составит 709,3 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238153-byudzhet-minkulta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Володин поддержал идею повысить налоги для золотодобывающих компаний",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238083-volodin-podderzhal-ideyu",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Володин предложил отменить льготный НДС на деликатесы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/19/1238082-otmenit-nds",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "Сергей Черногаев: «Работникам выгодно объединяться»",
+   "url": "https://www.vedomosti.ru/economics/characters/2026/10/19/1238024-rabotnikam-vigodno-obedinyatsya",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-19",
+   "title": "ФНС раскрыла итоги применения реабилитационных процедур в банкротстве",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/19/1238033-fns-raskrila-itogi",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-17",
+   "title": "Правительство выделило более 1,7 млрд рублей на поддержку региональных программ развития экспорта",
+   "url": "http://government.ru/docs/60217/",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "Котяков: МРОТ в России составит 28 935 рублей в 2027 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237704-mrot-sostavit",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "Минэнерго и Минфин прорабатывают поправки по налогам для ТРИЗ",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237590-minenergo-i-minfin",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-16",
+   "title": "В трехлетнем проекте бюджета Якутии отсутствуют дивиденды от «Алросы»",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/16/1237580-otsutstvuyut-dividendi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона\"О внесении изменений в статью 15.1 Федерального закона \"О правовом положении иностранных граждан в Российской Федерации\"(подготовлен МВД России, ID проекта 01/05/10-26/00171771)(не внесен в ГД ФС РФ, текст по состоянию на 12.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851102.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона\"О внесении изменений в Федеральный закон \"О правовом положении иностранных граждан в Российской Федерации\"(подготовлен МВД России, ID проекта 01/05/10-26/00171797)(не внесен в ГД ФС РФ, текст по состоянию на 12.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851100.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона\"О внесении изменений в Федеральный закон \"Об особых экономических зонах в Российской Федерации\"(подготовлен Минэкономразвития России, ID проекта 02/04/10-26/00171692)(не внесен в ГД ФС РФ, текст по состоянию на 14.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851099.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-16",
+   "title": "Проект Федерального закона N 8090-9\"О внесении изменений в статью 349.2 Трудового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 09.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209851089.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-16",
+   "title": "Установлены факты манипулирования рынком руководителем компании – профессионального участника рынка ценных бумаг (16.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639277388823606918PNP.htm",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Силуанов призвал G20 сокращать бюджетные дефициты для роста мировой экономики",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/15/1237468-siluanov-prizval",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Шохин попросил кабмин поэтапно включать пассивные доходы в расчет по НДФЛ",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/15/1237177-shohin-poprosil-kabmin",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Почему ожидания экономистов по инфляции хуже прогноза Минэка",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/15/1237175-ozhidaniya-ekonomistov-po-inflyatsii",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-15",
+   "title": "Чем вызван быстрый рост внешней торговли Китая",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/15/1237168-rost-vneshnei-torgovli-kitaya",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-15",
+   "title": "Приглашаем исследователей принять участие в научной конференции по Обзору денежно-кредитной политики",
+   "url": "https://www.cbr.ru/press/event/?id=32915",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-14",
+   "title": "Международное налоговое сотрудничество обсудили в Бангкоке",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40691",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-14",
+   "title": "Показатели устойчивой инфляции в сентябре практически не изменились",
+   "url": "https://www.cbr.ru/press/event/?id=32908",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-13",
+   "title": "Силуанов: проект о налоге на сверхдоходы учитывает мнение бизнеса",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/13/1236731-siluanov-o-naloge",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-13",
+   "title": "Как прошло обсуждение закона о бюджете в профильном комитете Госдумы",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/13/1236489-obsuzhdenie-zakona-o-byudzhete",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-13",
+   "title": "Аналитики «Сбера» указали на сокращение дефицита кадров за счет пожилых",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/13/1236484-sokraschenie-defitsita-kadrov-za-schet-pozhilih",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-13",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (13.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639275076044949684BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-12",
+   "title": "Казахстан начал продавать золото на фоне роста доходности облигаций США",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/12/1236456-kazahstan-nachal-prodavat-zoloto",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-12",
+   "title": "Заботкин: сокращение дефицита бюджета поможет снизить ключевую ставку",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/12/1236262-snizit-stavku",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-12",
+   "title": "Павел Кадочников: За каждой строкой бюджета должен стоять конкретный результат",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40685",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-12",
+   "title": "Антон Силуанов: Проект федерального бюджета на 2027-2029 годы устойчив к любым сценариям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40684",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-12",
+   "title": "Ненефтегазовый дефицит в предстоящей трехлетке составит около 5% ВВП – минимальный уровень с 2008 года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40682",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-10",
+   "title": "Участникам программы «Время героев» рассказали о программно-целевом бюджетировании и системе «Электронный бюджет»",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40681",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "<Информация> ФНС России \"Как подтвердить расходы на медицинские услуги для получения социального налогового вычета\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546270/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования, оценка соблюдения которых осуществляется в рамках федерального государственного контроля (надзора) за соблюдением обязательных требований к проведению экзамена по русскому языку как иностранному, истор",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546267/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "<Информация> ФНС России \"Утверждена обновленная форма декларации по налогу на прибыль организаций\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546183/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "<Информация> ФНС России \"ФНС России разъяснила особенности налогообложения автомобилей с электрическими двигателями\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546143/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "Информация ФНС России \"Правительство РФ предусмотрело меры поддержки предпринимателей \"Озон\", пострадавших от атак\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545861/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "Проект Приказа Минэкономразвития России \"Об установлении коэффициентов-дефляторов на 2027 год\"",
+   "url": "https://www.consultant.ru/cons/cgi/online.cgi?req=doc;base=PNPA;n=126632",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-10",
+   "title": "Проект Постановления Правительства РФ \"О единой предельной величине базы для исчисления страховых взносов с 1 января 2027 г.\"",
+   "url": "https://storage.consultant.ru/site20/202610/08/pr_pr_081026-strchvznos.rtf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "UnHerd: кризис с госдолгом Франции может распространиться на всю Европу",
+   "url": "https://www.vedomosti.ru/politics/news/2026/10/09/1235921-krizis-s-gosdolgom-frantsii",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "Минфин: дефицит бюджета в России за девять месяцев составил 5,2 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/09/1235952-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "Банки ЕС столкнутся с дополнительными проверками суверенных облигаций",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/09/1235746-banki-stolknutsya",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-09",
+   "title": "ФНС обозначила признаки созданных для налоговой оптимизации ЗПИФов",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/09/1235602-fns-oboznachila-priznaki-sozdannih-dlya-nalogovoi-optimizatsii-zpifov",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-09",
+   "title": "Предварительная оценка исполнения федерального бюджета за январь-сентябрь 2026 года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40677",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-09",
+   "title": "Ирина Окладникова: Бюджет на 2027–2029 годы обеспечит выполнение социальных обязательств и реализацию нацпроектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40676",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Распоряжение Правительства РФ от 09.10.2026 N 2844-р <О внесении изменений в распоряжение Правительства РФ от 21.06.2023 N 1633-р>",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546456/",
+   "rubric": "ХОЗЯЙСТВЕННАЯ ДЕЯТЕЛЬНОСТЬ",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "rubric",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Постановление Правительства РФ от 09.10.2026 N 1324 \"О внесении изменений в постановление Правительства Российской Федерации от 16 сентября 2022 г. N 1625\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546446/",
+   "rubric": "СВЯЗЬ. ИНФОРМАЦИЯ И ИНФОРМАТИЗАЦИЯ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Постановление Правительства РФ от 09.10.2026 N 1325 \"О внесении изменений в постановление Правительства Российской Федерации от 26 августа 2023 г. N 1390\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546445/",
+   "rubric": "ХОЗЯЙСТВЕННАЯ ДЕЯТЕЛЬНОСТЬ",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "rubric",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Постановление Правительства РФ от 09.10.2026 N 1327 \"О внесении изменений в постановление Правительства Российской Федерации от 31 декабря 2004 г. N 908\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546444/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-09",
+   "title": "Информационное письмо Банка России от 09.10.2026 N ИН-018-35/34 \"О порядке определения размера процентной ставки по отдельным ипотечным кредитам (займам)\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_546430/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона\"О внесении изменений в Трудовой кодекс Российской Федерации\"(подготовлен Минтрудом России, ID проекта 02/04/10-26/00171527)(не внесен в ГД ФС РФ, текст по состоянию на 02.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209844043.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 70-9\"О внесении изменения в статью 61.1 Бюджетного кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209844025.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 333-9\"О внесении изменений в статьи 346.34 и 346.38 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209844022.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 474-9\"О внесении изменения в статью 1 Федерального закона \"О минимальном размере оплаты труда\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209844017.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 485-9\"О внесении изменения в статью 144 Трудового кодекса Российской Федерации в части установления ежегодной дополнительной выплаты по итогам календарного года работникам государственных и муниципальных учреждений\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09",
+   "url": "https://www.consultant.ru/law/review/209844015.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 1523-9\"О внесении изменений в статью 217.1 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 01.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209844010.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-09",
+   "title": "Проект Федерального закона N 3147-9\"О внесении изменений в отдельные законодательные акты в части отмены патентной системы осуществления иностранными гражданами трудовой деятельности на территории Российской Федерации и введении механизма организованного набора на основании разрешения на работу\"(ред",
+   "url": "https://www.consultant.ru/law/review/209844006.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-09",
+   "title": "Индикаторы денежно-кредитных условий в августе – сентябре менялись разнонаправленно, оставаясь умеренно жесткими",
+   "url": "https://www.cbr.ru/press/event/?id=32903",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-08",
+   "title": "Минпромторг предложил изменить условия налоговых льгот для радиоэлектроники",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/08/1235291-minpromtorg-predlozhil",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-08",
+   "title": "Исполнение расходов федерального бюджета на реализацию национальных проектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40672",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-08",
+   "title": "Установлены факты манипулирования рынком ценных бумаг группой аффилированных организаций и их владельцами (08.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639270476049988487PNP.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-10-08",
+   "title": "В сентябре розничные инвесторы поддержали рынок облигаций",
+   "url": "https://www.cbr.ru/press/event/?id=32899",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "Фонд национального благосостояния в сентябре сократился на 210 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1235116-fond-sokratilsya",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "FT: ЕС ищет способ увеличить налоги для американских техногигантов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1234981-ft-es-ischet-sposob",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "Белгородской области списали 2,8 млрд рублей задолженности по бюджетным кредитам",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1234971-spisali-28-mlrd-rublei",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-07",
+   "title": "МВФ: мировой госдолг превысит 100% ВВП к 2030 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/07/1234927-mirovoi-gosdolg",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-07",
+   "title": "Информационное сообщение о результатах размещения средств Фонда национального благосостояния",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40668",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-07",
+   "title": "Правительство списало часть задолженности по бюджетным кредитам Белгородской области",
+   "url": "http://government.ru/docs/60112/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-07",
+   "title": "Состоялось заседание Национального финансового совета (07.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639269710780956055TODAY.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-07",
+   "title": "Банк России утвердил перечень системно значимых кредитных организаций (07.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639269694907022516BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Россия почти втрое нарастила экспорт золота в Гонконг",
+   "url": "https://www.vedomosti.ru/finance/news/2026/10/06/1234750-eksport-zolota-v-gonkong",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Шохин предложил альтернативу налогу на сверхприбыль",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/06/1234830-shohin-predlozhil-alternativu",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Доходности долгосрочных гособлигаций США обновили максимумы за 24 года",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/06/1234573-gosobligatsii-ssha",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "О чем просили Минфин регионы в ходе публичных слушаний проекта бюджета",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/06/1234507-o-chem-prosili-minfin-regioni",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-06",
+   "title": "Подсчеты «Ведомостей»: Европа удвоила военные расходы за пять лет",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/06/1234498-evropa-udvoila-voennie-rashodi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Матвиенко назвала бюджет на 2027–2029 годы «финансовым искусством»",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234390-byudzhet-iskusstvom",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов рассказал о найденном компромиссе по налогу на сверхдоходы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234338-o-naidennom-kompromisse",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов: МРОТ в России достигнет 35 000 рублей к 2030 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234325-mrot-dostignet",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "ЦБ: налоговые поступления снизят влияние роста расходов бюджета на ДКП",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234305-tsb-nalogovie-postupleniya",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов: план по обелению экономики уже принес 34 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234295-siluanov-plan-po",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Силуанов: доля нефтегазовых доходов бюджета РФ в 2027–2029 годах не превысит 17%",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234288-dolya-neftegazovih-dohodov",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Матвиенко: отмена льгот по НДС на устриц и омаров даст бюджету 6 млрд",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/05/1234286-matvienko-otmena-lgoti",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Доходы, нефть и «обеление» экономики: главное из выступления Силуанова в Совфеде",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/05/1234328-dohodi-neft-obelenie",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Генпрокурора просят поучаствовать в делах о налогах для экспортеров АПК",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/05/1234117-genprokurora-prosyat-pouchastvovat-v-delah-o-nalogah",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-05",
+   "title": "Минфин оценил эффективность отраслевых налоговых льгот",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/05/1234114-minfin-otsenil-effektivnost-lgot",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-05",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40666",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-05",
+   "title": "Министр финансов РФ Антон Силуанов представил на парламентских слушаниях в Совете Федерации проект федерального бюджета на 2027-2029 гг.",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40665",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-05",
+   "title": "О нефтегазовых доходах и проведении операций по покупке/продаже иностранной валюты и золота на внутреннем валютном рынке",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40664",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-05",
+   "title": "Совет директоров Банка России принял решение о включении ценных бумаг в Ломбардный список (05.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639267886931956080DSD.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-10-03",
+   "title": "Правительство утвердило постановление о маркетплейсах, на которых могут проводиться госзакупки для образовательных организаций",
+   "url": "http://government.ru/docs/60077/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Основные направления бюджетной, налоговой и таможенно-тарифной политики на 2027 год и на плановый период 2028 и 2029 годов\" (разработаны Минфином России)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545750/",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet",
+    "nalogi",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "<Информация> ФНС России \"Установлен порядок подтверждения пониженной налоговой ставки НДС в отношении товаров для детей\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545726/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Информация профессиональных участников рынка ценных бумаг, имеющих лицензии на осуществление депозитарной деятельности, а также деятельности по ведению реестра владельцев ценных бумаг, порядок и сроки ее составления и представления\" (утв. Банком России 25.09.2026)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545640/",
+   "rubric": "ЦЕННЫЕ БУМАГИ. РЫНОК ЦЕННЫХ БУМАГ",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "<Информация> ФНС России\"При применении льготы по налогу на прибыль организаций следует правильно отражать код признака налогоплательщика\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545564/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования, оценка соблюдения которых осуществляется в рамках федерального государственного контроля (надзора) в области производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции, предметом",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545411/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Перечень нормативных правовых актов (их отдельных положений), содержащих обязательные требования, оценка соблюдения которых осуществляется в рамках федерального государственного контроля (надзора) в области производства и оборота этилового спирта, алкогольной и спиртосодержащей продукции, предметом",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545410/",
+   "rubric": "КОНСТИТУЦИОННЫЙ СТРОЙ. ОСНОВЫ ГОСУДАРСТВЕННОГО УПРАВЛЕНИЯ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Порядок по подготовке информации по расчету норматива достаточности капитала\" (утв. Банком России 25.09.2026)",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545400/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "\"Стандарт Банка России \"Обмен электронными сообщениями в области наличного денежного обращения. Заявка на сдачу (получение) наличных денег в кредитной организации, филиале, внутреннем структурном подразделении кредитной организации, филиала\" СТО БР НДО-1.0-2026\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_545356/",
+   "rubric": "БАНКОВСКОЕ ДЕЛО",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 620-9 \"О бюджете Фонда пенсионного и социального страхования Российской Федерации на 2027 год и на плановый период 2028 и 2029 годов\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-620.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 619-9 \"Об установлении особенностей исполнения бюджетов бюджетной системы Российской Федерации в 2027 году, о внесении изменений в отдельные законодательные акты Российской Федерации, приостановлении действия отдельных положений законодательных актов Российской Федерации",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-619.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона РФ N 618-9 \"О налоге на сверхдоходы\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-618.pdf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 617-9 \"О внесении изменений в части первую и вторую Налогового кодекса Российской Федерации и отдельные законодательные акты Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-617.pdf",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 616-9 \"О внесении изменений в Бюджетный кодекс Российской Федерации и отдельные законодательные акты Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_fz_011026-616.pdf",
+   "rubric": "ФИНАНСЫ. БЮДЖЕТ",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-10-03",
+   "title": "Проект Федерального закона N 680-9 \"О внесении изменений в Уголовный кодекс Российской Федерации и Уголовно-процессуальный кодекс Российской Федерации\"",
+   "url": "https://storage.consultant.ru/site20/202610/01/pr_011026_680.pdf",
+   "rubric": "УГОЛОВНОЕ ПРАВО. ИСПОЛНЕНИЕ НАКАЗАНИЙ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Расходы на здравоохранение в России могут увеличиться за счет бюджета ФОМС",
+   "url": "https://www.vedomosti.ru/society/articles/2026/10/02/1233633-rashodi-na-zdravoohranenie-mogut-uvelichitsya",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Правительство предложило уменьшить расходы нацпроекта «Молодежь и дети»",
+   "url": "https://www.vedomosti.ru/society/articles/2026/10/02/1233632-rashodi-natsproekta-molodezh-i-deti",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Бюджет получит до 15,5 млрд рублей за обращения бизнеса к СМЭВ за три года",
+   "url": "https://www.vedomosti.ru/finance/articles/2026/10/02/1233626-byudzhet-poluchit-do-155-mlrd-rublei-za-obrascheniya-biznesa",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Новак: рынок дизельного топлива стабилен, но на рынке бензина есть дефицит",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/02/1233813-est-defitsit",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Главы правительств стран ЕАЭС обсудили значение промышленной кооперации",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233644-eaes-znachenie-promishlennoi-kooperatsii",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Из чего будут складываться доходы бюджета в будущем году",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233628-iz-chego-budut-skladivatsya-dohodi-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-02",
+   "title": "Таможенные сборы за покупки зарубежных товаров могут достичь 25 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233620-tamozhennie-sbori",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-02",
+   "title": "В Минфине России началась выплата заработной платы в цифровых рублях",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40662",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-02",
+   "title": "Представители Минфина России поделились опытом оценки налоговых расходов и налоговых льгот с коллегам из Кыргызстана",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40660",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-10-02",
+   "title": "Алексей Моисеев: Принятые при участии депутатов законодательные изменения позволяют реализовывать инвестиционные проекты по восстановлению исторических объектов в регионах России",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40659",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона\"О внесении изменений в часть вторую Налогового кодекса Российской Федерации\"(подготовлен Минэкономразвития России, ID проекта 02/04/09-26/00171432)(не внесен в ГД ФС РФ, текст по состоянию на 29.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837786.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 615-9\"О федеральном бюджете на 2027 год и на плановый период 2028 и 2029 годов\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837783.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 618-9\"О налоге на сверхдоходы\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837782.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 619-9\"Об установлении особенностей исполнения бюджетов бюджетной системы Российской Федерации в 2027 году, о внесении изменений в отдельные законодательные акты Российской Федерации, приостановлении действия отдельных положений законодательных актов Российской Федерации ",
+   "url": "https://www.consultant.ru/law/review/209837781.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 621-9\"О бюджете Федерального фонда обязательного медицинского страхования на 2027 год и на плановый период 2028 и 2029 годов\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837780.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 620-9\"О бюджете Фонда пенсионного и социального страхования Российской Федерации на 2027 год и на плановый период 2028 и 2029 годов\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 01.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209837779.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 1346902-8\"О внесении изменений в статью 8 Федерального закона \"О государственном оборонном заказе\" и статью 36 Федерального закона \"О таможенном регулировании в Российской Федерации и о внесении изменений в отдельные законодательные акты Российской Федерации\"(ред., внесе",
+   "url": "https://www.consultant.ru/law/review/209837774.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 1348117-8\"О внесении изменений в статью 149 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 25.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837772.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 1348957-8\"О внесении изменений в часть вторую Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 28.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837769.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-10-02",
+   "title": "Проект Федерального закона N 617-9\"О внесении изменений в части первую и вторую Налогового кодекса Российской Федерации и отдельные законодательные акты Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 30.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209837765.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "Власти оценили доходы бюджета от налогообложения ПИФов",
+   "url": "https://www.vedomosti.ru/investments/articles/2026/10/01/1233373-vlasti-otsenili-dohodi",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "Минфин планирует использовать ИИ для прогноза доходов госбюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/01/1233483-ii-dlya-prognoza",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "Экспорт стали из Европы упал на 20%",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/01/1233345-eksport-stali",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "ФНС сможет блокировать продажи нарушителей на маркетплейсах",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/01/1233297-fns-smozhet-blokirovat",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "Обнародованы проекты федбюджета и бюджетов внебюджетных фондов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/10/01/1233296-na-sozd-obnarodovali",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "Импорт из России в Турцию резко упал на 41% – до минимума с 2022 года",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/02/1233251-import-iz-rossii-v-turtsiyu-upal",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-10-01",
+   "title": "ФНС передаст маркетплейсам функцию налогового контроля за селлерами",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/10/01/1233061-fns-peredast-marketpleisam",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-10-01",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (01.10.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639264511680878877BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-30",
+   "title": "«Детский бюджет» на три года превысит 10 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/30/1233254-detskii-byudzhet",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-30",
+   "title": "Путин: все социальные обязательства в новом бюджете будут полностью выполнены",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/30/1233093-putin-novom-byudzhete",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-30",
+   "title": "Правительство внесло в Госдуму проект бюджета на следующую трехлетку",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/30/1233234-proekt-byudzheta-na-20272029-godi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-30",
+   "title": "Что предпримет японское правительство для поддержания иены",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/30/1232918-chto-predprimet-yaponskoe-pravitelstvo-dlya-podderzhaniya-ieni",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-30",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40655",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-09-30",
+   "title": "Правительство расширило перечень оборудования в рамках механизма повышенного авансирования закупок промышленной продукции",
+   "url": "http://government.ru/docs/60030/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-30",
+   "title": "Банк России направил в Государственную Думу проект Основных направлений денежно-кредитной политики на 2027–2029 годы",
+   "url": "https://www.cbr.ru/press/event/?id=32882",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-29",
+   "title": "Объем инвестиций нерезидентов в ОФЗ вырос на 37 млрд рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/29/1232807-obem-investitsii",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-29",
+   "title": "ЦБ: цена отсечения $50 за баррель станет фактором в пользу смягчения ДКП",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/29/1232741-tsena-otsecheniya",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-29",
+   "title": "Почему инвестиции в регионах показали худшую динамику за 10 лет",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/29/1232541-investitsii-v-regionah-pokazali-hudshuyu-dinamiku",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-29",
+   "title": "Банки смогут экономить капитал при кредитовании проектов по защите объектов критической инфраструктуры (29.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639263022316269751BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-29",
+   "title": "Инфляционные ожидания в сентябре повысились",
+   "url": "https://www.cbr.ru/press/event/?id=32879",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-28",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40651",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-25",
+   "title": "«Интерфакс» узнал, какие ПИФы затронет изменение налогов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/25/1231758-pifi-zatronut-izmenenie",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-25",
+   "title": "Государство получит 100 млрд рублей от обложения налогом пассивных доходов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/25/1231734-poluchit-100-rublei",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-25",
+   "title": "Что налоговые инициативы значат для бизнеса и граждан",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/25/1231683-chto-nalogovie-initsiativi-znachat-dlya-biznesa",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-25",
+   "title": "В Минфине России прошла VIII Всероссийская конференция по инициативному бюджетированию",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40640",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона\"О единой территории опережающего развития Дальнего Востока и Арктической зоны Российской Федерации\"(подготовлен Минвостокразвития России, ID проекта 02/04/09-26/00171190)(не внесен в ГД ФС РФ, текст по состоянию на 22.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209832214.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона\"О внесении изменений в отдельные законодательные акты Российской Федерации в связи с принятием Федерального закона \"О единой территории опережающего развития Дальнего Востока и Арктической зоны Российской Федерации\"(подготовлен Минвостокразвития России, ID проекта 01/05/09",
+   "url": "https://www.consultant.ru/law/review/209832208.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона\"О внесении изменений в части первую и вторую Налогового кодекса Российской Федерации и статью 33.4 Федерального закона \"Об обязательном пенсионном страховании в Российской Федерации\"(подготовлен Минвостокразвития России, ID проекта 02/04/09-26/00171216)(не внесен в ГД ФС Р",
+   "url": "https://www.consultant.ru/law/review/209832206.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона\"О внесении изменений в Федеральный закон \"О территориях опережающего развития в Российской Федерации\" и статьи 23, 25 Федерального закона \"О свободном порте Владивосток\"(подготовлен Минвостокразвития России, ID проекта 02/04/09-26/00171268)(не внесен в ГД ФС РФ, текст по с",
+   "url": "https://www.consultant.ru/law/review/209832204.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона N 1340887-8\"О внесении изменений в статью 133 Трудового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 16.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209832201.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона N 1341083-8\"О внесении изменений в Федеральный закон \"О занятости населения Российской Федерации\" в части установления квоты для приема на работу лиц, принимающих (принимавших) участие в специальной военной операции\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 16.09.",
+   "url": "https://www.consultant.ru/law/review/209832198.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона N 1341173-8\"О внесении изменения в статью 286.1 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 16.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209832197.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-09-25",
+   "title": "Проект Федерального закона N 1342678-8\"О внесении изменений в статьи 284 и 427 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 18.09.2026)",
+   "url": "https://www.consultant.ru/law/review/209832188.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-25",
+   "title": "Новый выпуск журнала «Деньги и кредит»: инфляционные ожидания, эффекты ставки и сила ИИ",
+   "url": "https://www.cbr.ru/press/event/?id=32873",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Правительство одобрило проект бюджета на 2027–2029 годы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231650-pravitelstvo-odobrilo-proekt-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Минэкономразвития представило прогноз индексации тарифов ЖКХ до 2029 года",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231643-prognoz-indeksatsii-tarifov",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Силуанов: дефицит федерального бюджета на 2027 год составит 2,2% ВВП",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231566-defitsit-federalnogo-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Минэкономразвития спрогнозировало инфляцию на конец года в 6,8%",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231559-inflyatsiyu-na-konets-goda",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Силуанов: МРОТ в 2027 году повысят на 6,8%",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231555-mrot-povisyat",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Мишустин: расходы бюджета России на 2027 год запланированы в 48,8 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231551-rashodi-byudzheta-na-2027",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Кремль отказался комментировать проект бюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231471-proekt-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "В проекте бюджета заложили 105 млрд рублей на строительство школ",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231422-proekte-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Минфин предложил взимать НДС 22% для купленных онлайн зарубежных товаров",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231418-minfin-predlozhil-vzimat",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Минфин предложил включить в налоговую базу по НДФЛ «пассивные» доходы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/24/1231411-bazu-ndfl",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Минэк повысил прогноз роста ВВП в 2026 году и сохранил на трехлетку",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/24/1231438-minek-povisil-prognoz",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-24",
+   "title": "Главное из проекта бюджета на 2027–2029 годы",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/24/1231407-minfin-vnes",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-24",
+   "title": "Россия представила Барбадосу цифровые решения в сфере налогового администрирования",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40637",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-24",
+   "title": "Минфин России внес в Правительство РФ бюджетный пакет",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40635",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-23",
+   "title": "В ЦБ увидели риск повышения прогноза дефицита бюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/23/1231231-defitsita-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-23",
+   "title": "Госдолг РФ в первом полугодии вырос на 2,4 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/23/1231078-gosdolg-rf",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-23",
+   "title": "Что власти хотят изменить в налогообложении в связи с атаками",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/23/1230983-chto-hotyat-izmenit-v-nalogooblozhenii",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-23",
+   "title": "Алексей Яковлев: Уже видим первые результаты Плана по «обелению» экономики",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40634",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-23",
+   "title": "Приоритеты бюджета, развитие регионов и новые технологии: в столице прошёл Мосфинфорум-2026",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40632",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-23",
+   "title": "Банк России публикует Резюме обсуждения ключевой ставки по итогам заседания 11 сентября",
+   "url": "https://www.cbr.ru/press/event/?id=32865",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-22",
+   "title": "Силуанов и Собянин обсудили бюджеты страны и столицы",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/22/1230671-siluanov-i-sobyanin-obsudili-byudzheti",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-22",
+   "title": "Минфин обсуждает отсрочку по налогам для Ozon",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/22/1230650-otsrochku-po-nalogam-dlya-ozon",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-22",
+   "title": "«Мы хотим интегрировать российские системы надзора за ювелирными украшениями в страны ЕАЭС»",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40619",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-22",
+   "title": "«Уже в октябре руководство Минфина получит зарплату в цифровых рублях»",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40618",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-22",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (22.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639256889568556554BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "ЦБ: изменения в бюджетной политике не исключают снижения ставки в 2027 году",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230590-ne-isklyuchayut-snizheniya-stavki",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "Мишустин: федеральный бюджет должен быть сбалансированным",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230565-byudzhet-sbalansirovannim",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "Силуанов: ФНБ по итогам года будет пополнен на сумму до 1 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230563-fnb-budet-popolnen",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "Минфин прорабатывает налоговые поправки по учету расходов на оборону",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230555-minfin-prorabativaet",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "Силуанов: Минфин заложил в бюджет цену нефти на уровне $50 за баррель",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230551-minfin-zalozhil",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "Силуанов: в федеральный бюджет на 2027 год заложат дефицит в 2% ВВП",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230540-federalnii-byudzhet-2027",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "ФТС не зафиксировала проблем с импортом после запуска системы СПОТ",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/21/1230518-fts-ne-zafiksirovala",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "Главные заявления Силуанова о бюджете, дефиците и ДКП",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/21/1230562-o-byudzhete-defitsite",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-21",
+   "title": "В ФНС сравнили банкротство с ампутацией",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/21/1230490-v-fns-sravnili",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-21",
+   "title": "На Мосфинфоруме-2026 обсудили работу единой бюджетной платформы и новые цифровые сервисы для регионов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40621",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-21",
+   "title": "На МФФ-2026 Силуанов и Собянин обсудили бюджет, инвестиции и самостоятельность регионов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40614",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-21",
+   "title": "Цена неформальной занятости: государство и бизнес ищут пути выхода из тени",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40612",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-21",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40611",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-21",
+   "title": "На МФФ обсудили вопросы сбалансированности региональных бюджетов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40608",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-09-21",
+   "title": "Правительство поддержит запуск производства в рамках национального проекта по обеспечению технологического лидерства «Новые материалы и химия»",
+   "url": "http://government.ru/docs/59930/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-19",
+   "title": "Минфин: правительство изменило правила подготовки бюджетного прогноза",
+   "url": "https://www.vedomosti.ru/society/news/2026/09/19/1230197-pravila-podgotovki-byudzhetnogo-prognoza",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-19",
+   "title": "Правительство скорректировало правила разработки бюджетного прогноза для повышения его качества",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40600",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-09-19",
+   "title": "Правительство дополнительно направит 157 млрд рублей на субсидирование льготных ипотечных программ",
+   "url": "http://government.ru/docs/59921/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-18",
+   "title": "«Бюджетный прогноз сегодня – это заранее подготовленная система реакций на разные ситуации»",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40597",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-17",
+   "title": "FT: Европа столкнулась с дефицитом картофеля из-за аномальной жары",
+   "url": "https://www.vedomosti.ru/politics/news/2026/09/17/1229538-evropa-defitsitom-kartofelya",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-17",
+   "title": "Путин: дефицит бюджета России ожидается в 2%",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/17/1229762-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-17",
+   "title": "Михаил Орлов: «Налоги не могут существовать вне спора и дискуссии»",
+   "url": "https://www.vedomosti.ru/economics/characters/2026/09/17/1229399-mihail-orlov-nalogi-ne-mogut-suschestvovat-vne-spora",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-09-17",
+   "title": "Правительство актуализировало Стратегию развития таможенной службы до 2030 года",
+   "url": "http://government.ru/docs/59904/",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-17",
+   "title": "Банк России оспаривает в Суде ЕС ограничения на признание российских судебных решений и их приведение в исполнение во всех странах (17.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639252525856889979TODAY.htm",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-16",
+   "title": "Торговый дефицит ЕС с Китаем достиг 1 млрд евро в день",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/16/1229450-defitsit-es-s-kitaem",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-16",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40595",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-15",
+   "title": "Орешкин указал на обновление финансовой системы после санкций",
+   "url": "https://www.vedomosti.ru/politics/news/2026/09/15/1228956-oreshkin-ukazal-obnovlenie",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-15",
+   "title": "Индикаторы денежно-кредитных условий в июле – августе менялись разнонаправленно, оставаясь умеренно жесткими",
+   "url": "https://www.cbr.ru/press/event/?id=32845",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-15",
+   "title": "С цифрового рубля откроется новый сезон онлайн-уроков",
+   "url": "https://www.cbr.ru/press/event/?id=32843",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-14",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (14.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639250029558334970BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-14",
+   "title": "Банк России впервые установил макропруденциальные надбавки по вложениям банков в облигации, обеспеченные поступлениями средств по потребительским кредитам (14.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639249886251446341FINSTAB.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-14",
+   "title": "Андрей Дынко возглавил Операционный департамент Банка России (14.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639249813008090409HP.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-11",
+   "title": "Набиуллина: ЦБ может смягчить политику при благоприятных параметрах бюджета",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/11/1228231-smyagchit-politiku",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-11",
+   "title": "ЦБ пока не получил параметры бюджета России на трехлетку",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/11/1228196-tsb-ne-poluchil",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-11",
+   "title": "ФНС разъяснила порядок начисления бонусов маркетплейсов",
+   "url": "https://www.vedomosti.ru/business/news/2026/09/11/1228042-fns-razyasnila-poryadok",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-11",
+   "title": "Банк России принял решение сохранить ключевую ставку на уровне 14,00% годовых (11.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=11092026_133000key.htm",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "dkp",
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-11",
+   "title": "Заявление Председателя Банка России Эльвиры Набиуллиной по итогам заседания Совета директоров Банка России 11 сентября 2026 года",
+   "url": "https://www.cbr.ru/press/event/?id=32832",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-10",
+   "title": "Бизнес и ФНС обсудили спорные ситуации в оценке финансово-хозяйственной деятельности компаний",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/10/1227666-spornie-situatsii-v-otsenke-finansovo-hozyaistvennoi-deyatelnosti",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-10",
+   "title": "Дивиденды, и не только: с чем связан профицит бюджета в августе",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/10/1227665-s-chem-svyazan-profitsit-byudzheta-v-avguste",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-10",
+   "title": "Николай Бегчин: инициативное бюджетирование – наиболее эффективный инструмент вовлечения граждан в бюджетный процесс",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40585",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-09-10",
+   "title": "Продлены полномочия финансового омбудсмена Дениса Новака (10.09.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639246510499868148DSD.htm",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-09",
+   "title": "Кремль: повышение налогов из-за дефицита бюджета не обсуждается",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/09/1227507-povishenie-nalogov-ne-obsuzhdaetsya",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-09",
+   "title": "Дефицит федерального бюджета составил с начала года 5,8 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/09/1227435-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-09",
+   "title": "Почему введение налога на сверхприбыль банков становится мировым трендом",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/09/1227309-vvedenie-naloga-na-sverhpribil-bankov-stanovitsya-trendom",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-09",
+   "title": "Минфин России предлагает уточнить правила закупок госкомпаний у МСП",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40582",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-09",
+   "title": "Предварительная оценка исполнения федерального бюджета за январь-август 2026 года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40580",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-09-09",
+   "title": "Правительство списало часть задолженности по бюджетным кредитам Курганской и Еврейской автономной областям",
+   "url": "http://government.ru/docs/59821/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-08",
+   "title": "Решетников: товарооборот ЕАЭС и Вьетнама за десять лет вырос вдвое",
+   "url": "https://www.vedomosti.ru/economics/news/2026/09/08/1227274-tovarooborot-viros",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-08",
+   "title": "Почему поступления от налога на прибыль растут вопреки замедлению экономики",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/08/1227034-pochemu-postupleniya-ot-naloga-na-pribil-rastut",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-08",
+   "title": "Исполнение расходов федерального бюджета на реализацию национальных проектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40577",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-08",
+   "title": "11 сентября в 15:00 состоится пресс-конференция по итогам заседания Совета директоров по денежно-кредитной политике",
+   "url": "https://www.cbr.ru/press/event/?id=32828",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-07",
+   "title": "Кабмин определит перечень маркетплейсов для проведения госзакупок к 1 октября",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/07/1226726-kabmin-opredelit-perechen-marketpleisov-dlya-goszakupok",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-07",
+   "title": "Информационное сообщение о результатах размещения средств Фонда национального благосостояния",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40573",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-06",
+   "title": "Bloomberg: BlackRock и JPMorgan делают ставку на облигации развивающихся рынков",
+   "url": "https://www.vedomosti.ru/investments/news/2026/09/06/1226711-blackrock-jpmorgan",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-09-04",
+   "title": "Малый бизнес рассказал о переманивании дальневосточных компаний в Китай",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/09/04/1226136-malii-biznes-rasskazal-o-peremanivanii-dalnevostochnih-kompanii-v-kitai",
+   "rubric": "",
+   "segments": [
+    "nalogi",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-03",
+   "title": "О нефтегазовых доходах и проведении операций по покупке/продаже иностранной валюты и золота на внутреннем валютном рынке",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40569",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-09-03",
+   "title": "Состоялось заседание Межбанковского валютного совета центральных банков России и Беларуси",
+   "url": "https://www.cbr.ru/press/event/?id=32820",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-02",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по номинированным в китайских юанях облигациям федерального займа",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40568",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-02",
+   "title": "Восточный финансовый центр предполагает прямой доступ инвесторов к российскому финансовому рынку и устойчивую к санкциям инфраструктуру",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40562",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-09-02",
+   "title": "Антон Силуанов: рост госдолга крупнейших экономик требует возвращения к бюджетной дисциплине",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40561",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-08-31",
+   "title": "Выступление заместителя Председателя Банка России Алексея Заботкина о проекте Основных направлений единой государственной денежно-кредитной политики на 2027–2029 годы",
+   "url": "https://www.cbr.ru/press/event/?id=32807",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-08-31",
+   "title": "Опубликован проект Основных направлений единой государственной денежно-кредитной политики на 2027–2029 годы",
+   "url": "https://www.cbr.ru/press/event/?id=32805",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-08-31",
+   "title": "Цифровой рубль: старт использования",
+   "url": "https://www.cbr.ru/press/event/?id=32802",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": null,
+   "title": "Министр финансов РФ Антон Силуанов представил на заседании Правительства РФ проект федерального бюджета на 2027 год и на плановый период 2028 и 2029 годов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40641",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}
