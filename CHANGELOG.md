@@ -1,3 +1,7 @@
+## 2026-W46 (2026-11-11) — отозвана сверка семи фактов бюджета-2026
+
+`federal_budget_2026`, `budget_revenue_structure`, `budget_expenditure_structure`, `zhkh_spending_trend`, `national_projects_funding`, `tech_national_projects`, `state_debt_borrowings` (W45, повторный прогон) влиты по брошюре Минфина BDG_2026.pdf цитатами из перемешанных таблиц: «оборона 12 121,0» — цитатой «20252 6 923,3 20252 13 574,8 … 2026 12 121,0 2026 3 826,7» без слова «оборона». Числа, скорее всего, верны, но цитата их не доказывает. Факты не изменены; `harvested` возвращён в 2026-08-20, `channel` — в `deep_research`: снова посев, `seed_due.py` ставит все семь первыми в прогон 13.11. Новая сверка `QUOTE_NO_LABEL` (main) и PROMPT п. 3: перемешанный PDF — не источник, бюджет — с HTML Минфина.
+
 ## 2026-W46 (2026-11-11) — ручная правка факта
 
 Через ту же сверку и merge, файлы — `runs/2026-W46/manual/`. `VERIFY_STATS items=1 ok=1` (сверка с `CLAIM_NOT_ON_PAGE` и `QUOTE_NO_LABEL`), `FUSES OK`. Страница скачана отдельно (curl с проверкой сертификата), сверка — по ней офлайн.
