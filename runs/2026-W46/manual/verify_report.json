@@ -1,0 +1,34 @@
+{
+ "counts": {
+  "VERIFIED": 1
+ },
+ "hosts": {
+  "index1520.com": {
+   "items": 1,
+   "direct": 1,
+   "proxy": 0,
+   "unreachable": 0
+  }
+ },
+ "items": [
+  {
+   "topic": "frakht_konteiner",
+   "replaces": [
+    "55800957"
+   ],
+   "source_url": "https://index1520.com/news/stoimost-transportirovki-konteynera-iz-kitaya-v-moskvu-v-iyune-2026-goda-vyrosla-na-11-k-mayu-do-900/",
+   "value": "$9002 за контейнер FEU Китай — Москва (июнь 2026), +10,8% к маю",
+   "evidence": [
+    "Стоимость транспортировки сорокафутового контейнера (FEU) из Китая в Москву в июне 2026 года выросла на 10,8% к маю и достигла $9002, или 662 412 рублей."
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "index1520.com",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "vneshtorg"
+  }
+ ]
+}
