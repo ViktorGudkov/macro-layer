@@ -23,6 +23,11 @@ verify_sources.py — сверка «число есть на странице �
     QUOTE_TOO_SHORT ни одного фрагмента от 30 символов — голая ячейка или число
                     без подписи и периода не доказывают, о чём цифра;
     NOT_FOUND       цитата есть, но в ней нет числа(ел) value — список в detail;
+    QUOTE_NO_LABEL  число value стоит в цитате только в ряду цифр: ни слова за
+                    60 символов до него, ни слова сразу после — перемешанная
+                    таблица PDF, из цитаты не понять, что это за число. Строки
+                    xlsx не проверяются (подпись — первая ячейка строки). Это
+                    нижняя граница: перепутанную подпись правило не видит;
     CLAIM_NOT_ON_PAGE value подтверждён, но в claim есть число или дата, которых
                     на странице нет вообще (выведенный процент, чужой факт,
                     другой документ) — список в detail. Реквизиты документов и
@@ -85,6 +90,7 @@ MIN_HTML_BYTES = 2000
 QUOTE_MAX = 300
 QUOTES_MAX = 4
 MIN_CONTEXT = 30          # хотя бы один фрагмент цитаты — с контекстом, не голая ячейка
+LABEL_BEFORE = 60         # подпись числа в цитате — слово не дальше стольких символов до него
 
 SPACES = "\u00a0\u202f\u2009\u2007\u200b\ufeff"
 MONTHS = {"январ": 1, "феврал": 2, "март": 3, "апрел": 4, "ма": 5, "июн": 6,
@@ -319,6 +325,42 @@ def claim_missing(claim: str, page_text: str) -> list[str]:
     return miss + [str(n) for n in tc["nums"] if not num_match(n, pool)]
 
 
+_WORD = re.compile(r"[а-яa-z]{3,}")
+_WORD_AFTER = re.compile(r"[^\dа-яa-z]{0,3}[а-яa-z]{3,}")     # «3 млрд руб.», «3% годовых», «6. Настоящее»
+
+
+def _num_spans(s: str):
+    """(число, начало, конец) в нормализованном тексте; даты и голые годы — не числа."""
+    for rx in (_DATE_ISO, _DATE_DMY, _DATE_WORD):
+        s = rx.sub(lambda m: " " * len(m.group(0)), s)
+    for m in _NUM.finditer(s):
+        ip, fr = m.group(1), m.group(2)
+        if fr is None and " " not in ip and len(ip) == 4 and 1990 <= int(ip) <= 2100:
+            continue
+        d = _dec(ip, fr)
+        if d is not None:
+            yield d, m.start(), m.end()
+
+
+def unlabeled(value: str, evs: list[str]) -> list[str]:
+    """Числа value, которые в цитатах стоят только в ряду цифр.
+
+    W45, 06.11.2026: брошюра Минфина «Бюджет для граждан» в pymupdf даёт таблицы
+    вперемешку, и «оборона 12 121,0» прошла цитатой «20252 6 923,3 20252
+    13 574,8 … 2026 12 121,0 2026 3 826,7»: числа в ней есть, слова «оборона» нет.
+    Число подписано, если хоть одно его вхождение в цитате имеет слово не дальше
+    LABEL_BEFORE символов до себя или сразу после себя («3 млрд руб.»).
+    """
+    qs = [norm(e[:QUOTE_MAX]) for e in evs]
+    out = []
+    for n in tokens(value)["nums"]:
+        hits = [(q, a, b) for q in qs for d, a, b in _num_spans(q) if num_match(n, [d])]
+        if hits and not any(_WORD.search(q[max(0, a - LABEL_BEFORE):a]) or _WORD_AFTER.match(q, b)
+                            for q, a, b in hits):
+            out.append(str(n))
+    return out
+
+
 def quote_found(evidence: str, page_norm: str) -> bool:
     """Цитата (или каждый её фрагмент между «...») есть на странице по порядку."""
     frags = [f.strip(" .,;:") for f in norm(evidence).split("...")]
@@ -476,6 +518,12 @@ def verify_item(item: dict, fetcher: Fetcher, text_field: str = "value") -> dict
         rep["verdict"], rep["detail"] = "NOT_FOUND", "not in quote: " + ", ".join(miss)
     else:
         rep["verdict"] = "VERIFIED"
+    if rep["verdict"] == "VERIFIED" and kind != "xlsx":
+        bare = unlabeled(value, evs)
+        if bare:
+            rep["verdict"] = "QUOTE_NO_LABEL"
+            rep["detail"] = ("no label next to: %s — scrambled table? quote the row with its caption "
+                             "or take an HTML/xlsx page" % ", ".join(bare))
     if rep["verdict"] in OK_VERDICTS and item.get("claim"):
         # W45, 06.11.2026: value сузили до чисел цитаты, claim оставили слово в слово —
         # факт стал «сверен» с датой 28.10 при ссылке на релиз от 27.07

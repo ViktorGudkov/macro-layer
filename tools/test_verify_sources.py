@@ -153,6 +153,36 @@ def _():
     assert vs.claim_missing("ВВП — 240,1 трлн ₽", "ВВП 235 067 млрд рублей") == ["240.1"]
 
 
+BURL = "https://minfin.gov.ru/common/upload/library/2026/02/main/BDG_2026.pdf"
+BPAGE = ("<html><body><p>20252 6 923,3 20252 13 574,8 20252 3 448,7 2026 7 838,7 2026 12 121,0 "
+         "2026 3 826,7 нп \"инфраструктура для жизни\" 1 364,1</p>"
+         "<p>Инфляция, в %, декабрь к декабрю предыдущего года 5,6 7,1–7,6 4,0 4,0 4,0</p>"
+         "<p>3 млрд руб. минимальная стоимость проекта, 30 лет максимальный срок окупаемости</p>"
+         "<p>" + "наполнитель " * 300 + "</p></body></html>")
+BNET = {BURL: {"direct": (200, BPAGE.encode("utf-8"))}}
+
+
+@case("quote-number-without-label")
+def _():
+    # W45: «оборона 12 121,0» подтверждена перемешанной таблицей брошюры Минфина
+    r = vs.verify_item({"value": "оборона 12 121,0 млрд ₽ (2025: 13 574,8)", "source_url": BURL,
+                        "evidence": ["20252 6 923,3 20252 13 574,8 20252 3 448,7 2026 7 838,7 2026 12 121,0 2026 3 826,7"]},
+                       fetcher(BNET))
+    assert r["verdict"] == "QUOTE_NO_LABEL" and "12121.0" in r["detail"] and "13574.8" in r["detail"], r
+
+
+@case("quote-table-row-and-unit-are-labels")
+def _():
+    r = vs.verify_item({"value": "7,1–7,6% в 2026 (дек/дек)", "source_url": BURL,
+                        "evidence": "Инфляция, в %, декабрь к декабрю предыдущего года 5,6 7,1–7,6 4,0 4,0 4,0"},
+                       fetcher(BNET))
+    assert r["verdict"] == "VERIFIED", r
+    r = vs.verify_item({"value": "мин. проект 3 млрд ₽", "source_url": BURL,
+                        "evidence": "3 млрд руб. минимальная стоимость проекта"}, fetcher(BNET))
+    assert r["verdict"] == "VERIFIED", r
+    assert vs.unlabeled("1 380,0", ["2027 1 890,6 2027 1 380,0 нп \"новые технологии\""]) == ["1380.0"]
+
+
 @case("recipe-without-claim-is-not-checked")
 def _():
     r = vs.verify_item({"last_value": "22%", "source_url": URL,
@@ -256,6 +286,16 @@ def _():
     f = fetcher({XURL: {"direct": (200, XLSX)}})
     r = vs.verify_item({"value": "2,2% (скользящее за 3 мес.)", "source_url": XURL}, f)
     assert r["verdict"] == "NO_EVIDENCE", r
+
+
+@case("quote-label-not-required-in-xlsx-row")
+def _():
+    # строка xlsx — структура, а не ряд цифр: подпись в первой ячейке, месяц — в шапке
+    x = _xlsx([["2026(2)", "106979", "111433", "109524"]])
+    f = fetcher({XURL: {"direct": (200, x)}})
+    r = vs.verify_item({"value": "109 524 руб./мес", "source_url": XURL,
+                        "evidence": "2026(2) | 106979 | 111433 | 109524"}, f)
+    assert r["verdict"] == "VERIFIED" and r["kind"] == "xlsx", r
 
 
 @case("negative-value-never-verified")
