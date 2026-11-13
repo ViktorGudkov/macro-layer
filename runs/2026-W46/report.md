@@ -160,3 +160,10 @@ FUSES OK
 - splitting_amnesty и parallelnyi_import_srok подтверждены сверкой, но отклонены гейтом даты merge (as_of старых фактов — даты прошлых проверок). Требуют ручного решения.
 - Сигналы на ручной разбор (не влиты): МРОТ-2027 = 28 935 руб. принят в I чтении (только вторичка) — кандидат на рецепт-инициативу; ФРП «Проекты развития», по выдаче поиска, теперь 100–2000 млн ₽ (frprf.ru 403); после ФЗ № 104-ФЗ мог устареть факт об отмене льготы МСП по взносам (см. notes_B.md); Минпромторг готовит переформатированный перечень параллельного импорта (вторичка).
 - Из этой среды недоступна большая часть российских госсайтов (minfin 503, rosstat/economy/sozd/budget/minpromtorg 502, frprf 403). Нужен прокси с российским IP (`MACRO_PROXY`), иначе бюджетные и росстатовские пункты будут уходить в pending.
+
+
+## Добор 2026-11-13 через туннель (домашний Keenetic)
+
+- MACRO_PROXY (туннель) поднят. Сверка: 3 кандидата, VERIFIED 3; merge: принято 3 (frp_zaymy, kvota_invalidy_sout, komplaens_platezhi); FUSES OK. Файлы: `runs/2026-W46/addon/`.
+- Бюджетные факты budget_expenditure_structure, tech_national_projects, zhkh_spending_trend остаются в pending: нет связной подписанной цитаты с числами закона (см. CHANGELOG).
+- Ленты: FEEDS_STATS since=2026-11-06 items=51 new=51 sources_ok=7/7 minfin_last_id=40751. tools/feeds.py не берёт MACRO_PROXY, поэтому запускался с переменными curl https_proxy/HTTPS_PROXY на туннель.

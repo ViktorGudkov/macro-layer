@@ -1,0 +1,88 @@
+{
+ "counts": {
+  "VERIFIED": 3
+ },
+ "hosts": {
+  "garant.ru": {
+   "items": 1,
+   "direct": 1,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "sttlogistics.ru": {
+   "items": 1,
+   "direct": 1,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "frprf.ru": {
+   "items": 1,
+   "direct": 0,
+   "proxy": 1,
+   "unreachable": 0
+  }
+ },
+ "items": [
+  {
+   "topic": "kvota_invalidy_sout",
+   "replaces": [
+    "99e6503c"
+   ],
+   "source_url": "https://www.garant.ru/hotlaw/federal/2112588/",
+   "value": "новая форма отчётности по квоте с 01.09.2026; порог — свыше 35 человек",
+   "evidence": [
+    "Форма заполняется, если численность работников непосредственно в организации (филиале, представительстве, ином обособленном подразделении) либо у ИП превышает 35 человек. Приказ вступает в силу с 1 сентября 2026 г."
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "garant.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "trud"
+  },
+  {
+   "topic": "komplaens_platezhi",
+   "replaces": [
+    "bd57820c"
+   ],
+   "source_url": "https://sttlogistics.ru/information/vneshneekonomicheskaya-deyatelnost-ved/platezhi-kitay/",
+   "value": "рисковые группы ТН ВЭД: 84, 85, 90",
+   "evidence": [
+    "По товарным группам ТН ВЭД 84, 85 и 90 (машины, оборудование, электроника, оптика) банки проверяют жестче — по этим кодам чаще требуют платежного агента.",
+    "Крупные китайские госбанки — Bank of China, ICBC, China Construction Bank — по оценкам участников рынка, отклоняют до 60–80% платежей из России.",
+    "совокупные транзакционные издержки бизнеса на трансграничные платежи с Китаем сейчас в среднем составляют 15–20%"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "sttlogistics.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "vneshtorg"
+  },
+  {
+   "topic": "frp_zaymy",
+   "replaces": [
+    "6d072f80"
+   ],
+   "source_url": "https://frprf.ru/zaymy/",
+   "value": "3% и 5% годовых; 5–3000 млн ₽; до 7 лет (суда — до 25 лет)",
+   "evidence": [
+    "Фонд предоставляет целевые займы в рамках основных программ финансирования по ставкам 3% и 5% годовых сроком до 7 лет в объеме от 5 млн до 2 млрд рублей",
+    "Лизинг судов Сумма займа млн ₽ 100-3000 1% Срок займа ≤ 25 лет",
+    "Проекты развития Сумма займа млн ₽ 100-2000 5% базовая ставка"
+   ],
+   "route": "proxy",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "frprf.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "podderzhka"
+  }
+ ]
+}

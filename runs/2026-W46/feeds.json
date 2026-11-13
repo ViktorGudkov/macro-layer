@@ -2,7 +2,7 @@
  "today": "2026-11-13",
  "since": "2026-11-06",
  "state": {
-  "minfin_last_id": 40737
+  "minfin_last_id": 40751
  },
  "sources": {
   "cbr_events": {
@@ -26,18 +26,19 @@
    "kept": 19
   },
   "cons_bills": {
-   "ok": false,
-   "fetched": 0,
-   "error": "RuntimeError: http 502"
+   "ok": true,
+   "fetched": 40,
+   "kept": 9
   },
   "minfin": {
    "ok": true,
-   "fetched": 0
+   "fetched": 14,
+   "kept": 6
   },
   "cons_week": {
-   "ok": false,
-   "fetched": 0,
-   "error": "RuntimeError: archive http 502"
+   "ok": true,
+   "fetched": 122,
+   "kept": 6
   }
  },
  "items": [
@@ -146,6 +147,18 @@
    "rubric": "",
    "segments": [
     "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-12",
+   "title": "Правительство одобрило ко второму чтению поправки в бюджетный пакет",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40747",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
    ],
    "why": "keyword",
    "known": false
@@ -273,6 +286,30 @@
    "known": false
   },
   {
+   "source": "minfin",
+   "date": "2026-11-10",
+   "title": "Предварительная оценка исполнения федерального бюджета за январь-октябрь 2026 года",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40744",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-10",
+   "title": "Исполнение расходов федерального бюджета на реализацию национальных проектов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40743",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
    "source": "vedomosti",
    "date": "2026-11-09",
    "title": "ФНБ России вырос на 70,7 млрд рублей в октябре",
@@ -316,6 +353,43 @@
    "rubric": "",
    "segments": [
     "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-09",
+   "title": "Срок владения изъятым жильем предлагается учитывать при продаже квартир для получения налоговой льготы",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40742",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-09",
+   "title": "Минфин продолжает цифровизацию процесса предоставления бюджетных субсидий",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40739",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-09",
+   "title": "Информационное сообщение о результатах размещения средств Фонда национального благосостояния",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40738",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
    ],
    "why": "keyword",
    "known": false
@@ -393,6 +467,43 @@
    "known": false
   },
   {
+   "source": "cons_week",
+   "date": "2026-11-07",
+   "title": "<Информация> ФНС России \"ФНС России напоминает, как рассчитывается НДФЛ с процентов по банковским вкладам\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548498/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-07",
+   "title": "<Информация> СФР \"Работодателям необходимо подать заявление о компенсации расходов на предупредительные меры не позднее 16 ноября\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548263/",
+   "rubric": "СТРАХОВАНИЕ",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-07",
+   "title": "<Информация> ФНС России \"Минюст России утвердил изменения форматов фискальных документов\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548212/",
+   "rubric": "ХОЗЯЙСТВЕННАЯ ДЕЯТЕЛЬНОСТЬ",
+   "segments": [
+    "nalogi",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
    "source": "vedomosti",
    "date": "2026-11-06",
    "title": "Бюджет получил в октябре самые высокие нефтегазовые доходы за полтора года",
@@ -400,6 +511,152 @@
    "rubric": "",
    "segments": [
     "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-06",
+   "title": "Распоряжение Правительства РФ от 06.11.2026 N 3224-р <О внесении изменений в перечень пунктов пропуска через государственную границу Российской Федерации, через которые иностранные граждане осуществляют въезд в Российскую Федерацию и выезд из Российской Федерации на основании единой электронной визы",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548517/",
+   "rubric": "ОБОРОНА. БЕЗОПАСНОСТЬ И ОХРАНА ПРАВОПОРЯДКА",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-06",
+   "title": "Приказ Минфина России от 06.11.2026 N 333 \"Об эмиссии облигаций федерального займа с постоянным купонным доходом дополнительного выпуска N 26218RMFS\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548504/",
+   "rubric": "ЦЕННЫЕ БУМАГИ. РЫНОК ЦЕННЫХ БУМАГ",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-06",
+   "title": "Приказ Минфина России от 06.11.2026 N 334 \"Об эмиссии облигаций федерального займа с постоянным купонным доходом дополнительного выпуска N 26233RMFS\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548503/",
+   "rubric": "ЦЕННЫЕ БУМАГИ. РЫНОК ЦЕННЫХ БУМАГ",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 20886-9\"О внесении изменений в статью 219 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 28.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209870012.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 20904-9\"О внесении изменений в статьи 418.4 и 418.7 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 28.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209870010.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 21167-9\"О внесении изменений в статью 136 Трудового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 28.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209870008.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 21379-9\"О внесении изменений в статью 144 Трудового кодекса Российской Федерации (в части установления единых государственных гарантий оплаты труда работникам бюджетной сферы)\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 28.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209870006.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "podderzhka",
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 22242-9\"О внесении изменения в статью 333.33 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 29.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209870003.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 24858-9\"О внесении изменений в Трудовой кодекс Российской Федерации в части установления запрета премирования руководства при наличии задолженности по заработной плате\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 02.11.2026)",
+   "url": "https://www.consultant.ru/law/review/209869993.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 1336427-8\"О внесении изменений в Федеральный закон \"О промышленной политике в Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 28.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209869986.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 616-9\"О внесении изменений в Бюджетный кодекс Российской Федерации и отдельные законодательные акты Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 29.10.2026)",
+   "url": "https://www.consultant.ru/law/review/209869985.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-06",
+   "title": "Проект Федерального закона N 1342684-8\"О внесении изменения в статью 8 Федерального закона \"О социальных гарантиях сотрудникам некоторых федеральных органов исполнительной власти и внесении изменений в отдельные законодательные акты Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 27.10.2026",
+   "url": "https://www.consultant.ru/law/review/209869984.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
    ],
    "why": "keyword",
    "known": false
