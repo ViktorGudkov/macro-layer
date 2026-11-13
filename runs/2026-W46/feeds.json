@@ -1,0 +1,408 @@
+{
+ "today": "2026-11-13",
+ "since": "2026-11-06",
+ "state": {
+  "minfin_last_id": 40737
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": true,
+   "fetched": 100,
+   "kept": 3
+  },
+  "cbr_press": {
+   "ok": true,
+   "fetched": 13,
+   "kept": 2
+  },
+  "gov_docs": {
+   "ok": true,
+   "fetched": 20,
+   "kept": 6
+  },
+  "vedomosti": {
+   "ok": true,
+   "fetched": 200,
+   "kept": 19
+  },
+  "cons_bills": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: http 502"
+  },
+  "minfin": {
+   "ok": true,
+   "fetched": 0
+  },
+  "cons_week": {
+   "ok": false,
+   "fetched": 0,
+   "error": "RuntimeError: archive http 502"
+  }
+ },
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-11-13",
+   "title": "Банкам дадут время на донастройку систем прогрессивного налогообложения вкладов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/13/1245134-uderzhivat-s-protsentov",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-13",
+   "title": "Дефицит бюджета США в октябре вырос почти в 15 раз",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/13/1245051-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-13",
+   "title": "Как бизнес оценивает предложения кабмина по доработке НК и проекта бюджета",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/13/1244988-kak-biznes-otsenivaet-predlozheniya-kabmina",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-12",
+   "title": "Набиуллина назвала льготное кредитование одной из причин высокой ключевой ставки",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/12/1244768-lgotnoe-kreditovanie",
+   "rubric": "",
+   "segments": [
+    "dkp",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-12",
+   "title": "«Единая Россия» предложила увеличить расходы бюджета на соцпрограммы",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/12/1244692-rashodi-sotsprogrammi",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-12",
+   "title": "Что правительство предложило доработать в налоговом законопроекте",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/12/1244913-predlozhilo-dorabotat",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-12",
+   "title": "Правительство одобрило перераспределение в проекте бюджета 8,7 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/12/1244899-pereraspredelenie-v-byudzhete",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-12",
+   "title": "Что сказала Набиуллина о тупике льготных кредитов и причинах высокой ставки",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/12/1244774-o-tupike-lgotnih-kreditov",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-12",
+   "title": "Бизнес назвал значимые стимулы не уходить в тень после роста налогов",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/12/1244626-biznes-nazval-znachimie-stimuli",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-12",
+   "title": "Правительство дополнительно выделило около 50 млрд рублей на субсидирование льготных кредитов для сельхозпроизводителей и жителей сельских территорий",
+   "url": "http://government.ru/docs/60431/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-12",
+   "title": "Правительство направит свыше 250 млн рублей на субсидирование программы льготного кредитования экспортёров",
+   "url": "http://government.ru/docs/60430/",
+   "rubric": "",
+   "segments": [
+    "podderzhka",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-12",
+   "title": "Выступление Эльвиры Набиуллиной на пленарном заседании Государственной Думы по Основным направлениям единой государственной денежно-кредитной политики на 2027-2029 годы",
+   "url": "https://www.cbr.ru/press/event/?id=32976",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-11",
+   "title": "Медведев: работа над бюджетом России вступила в завершающую стадию",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/11/1244609-rabota-nad-byudzhetom",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-11",
+   "title": "Бюджет вернулся к дефициту в октябре после двух профицитных месяцев",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/11/1244256-byudzhet-vernulsya-k-defitsitu",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-11-11",
+   "title": "Результаты мониторинга максимальных процентных ставок кредитных организаций (11.11.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639300094094201108BANK_SECTOR.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_press",
+   "date": "2026-11-11",
+   "title": "Установлены факты манипулирования рынком ценных бумаг лицом, действующим в собственных интересах с использованием брокерских счетов своих доверителей (11.11.2026)",
+   "url": "https://www.cbr.ru/press/PR/?file=639299950160247890PNP.htm",
+   "rubric": "",
+   "segments": [
+    "finansirovanie",
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-11",
+   "title": "Денежно-кредитные условия в сентябре – октябре оставались умеренно жесткими",
+   "url": "https://www.cbr.ru/press/event/?id=32973",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-10",
+   "title": "Дефицит бюджета за 10 месяцев составил 5,2 трлн рублей",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/10/1244181-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-10",
+   "title": "Север требует вложений",
+   "url": "https://www.vedomosti.ru/economics/columns/2026/11/10/1243882-sever-trebuet-vlozhenii",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-09",
+   "title": "ФНБ России вырос на 70,7 млрд рублей в октябре",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/09/1243812-fnb-viros",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-09",
+   "title": "Мишустин распорядился списать долги по бюджетным кредитам семи регионам",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/09/1243770-spisat-dolgi-semi-regionam",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-09",
+   "title": "«Русская сталь» не поддержала налог на сверхдоходы железной руды",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/09/1243738-nalog-na-sverhdohodi",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-09",
+   "title": "В каких регионах мигрантам запретят работать таксистами и курьерами",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/09/1243530-migrantam-zapretyat-rabotat",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-09",
+   "title": "Правительство списало часть задолженности по бюджетным кредитам ещё семи регионам",
+   "url": "http://government.ru/docs/60395/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-09",
+   "title": "Правительство выделило 350 млн рублей на поддержку МСП в Крыму",
+   "url": "http://government.ru/docs/60391/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-09",
+   "title": "Выступление Эльвиры Набиуллиной на совместном заседании комитетов Госдумы по Основным направлениям единой государственной денежно-кредитной политики на 2027–2029 годы",
+   "url": "https://www.cbr.ru/press/event/?id=32967",
+   "rubric": "",
+   "segments": [
+    "dkp"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-08",
+   "title": "Правительство расширило границы территории опережающего развития в Хабаровском крае",
+   "url": "http://government.ru/docs/60387/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-07",
+   "title": "Пекин пригрозил ответить на санкции США против китайских компаний",
+   "url": "https://www.vedomosti.ru/politics/news/2026/11/07/1243376-pekin-prigrozil",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-07",
+   "title": "Правительство выделило дополнительное финансирование регионам на модернизацию центров занятости населения",
+   "url": "http://government.ru/docs/60386/",
+   "rubric": "",
+   "segments": [
+    "trud"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-06",
+   "title": "Бюджет получил в октябре самые высокие нефтегазовые доходы за полтора года",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/06/1243067-byudzhet-poluchil",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}

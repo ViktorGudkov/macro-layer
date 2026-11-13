@@ -1,0 +1,8 @@
+FEEDS_STATS since=2026-11-06 items=30 new=30 sources_ok=5/7 minfin_last_id=40737 FAILED=cons_bills,cons_week
+FEEDS_SOURCE cbr_events ok=True  fetched=100  kept=3    
+FEEDS_SOURCE cbr_press  ok=True  fetched=13   kept=2    
+FEEDS_SOURCE cons_bills ok=False fetched=0    kept=0    RuntimeError: http 502
+FEEDS_SOURCE cons_week  ok=False fetched=0    kept=0    RuntimeError: archive http 502
+FEEDS_SOURCE gov_docs   ok=True  fetched=20   kept=6    
+FEEDS_SOURCE minfin     ok=True  fetched=0    kept=0    
+FEEDS_SOURCE vedomosti  ok=True  fetched=200  kept=19   
