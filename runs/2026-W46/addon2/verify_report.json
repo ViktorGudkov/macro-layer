@@ -1,0 +1,85 @@
+{
+ "counts": {
+  "VERIFIED": 3
+ },
+ "hosts": {
+  "base.garant.ru": {
+   "items": 2,
+   "direct": 2,
+   "proxy": 0,
+   "unreachable": 0
+  },
+  "consultant.ru": {
+   "items": 1,
+   "direct": 0,
+   "proxy": 1,
+   "unreachable": 0
+  }
+ },
+ "items": [
+  {
+   "topic": "budget_expenditure_structure",
+   "replaces": [
+    "693682ef"
+   ],
+   "source_url": "https://base.garant.ru/413165837/8599a70d26e5983585d90ff6adf82e89/",
+   "value": "всего открытая часть 32 513 494 976,1 тыс. ₽ в 2026",
+   "evidence": [
+    "(тыс. рублей) Наименование Рз ПР ЦСР ВР 2026 год 2027 год 2028 год ВСЕГО 32 513 494 976,1 31 858 080 288,5 34 383 441 961,1",
+    "СОЦИАЛЬНАЯ ПОЛИТИКА 10 7 244 330 286,8 7 130 928 496,3 7 322 602 834,4",
+    "НАЦИОНАЛЬНАЯ ОБОРОНА 02 2 934 372 506,2 2 387 589 262,7 2 507 581 238,4",
+    "ОБСЛУЖИВАНИЕ ГОСУДАРСТВЕННОГО (МУНИЦИПАЛЬНОГО) ДОЛГА 13 3 900 234 862,4 3 757 498 200,6 4 522 454 024,3"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "base.garant.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  },
+  {
+   "topic": "zhkh_spending_trend",
+   "replaces": [
+    "77da7b1e"
+   ],
+   "source_url": "https://base.garant.ru/413165837/8599a70d26e5983585d90ff6adf82e89/",
+   "value": "1 374 617 122,3 тыс. ₽ в 2027",
+   "evidence": [
+    "(тыс. рублей) Наименование Рз ПР ЦСР ВР 2026 год 2027 год 2028 год ВСЕГО 32 513 494 976,1 31 858 080 288,5 34 383 441 961,1",
+    "ЖИЛИЩНО-КОММУНАЛЬНОЕ ХОЗЯЙСТВО 05 2 025 968 919,1 1 374 617 122,3 1 415 198 624,8"
+   ],
+   "route": "direct",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "base.garant.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  },
+  {
+   "topic": "tech_national_projects",
+   "replaces": [
+    "602882e9"
+   ],
+   "source_url": "https://www.consultant.ru/document/cons_doc_LAW_521444/d5ef270f42e40fcf7ae285cfd47a2cbbf9e3bfbd/",
+   "value": "12,4–121,5 млрд ₽ на нацпроект",
+   "evidence": [
+    "(млрд. рублей) Показатель 2025 год 2026 год 2027 год 2028 год 2029 год 2030 год Расходы федерального бюджета на реализацию национальных проектов - всего 5993 6761,7",
+    "национальный проект \"Промышленное обеспечение транспортной мобильности\" 107,1 121,5 141 156,7",
+    "национальный проект \"Новые материалы и химия\" 7,4 12,4 17,4 20,7",
+    "<3> Данные Федерального закона \"О федеральном бюджете на 2026 год и на плановый период 2027 и 2028 годов\""
+   ],
+   "route": "proxy",
+   "verdict": "VERIFIED",
+   "detail": "",
+   "host": "consultant.ru",
+   "http": 200,
+   "kind": "html",
+   "kind_item": "fact",
+   "segment": "byudzhet"
+  }
+ ]
+}

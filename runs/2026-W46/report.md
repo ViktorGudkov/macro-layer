@@ -167,3 +167,9 @@ FUSES OK
 - MACRO_PROXY (туннель) поднят. Сверка: 3 кандидата, VERIFIED 3; merge: принято 3 (frp_zaymy, kvota_invalidy_sout, komplaens_platezhi); FUSES OK. Файлы: `runs/2026-W46/addon/`.
 - Бюджетные факты budget_expenditure_structure, tech_national_projects, zhkh_spending_trend остаются в pending: нет связной подписанной цитаты с числами закона (см. CHANGELOG).
 - Ленты: FEEDS_STATS since=2026-11-06 items=51 new=51 sources_ok=7/7 minfin_last_id=40751. tools/feeds.py не берёт MACRO_PROXY, поэтому запускался с переменными curl https_proxy/HTTPS_PROXY на туннель.
+
+
+## Добор 2026-11-14: бюджетные факты по открытой части закона
+
+- budget_expenditure_structure и zhkh_spending_trend — по приложению 14 к ФЗ № 426-ФЗ на ГАРАНТе (только открытая часть расходов); tech_national_projects — по прил. № 4 к Бюджетному прогнозу до 2042 г. (распоряжение № 3702-р, столбец 2026 = данные закона).
+- Сверка: 3 VERIFIED (1 повтор); merge: принято 3; FUSES OK. Файлы: `runs/2026-W46/addon2/`. Pending по W46 бюджету — 0.
