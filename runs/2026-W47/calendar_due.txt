@@ -1,0 +1,9 @@
+CALENDAR_DUE due=8 skipped=36 cap=8
+  DUE [31] Недельная инфляция Росстата — every 6 days, checked 32 days ago
+  DUE [15] Точная формула ставки промышленной ипотеки по действующей редакции ПП  — no date in text, checked 92 days ago
+  DUE [16] Условия отбора и лимиты кластерной инвестиционной платформы после смен — no date in text, checked 92 days ago
+  DUE [17] Следующая редакция Правил листинга ПАО Московская Биржа — no date in text, checked 92 days ago
+  DUE [21] Индексация грузовых тарифов РЖД на 2027 год — no date in text, checked 92 days ago
+  DUE [2] Осенний пакет поправок в закон о бюджете-2026 и внесение проекта бюдже — no date in text, checked 49 days ago
+  DUE [11] Вступление в силу требований к раскрытию информации эмитентами ЦФА — no date in text, checked 49 days ago
+  DUE [19] Индексация грузовых тарифов ОАО «РЖД» +8,5% — no date in text, checked 49 days ago

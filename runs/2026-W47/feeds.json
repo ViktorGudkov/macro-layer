@@ -1,0 +1,468 @@
+{
+ "today": "2026-11-20",
+ "since": "2026-11-13",
+ "state": {
+  "minfin_last_id": 40773
+ },
+ "sources": {
+  "cbr_events": {
+   "ok": true,
+   "fetched": 100,
+   "kept": 2
+  },
+  "cbr_press": {
+   "ok": true,
+   "fetched": 11,
+   "kept": 0
+  },
+  "gov_docs": {
+   "ok": true,
+   "fetched": 20,
+   "kept": 2
+  },
+  "vedomosti": {
+   "ok": true,
+   "fetched": 200,
+   "kept": 12
+  },
+  "cons_bills": {
+   "ok": true,
+   "fetched": 21,
+   "kept": 5
+  },
+  "minfin": {
+   "ok": true,
+   "fetched": 22,
+   "kept": 10
+  },
+  "cons_week": {
+   "ok": true,
+   "fetched": 141,
+   "kept": 4
+  }
+ },
+ "items": [
+  {
+   "source": "vedomosti",
+   "date": "2026-11-20",
+   "title": "Как проходило второе чтение комплексных поправок в Налоговый кодекс",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/20/1413528-kak-prohodilo-vtoroe-chtenie-popravok-v-nalogovii-kodeks",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-20",
+   "title": "Результатами инициативного бюджетирования пользуется более трети населения России",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40773",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-20",
+   "title": "Минфин России исполнил обязательства по выплате купонного дохода по еврооблигациям",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40772",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-19",
+   "title": "Право регионов устанавливать пониженные ставки УСН будет ограничено",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/19/1413529-pravo-regionov-ustanavlivat",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-19",
+   "title": "Госдума приняла проект федерального бюджета во втором чтении",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/19/1413373-proekt-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-19",
+   "title": "Госдума приняла во втором чтении проект поправок в Налоговый кодекс",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40768",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-19",
+   "title": "Проект федерального бюджета на 2027-2029 годы принят Госдумой во втором чтении",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40767",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-19",
+   "title": "Корпоративное кредитование в 2026 году росло быстрее ожиданий, и прогноз по итогам года повышен",
+   "url": "https://www.cbr.ru/press/event/?id=33002",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-18",
+   "title": "Правительство спишет часть задолженностей по бюджетным кредитам 23 регионам",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/18/1413041-zadolzhennostei-po-kreditam",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-18",
+   "title": "Почему кабмин отказался от передачи налогового контроля маркетплейсам",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/18/1412726-kabmin-otkazalsya-ot-peredachi",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-18",
+   "title": "Госдума поддержала в первом чтении законопроект, направленный на дальнейшую цифровизацию бюджетных процедур",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40763",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-18",
+   "title": "Мишустин: РЭЦ довел сумму экспортных контрактов до 130 млрд рублей",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40760",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-18",
+   "title": "Правительство утвердило решение о списании части задолженности по бюджетным кредитам ещё 23 регионам",
+   "url": "http://government.ru/docs/60484/",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cbr_events",
+   "date": "2026-11-18",
+   "title": "Пилотирование офлайн-платежей, новые смарт-контракты и операции в цифровых рублях: планы Банка России",
+   "url": "https://www.cbr.ru/press/event/?id=32996",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-17",
+   "title": "Правительство одобрило законопроект о защите интересов МСП при госзакупках",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/17/1300365-pravitelstvo-odobrilo-zakonoproekt",
+   "rubric": "",
+   "segments": [
+    "byudzhet",
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-17",
+   "title": "Бизнес защитят от уголовных дел при реструктуризации налоговых долгов",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/17/1292783-biznes-zaschityat-ot-ugolovnih-del",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-17",
+   "title": "Минфин России продолжает диалог с профессиональными участниками рынка ценных бумаг",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40758",
+   "rubric": "",
+   "segments": [
+    "finansirovanie"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-17",
+   "title": "Расходы бюджета на социальную политику составят более 6,6 трлн рублей ежегодно",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40757",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-16",
+   "title": "Профильный комитет Госдумы одобрил поправки ко второму чтению бюджетоопределяющих законов",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40753",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "gov_docs",
+   "date": "2026-11-16",
+   "title": "Правительство утвердило постановление о создании территории опережающего развития «Колыма»",
+   "url": "http://government.ru/docs/60456/",
+   "rubric": "",
+   "segments": [
+    "podderzhka"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-15",
+   "title": "Из налога на сверхдоходы могут исключить добычу некоторых полезных ископаемых",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/15/1245475-mogut-isklyuchit-dobichu-nekotorih",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-14",
+   "title": "МИД: Россия повышает пошлины в ответ на европейские санкции",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/14/1245370-rossiya-povishaet",
+   "rubric": "",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "minfin",
+   "date": "2026-11-14",
+   "title": "В поправках Правительства ко второму чтению закона о федеральном бюджете распределены 97% межбюджетных трансфертов регионам",
+   "url": "https://minfin.gov.ru/ru/press-center/?id_4=40752",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-14",
+   "title": "<Информация> ФТС России \"О постановлении Правительства Российской Федерации от 9 ноября 2026 г. N 1475\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548888/",
+   "rubric": "ТРАНСПОРТ",
+   "segments": [
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-14",
+   "title": "<Информация> ФНС России \"Как рассчитывается НДФЛ по доходам от выигрышей в азартных играх, проводимых в казино и залах игровых автоматов, и по операциям с ценными бумагами\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548880/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-14",
+   "title": "<Информация> Минфина России \"Правительство уточнило порядок оказания мер поддержки предпринимателей, пострадавших из-за атак на инфраструктуру маркетплейсов\"",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548859/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_week",
+   "date": "2026-11-14",
+   "title": "Информация Минэкономразвития России <Об установлении коэффициентов-дефляторов на 2027 год>",
+   "url": "https://www.consultant.ru/document/cons_doc_LAW_548778/",
+   "rubric": "НАЛОГИ, СБОРЫ И ДРУГИЕ ОБЯЗАТЕЛЬНЫЕ ПЛАТЕЖИ",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-13",
+   "title": "Банкам дадут время на донастройку систем прогрессивного налогообложения вкладов",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/13/1245134-uderzhivat-s-protsentov",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-13",
+   "title": "Дефицит бюджета США в октябре вырос почти в 15 раз",
+   "url": "https://www.vedomosti.ru/economics/news/2026/11/13/1245051-defitsit-byudzheta",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "vedomosti",
+   "date": "2026-11-13",
+   "title": "Как бизнес оценивает предложения кабмина по доработке НК и проекта бюджета",
+   "url": "https://www.vedomosti.ru/economics/articles/2026/11/13/1244988-kak-biznes-otsenivaet-predlozheniya-kabmina",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-13",
+   "title": "Проект Федерального закона N 25877-9\"О внесении изменений в статью 219 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 03.11.2026)",
+   "url": "https://www.consultant.ru/law/review/209875920.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-13",
+   "title": "Проект Федерального закона N 26560-9\"О внесении изменений в статью 46 Бюджетного кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 05.11.2026)",
+   "url": "https://www.consultant.ru/law/review/209875917.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "byudzhet"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-13",
+   "title": "Проект Федерального закона N 27227-9\"О внесении изменений в часть вторую Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 05.11.2026)",
+   "url": "https://www.consultant.ru/law/review/209875915.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-13",
+   "title": "Проект Федерального закона N 27273-9\"О внесении изменения в статью 346.38 части второй Налогового кодекса Российской Федерации\"(ред., внесенная в ГД ФС РФ, текст по состоянию на 05.11.2026)",
+   "url": "https://www.consultant.ru/law/review/209875913.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "nalogi"
+   ],
+   "why": "keyword",
+   "known": false
+  },
+  {
+   "source": "cons_bills",
+   "date": "2026-11-13",
+   "title": "Проект Федерального закона N 1265998-8\"О внесении изменений в статьи 4 и 6 Федерального закона \"Об Особой экономической зоне в Калининградской области и о внесении изменений в некоторые законодательные акты Российской Федерации\"(ред., принятая ГД ФС РФ в I чтении 10.11.2026)",
+   "url": "https://www.consultant.ru/law/review/209875905.html#utm_campaign=rss_zw&utm_source=rss_reader&utm_medium=rss",
+   "rubric": "",
+   "segments": [
+    "podderzhka",
+    "vneshtorg"
+   ],
+   "why": "keyword",
+   "known": false
+  }
+ ]
+}
